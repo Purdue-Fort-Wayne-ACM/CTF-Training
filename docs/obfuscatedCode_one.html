@@ -1,0 +1,31 @@
+<html>
+
+
+<script>
+    var storedPassword = "bXlTZWNyZXRQYXNzd29yZA==";
+
+// Function to check if the entered password is correct
+function checkPassword() {
+    // Prompt the user to enter the password
+    var enteredPassword = btoa(prompt("Please enter the password:"));
+
+    // Check if the entered password matches the stored password
+    if (enteredPassword === storedPassword) {
+        // Alert the user that the password is correct
+        alert("Correct password! Welcome.");
+        return false;
+    } else {
+        // Alert the user that the password is incorrect
+        alert("Incorrect password. Please try again.");
+        return true;
+    }
+}
+
+// Call the function to start the process
+
+var fail = true;
+while (fail){
+    fail = checkPassword()
+}
+    </script>
+</html>
