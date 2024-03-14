@@ -1,5 +1,5 @@
-# HEADER
-This is an example
+# Training Materials for Spring 2024 CTF Event
+Jump to a section that you would like to learn more about and then try the challenges in each section. Answers will be posted below each section.
 <details>
   <Summary>Open Source Intelligence (OSINT)</Summary>
   
@@ -19,7 +19,8 @@ This is an example
 3) Using the image on the right please tell us the following information:
     * What city is in the image
     * What is the name of the building that is directly in front of the camera
-    * What is the name of the bridge that the photo was taken on
+    * What is the name of the bridge that the photo was taken on  
+  [DOWNLOAD LINK](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/_MG_9319%20copy.jpg)
 ![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/_MG_9319%20copy.jpg)
 Image by Neal Birchfield, Image used with permission.
 4) Using the following information below please tell us the following information:
@@ -39,7 +40,8 @@ Image by Neal Birchfield, Image used with permission.
     * What was the plain text?
 2) We have this, we think that it contains a hidden message:
     * How was this encrypted?
-    * What was the plain text?
+    * What was the plain text?  
+[DOWNLOAD LINK](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/rickysteg.jpg)
 ![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/assets/84486562/c81040d4-f0ce-42f2-ac69-2e8d10d8e9b2)
 </details>
 <details>
@@ -100,7 +102,7 @@ b90091604524151559d3d231fc88a52d
 <details>
   <summary>Network Traffic Analysis</summary>
 
-  [sus.pcap](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/sus_export.pcapng)
+  [sus.pcap](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/raw/main/assets/sus_export.pcapng)
 1) Using the wireless traffic capture, please tell us the following information
     * How many players where there?
     * Did the players win or did the imposter win?
@@ -111,7 +113,7 @@ b90091604524151559d3d231fc88a52d
 <details>
   <summary>Log Analysis</summary>
 
-  [healtcare log](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/LogAnalysis.patient.ssx)
+  [healtcare log](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/raw/main/assets/LogAnalysis.patient.ssx)
 1) Using the log capture, please tell us the following information:
     * What was the model and manufacturer used?
     * What computer was this captured on?
@@ -130,7 +132,7 @@ b90091604524151559d3d231fc88a52d
 <details>
   <summary>Digital Forensics</summary>
 
-  [capturedfile.docx](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/capturedfile.docx)
+  [capturedfile.docx](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/raw/main/assets/capturedfile.docx)
 1) We have recovered a word document. It seems to be corrupted though. Can you find the following information about the document?
     * Who made the document
     * Are there any fonts embedded in the document
