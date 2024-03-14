@@ -111,7 +111,7 @@ b90091604524151559d3d231fc88a52d
 <details>
   <summary>Log Analysis</summary>
 
-  [healtcare log]()
+  [healtcare log](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/LogAnalysis.patient.ssx)
 1) Using the log capture, please tell us the following information:
     * What was the model and manufacturer used?
     * What computer was this captured on?
