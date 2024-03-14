@@ -97,3 +97,55 @@ ffbcde20e43136ba3740c72524aab8a5
 b90091604524151559d3d231fc88a52d
   ```
 </details>
+<details>
+  <summary>Network Traffic Analysis</summary>
+
+  [sus.pcap](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/sus_export.pcapng)
+1) Using the wireless traffic capture, please tell us the following information
+    * How many players where there?
+    * Did the players win or did the imposter win?
+    * What colors where playing?
+    * Did anyone have any special outfits?
+
+</details>
+<details>
+  <summary>Log Analysis</summary>
+
+  [healtcare log]()
+1) Using the log capture, please tell us the following information:
+    * What was the model and manufacturer used?
+    * What computer was this captured on?
+    * Did the patient live?
+    * How many shocks did the patient receive?
+    * When was this recorded?
+</details>
+<details>
+  <summary>Scanning</summary>
+
+1) We think that there is something is hiding  in the code of scanme.nmap.org, can you check it out and see what you can find?
+    * How many open ports are there?
+    * What is the most likely Operating system of the server?
+    * How long has the server been operational?
+</details>
+<details>
+  <summary>Digital Forensics</summary>
+
+  [capturedfile.docx](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/capturedfile.docx)
+1) We have recovered a word document. It seems to be corrupted though. Can you find the following information about the document?
+    * Who made the document
+    * Are there any fonts embedded in the document
+    * Are there any images in the document
+    * What is the text in the document
+</details>
+<details>
+  <summary>Reverse Engineering</summary>
+
+  Go to [JS Code](https://purdue-fort-wayne-acm.github.io/CTF-Training-Spring-2024/obfuscatedCode_one.html)
+</details>
+<details>
+  <summary>Web Application Exploitation</summary>
+
+1) We have found some vulnerable websites can you find the vulnerabilities?
+    * [Employee Panel](https://purdue-fort-wayne-acm.github.io/CTF-Training-Spring-2024/employeepanel)
+    * [OurSpace](https://purdue-fort-wayne-acm.github.io/CTF-Training-Spring-2024/ourspace)
+</details>
