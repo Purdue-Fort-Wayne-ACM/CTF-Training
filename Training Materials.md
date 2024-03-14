@@ -20,7 +20,7 @@ This is an example
     * What city is in the image
     * What is the name of the building that is directly in front of the camera
     * What is the name of the bridge that the photo was taken on
-![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/assets/84486562/a8cdfc2a-584f-4242-a629-25d3a482c1f5)
+![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/_MG_9319%20copy.jpg)
 Image by Neal Birchfield, Image used with permission.
 4) Using the following information below please tell us the following information:
     * Deep Breath
