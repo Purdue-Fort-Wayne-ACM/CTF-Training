@@ -1,28 +1,74 @@
 # Training Materials for Spring 2024 CTF Event
 Jump to a section that you would like to learn more about and then try the challenges in each section. Answers will be posted below each section.
+
 <details>
   <Summary>Open Source Intelligence (OSINT)</Summary>
-  
+
 ## Open Source Intelligence:
-1) Based on the following image, can you identify the following bits of information:
-    * Where was this image shot?
-    * What is the name of the series this image was from?
-    * What is the name of the episode this image was from?
+### Reverse Image Searching
+#### 1) Based on the following image, can you identify the following bits of information:  
+   + [ ] Where was this image shot?</label>
+   + [ ] What is the name of the series this image was from?
+   + [ ] What is the name of the episode this image was from?
 ![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/assets/84486562/16669296-747e-4d93-b1f4-84b85d1e9d30)
 
-2) Based on the following image, can you identify the following bits of information:
-    * What is the name of the video?
-    * What country is the video being reacted to shot in?
-    * Where was the video being reacted to originally posted?
-    * What brand was the cause of the critical failure?
+<details>
+<Summary>Walkthrough and Answers</Summary>
+
+  ##### Walkthrough
+  > How would we be able to get a location from a screengrab? In this section we discuss a fairly simple way to do just that!
+>  
+  > How we would typically go about solving this type of question, is to first start by reverse image searching. Most search engines will have an option when right clicking an image to do a reverse image search. This is essentially like googling, but instead of words you are googling with images. For instance in chrome you can right click on an image and select the `Search Image with Google` to open a side pane. This side pane will have the results of your image search in them and will link to external sites.
+>   
+  > In our case, as this image is from a TV show (we can tell this both by the question and the way that the image is composed), we will likely get a lot of hits. From there, once we get the episode number and series name (it should be one of the first results), we can use the google search `Where was <SERIES NAME> filmed` and get all of the required information.
+
+  ##### Answers
+  > 1. Where was this image shot? **_Portmeirion, Wales_**
+>
+  > 2. What is the name of the series this image was from? **_The Prisoner (1968)_**
+>      
+  > 3. What is the name of the episode this image was from? **_Free for All (S1 E4)_**
+</details>
+
+#### 2) Based on the following image, can you identify the following bits of information:
+  + [ ] What is the name of the video?
+  + [ ] Where was the video being reacted to originally posted?
+  + [ ] What country is the video being reacted to shot in?
+  + [ ] What type of battery was the cause of the critical failure?
 ![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/assets/84486562/f86d7440-da22-4849-81f4-15179ba307ff)
+
+> [!TIP]  
+> **HINT:** This image is taken from a video posted by @TheLexikitty...
+
+<details>
+<Summary>Walkthrough and Answers</Summary>
+
+  ##### Walkthrough
+  > This one is much harder than the last one, but is still a good reverse image search experiment.
+> 
+> Knowing that this image came from @TheLexikitty, we can quickly find the video on her YouTube channel. If you tried to do it without the hint, it would take a long time, but is still doable. From there, we have the name of the video and the place to look for the next bits of information. After going to the reddit that posted the video and searching the title of the video we can then go to where the video was originally taken from. Using google translate we should be able to get the final bit of information.
+  ##### Answers
+  > 1. What is the name of the video? **_Spicy Pillows, Bulging Batteries, And You | Lexplanations ft. r/spicypillows_**
+>
+  > 2. Where was the video being reacted to originally posted? **_Viber or r/Slovenia_**
+>      
+  > 3. What country is the video being reacted to shot in? **_Slovenia_**
+>
+>   4. What type of battery was the cause of the critical failure? **_3.7V Li-ION 18650_**
+</details>
+
+### Metadata
 3) Using the image on the right please tell us the following information:
-    * What city is in the image
-    * What is the name of the building that is directly in front of the camera
-    * What is the name of the bridge that the photo was taken on  
-  [DOWNLOAD LINK](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/_MG_9319%20copy.jpg)
+    * What were the camera settings used for this image?
+    * What city is in the image?
+    * What is the name of the building that is directly in front of the camera?
+    * What is the name of the bridge that the photo was taken on?
+      
 ![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/_MG_9319%20copy.jpg)
-Image by Neal Birchfield, Image used with permission.
+Image by Neal Birchfield, Image used with permission. [Download Image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/blob/main/assets/_MG_9319%20copy.jpg)  
+
+### Pattern Recognition
+
 4) Using the following information below please tell us the following information:
     * Deep Breath
     * The Girl Who Waited
@@ -34,9 +80,9 @@ Image by Neal Birchfield, Image used with permission.
 <details>
   <summary>Cryptography</summary>
 
-1) We have this, we think that it was encoded multiple times:
-  ```....-/----./-..../...../-..../-.../-..../-../-..../---../-..../-..../-..../----./--.../....-/--.../...../-..../----./-..../---../--.../.----/..---/-----/....-/-..../....-/----./..---/-----/--.../...../--.../...../--.../...--/-..../---../-..../-...```
-    * How many times was this encrypted
+1) We have this, we think that it was encoded multiple times:  
+  ```....-/----./-..../...../-..../-.../-..../-../-..../---../-..../-..../-..../----./--.../....-/--.../...../-..../----./-..../---../--.../.----/..---/-----/....-/-..../....-/----./..---/-----/--.../...../--.../...../--.../...--/-..../---../-..../-...```  
+    * How many times was this encrypted?
     * What was the plain text?
 2) We have this, we think that it contains a hidden message:
     * How was this encrypted?
