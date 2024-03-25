@@ -37,16 +37,22 @@ Jump to a section that you would like to learn more about and then try the chall
   + [ ] What type of battery was the cause of the critical failure?
 ![image](https://github.com/Purdue-Fort-Wayne-ACM/CTF-Training-Spring-2024/assets/84486562/f86d7440-da22-4849-81f4-15179ba307ff)
 
-> [!TIP]  
-> **HINT:** This image is taken from a video posted by @TheLexikitty...
-
 <details>
 <Summary>Walkthrough and Answers</Summary>
 
   ##### Walkthrough
   > This one is much harder than the last one, but is still a good reverse image search experiment.
 > 
-> Knowing that this image came from @TheLexikitty, we can quickly find the video on her YouTube channel. If you tried to do it without the hint, it would take a long time, but is still doable. From there, we have the name of the video and the place to look for the next bits of information. After going to the reddit that posted the video and searching the title of the video we can then go to where the video was originally taken from. Using google translate we should be able to get the final bit of information.
+> You will quickly realize that reverse image search does not give any valuable information. So, we will need to resort to our powers of observation! We know that this is from a video. We know this both from the way that the question is asked and how the image is composed like a 'react' video from YouTube or other popular video sharing platforms. For this section, we will assume that this image is taken from a YouTube video given the aspect ratio. So we have an idea of where to search once we get more information on the image.
+> 
+> Looking specificially at the video that is being reacted to in the image we can gain some more information. We can clearly see that the video has something on fire, however, the fire looks odd. Instead of being more traditional match/firewood/etc. fire, it is a brilliant white. This might seem to be inconsquectial, but we can gain more information from this. Next looking closely, we can see that the video was taken in what seems to be a parking lot. Looking at this, it seems that the thing burning is likely made of some metal. To determine this, we can look up `metals that burn white`, we get metals such as Magnesium, Titanium, Nickle, Chromium, and Aluminum. Given that the burning object takes up a small amount of space in the parking spot, so we can assume that the burning metal object is also lightweight. Some common metals that are used in transportation and are light weight, we can safely assume that it is made of either aluminum or titanium. So we know what the item is made of, but what could it be? For that, we can look up things that are commonly made of aluminum and are small. This will lead to something like a bike or scooter.
+> 
+> Both of these are also have 'electric' versions of them. Next, we can see what powers the electric version of a bike or scooter. This will lead to a type of battery. Our instinct is confirmed as well given our last question asking what type of battery is the cause of the fire. After googling `electric scooter battery`, we can see that they are commonly using Lithium Ion batteries.
+> 
+> Looking at we know now; we know that we are looking for a YouTube video, in which, the YouTuber is reacting to a video of an e-scooter or e-bike on fire that was powered by a lithium ion battery that failed. Knowing this, we know that the YouTube video will likely not have 'Lithium Ion Battery', 'e-bike fire', or 'e-scooter fire'. We can then return to google for more information. When googleing `lithium ion battery "slang"`[^1], we will get "spicy pillow" as slang/common saying for 'Lithium Ion Batteries'. This seems like something that might be a good YouTube video title. So let's google `YouTuber reacts to spicy pillows`. The first result shows a YouTuber or seems to look similar to the one in our screenshot. Watching/skimming through the first result on YouTube, we can quickly confirm that this is the video that the screenshot was taken from.
+> 
+> We can then go to the subreddit that posted the video using the keywords that were given in the video right before the YouTuber's reaction to the video. We should be able to find the video that was being reacted to. It turns out that the video was reposted from another subreddit. The subreddit that it was _originally_ posted on is a country's subreddit, so we have answer 3. We can then use google translate to determine the rest of the answers.
+[^1]: When you use `"<WORD or PHRASE>` or `-<WORD>` in a google search, we refer to this as google dorking. Google dorking is when you modify the google search so that it provides more relevent results for you. `"<WORD or PHRASE>` will force google to return only results that contain that word or phrase verbatim. Using `-<WORD>` will force google to return results that don't contain that word.
   ##### Answers
   > 1. What is the name of the video? **_Spicy Pillows, Bulging Batteries, And You | Lexplanations ft. r/spicypillows_**
 >
