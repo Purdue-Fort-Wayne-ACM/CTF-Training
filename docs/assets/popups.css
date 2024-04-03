@@ -1,0 +1,47 @@
+/* Pop Up Box*/
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background-color: #343F3EAA;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    position: relative;
+    background: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #343F3E;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.close:hover{
+    color:#505A5B
+}
+
+.close:click{
+    color:#94B0DA
+}
+
+.challenge {
+    position: relative;
+    background: white;
+    padding: 2em 2em;
+    border-radius: 4px;
+    max-height: 80%;
+    max-width: 60%;
+    overflow-y: auto;
+}

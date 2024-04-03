@@ -1,0 +1,458 @@
+<html>
+    <head>
+        <!--SEO and Meta-->
+        <meta charset="UTF-8">        
+        <meta name="description" content="Learn how to be successful in CTFs through a collection of example challenges that you might face with walkthroughs and answers.">
+        <meta name="keywords" content="PFW, PFW ACM, ACM, CTF, Capture the Flag, Cybersecurity, cyber, security, NCL, national cyber league, norweigen cruse lines, education">
+        <meta name="author" content="Purdue University Fort Wayne Association for Computing Machinery Officer Committee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CTF Example Challenges</title>
+        <link rel="favicon" href="../assets/">
+
+        <!--Imports-->
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="../assets/input.css">
+        <link rel="stylesheet" href="../assets/popups.css">
+        <link rel="stylesheet" href="../assets/tiles.css">
+        <link rel="stylesheet" href="../assets/panels.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="../">Home</a>
+            <burger>
+                <a href="#popup-box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+            </burger> 
+            
+            <div id="popup-box" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+                <div class="content">
+                    <h1>
+                        Settings
+                    </h1>
+                    <div class="SettingMenuOption">
+                        <label for="setting" class="switchLabel">Dark Mode:</label>
+                        <label class="switch" name="setting">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <a href="" class="close">&times;</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <content>
+                <h1>Open Source Intelligence</h1>
+                <p>
+                    Open source intelligence is the process of gathering information from publicly accessable sources.
+</p>
+<p>
+In the following challenges we will be utilizing a variety of free online tools, and information that is obtained by googling.
+
+
+                </p>
+                <p>
+                    
+                </p>
+                <h2>
+                    Challenges
+                </h2>
+                <hr>
+                <section class="container">
+                    <div class="catSection" onclick="location.href='#CH1'">
+                        <h3>Challenge 1 (Easy)</h3>
+                        <hr>
+                        <p>Exercise your reverse image searching skills to determine where a TV show was filmed.</p>
+                    </div>
+                    <div class="catSection" onclick="location.href='#CH2'">
+                        <h3>Challenge 2 (Easy)</h3>
+                        <hr>
+                        <p>Take your reverse image searching skills to another level as you find the location of a mysterious photograph.</p>
+                    </div>
+                    <div class="catSection" onclick="location.href='#CH3'">
+                        <h3>Challenge 3 (Medium)</h3>
+                        <hr>
+                        <p>Exercise your pattern recognition skills to find the missing element of a pattern.</p>
+                    </div>
+                    <div class="catSection" onclick="location.href='#CH4'">
+                        <h3>Challenge 4 (Medium)</h3>
+                        <hr>
+                        <p>Take your pattern recognition skills to another level as you find the missing element of a complex pattern.</p>
+                    </div>
+                    <div class="catSection" onclick="location.href='#CH5'">
+                        <h3>Challenge 5 (Hard)</h3>
+                        <hr>
+                        <p>Test your skills as you combine your reverse image searching skills, pattern recognition, and powers of observation to gain key information with minimal starting information.</p>
+                    </div>
+                    
+                </section>
+            </content>
+        </main>
+        <footer>
+            &copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved.
+            <a href="mailto:acm@pfw.edu">Contact Us!</a>
+        </footer>
+    </body>
+</html>
+
+
+<div id="CH1" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+    <div class="challenge">
+        <h1>
+            Challenge 1 - Reverse Image Search I
+        </h1>
+        <hr>
+        <p>
+            Based on the following image, can you identify the following bits of information:
+            <br>
+            <br>
+            <input type="checkbox" id="q1">
+            <label for="q1">Where was this image shot?</label><br>
+            <input type="checkbox" id="q2">
+            <label for="q2">What is the name of the series this image was from?</label><br>
+            <input type="checkbox" id="q3">
+            <label for="q3">What is the name of the episode this image was from?</label><br>
+        </p>
+        <img src="../../assets/OSINT_q1_q1.png" style="border-radius: 10px;" width="100%">
+        <br>
+        <br>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><div  class="panel-heading">
+                <h4  class="panel-title">
+                  Walkthrough
+                </h4>
+                </a>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        How would we be able to get a location from a screengrab? In this section we discuss a fairly simple way to do just that!
+                    </p>
+                    <p>
+                        How we would typically go about solving this type of question, is to first start by reverse image searching. Most search engines will have an option when right clicking an image to do a reverse image search. This is essentially like googling, but instead of words you are googling with images. For instance in chrome you can right click on an image and select the <code>Search Image with Google</code> to open a side pane. This side pane will have the results of your image search in them and will link to external sites.
+                    </p>
+                    <p>
+                        In our case, as this image is from a TV show (we can tell this both by the question and the way that the image is composed), we will likely get a lot of hits. From there, once we get the episode number and series name (it should be one of the first results), we can use the google search <code>Where was {SERIES NAME}</code> filmed and get all of the required information.
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+                  </a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <p>
+                          How would we be able to get a location from a screengrab? In this section we discuss a fairly simple way to do just that!
+                      </p>
+                      <p>
+                          How we would typically go about solving this type of question, is to first start by reverse image searching. Most search engines will have an option when right clicking an image to do a reverse image search. This is essentially like googling, but instead of words you are googling with images. For instance in chrome you can right click on an image and select the <code>Search Image with Google</code> to open a side pane. This side pane will have the results of your image search in them and will link to external sites.
+                      </p>
+                      <p>
+                          In our case, as this image is from a TV show (we can tell this both by the question and the way that the image is composed), we will likely get a lot of hits. From there, once we get the episode number and series name (it should be one of the first results), we can use the google search <code>Where was {SERIES NAME}</code> filmed and get all of the required information.
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <a href="" class="close">&times;</a>
+    </div>
+</div>
+<div id="CH2" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+    <div class="challenge">
+        <h1>
+            Challenge 2 - Reverse Image Search II
+        </h1>
+        <hr>
+        <p>
+            Based on the following image, can you identify the following bits of information:
+            <br>
+            <br>
+            <input type="checkbox" id="q1">
+            <label for="q1">What were the camera settings used for this image?</label><br>
+            <input type="checkbox" id="q2">
+            <label for="q2">What city is in the image?</label><br>
+            <input type="checkbox" id="q3">
+            <label for="q3">What is the name of the building that is directly in front of the camera?</label><br>
+            <input type="checkbox" id="q4">
+            <label for="q4">What is the name of the bridge that the photo was taken on?</label><br>
+        </p>
+        <img src="../../assets/_MG_9319 copy.jpg" style="border-radius: 10px;" width="100%">
+        <br>
+        <br>
+        <div class="panel-group" id="accordion1">
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3"><div  class="panel-heading">
+                    <h4  class="panel-title">Walkthrough</h4>
+                </a>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        Let's start with the camera settings. When you take a picture, the phone or camera will save a little bit of information about the image in addition to the picture taken. This 'metadata' as we call it stores settings such as lens, aperture (how much light was let in), shutter speed (how long the shutter was open for), and more. There are plenty of free metadata viewers online.
+                    </p>
+                    <p>
+                        After finding the viewing the metadata, we found the camera settings, but unfortunately not the location of the image. We can try reverse image search to see if there are any hits. In doing this, we can see that there are two possible hits, one on a photo site and one on an instagram post. Both were taken in the same city, but can we get down to the bridge. The instagram post could help us with that. It was taken by Cloudgate (aka the 'Chicago Bean'). On google maps, it shows that there are only two bridges anywhere near the bean, one to the east and one to the south. The one to the east doesn't seem to fit, so it must be the one to the south! We can then check what building the bridge is connecting.
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse4"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+                  </a>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+                    1. What were the camera settings used for this image?
+                    <pre>
+Camera Brand: Canon
+Camera Model: Canon EOS Rebel T6
+Lens Size: 39 mm
+Aperture: f/7.1
+Shutter Speed: 1/100 sec
+ISO: 100                      </pre>
+                    2. What city is in the image? <em>Chicago</em><br>
+                    3. What is the name of the building that is directly in front of the camera? <em>The Art Institute of Chicago</em><br>
+                    4. What is the name of the bridge that the photo was taken on? <em>Nicholas Bridgeway</em><br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <a href="" class="close">&times;</a>
+    </div>
+</div>
+<div id="CH3" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+    <div class="challenge">
+        <h1>
+            Challenge 3 - Patterns I
+        </h1>
+        <hr>
+        <pre>
+Jenna Coleman: Deep Breath
+Karen Gillan: The Girl Who Waited
+Catherine Tate: Forest of the Dead
+Billie Piper: ???        </pre>
+        <p>
+            Using the above, please answer the following:
+            <br>
+            <br>
+            <input type="checkbox" id="q1">
+            <label for="q1">What is the missing title?</label><br>
+            <input type="checkbox" id="q2">
+            <label for="q2">What ties these titles together?</label><br>
+        </p> 
+        <div class="panel-group" id="accordion2">
+            <div class="panel panel-default">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5"><div  class="panel-heading">
+                <h4  class="panel-title">
+                  Walkthrough
+                </h4>
+            </a>
+              </div>
+              <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        These seem to follow the same pattern, a name then a title. We can make a guess that these might be author's and their books or something similar. If we google one of the names, we can see that they are actors. If we google the title, we can see that these are all names of Doctor Who episodes. Let's use IMDb to figure out any other information about each episode. Let's try it with the last one, the <i>Forest of the Dead</i>.
+                    </p>
+                    <p>
+                        Looking at the cast, we can see that <i>Catherine Tate</i> is one of the actors who credited for the episode. We seem to be on the right track! If we do this with the others, we will also see that they follow the same pattern.
+                    </p>
+                    <p>
+                        Let's check the details of each episode to see if anything matches. If we look under filming locations, we can see that they all share a common filming location! Looking into this, we see that there are a total of 7 (as of writing) episodes that use this location on IMDb.
+                    </p>
+                    <p>
+                        To determine what the correct episode is, we can check which one (outside of the three that we know) has the actor <i>Billie Piper</i> credited in.
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+              </a>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+                        1. What is the missing title? <em>The Girl in the Fireplace</em><br>
+                        2. What ties these titles together? <em>These all share common filming locations. Specifically the Dyffryn Gardens, St Nicholas, Vale of Glamorgan, Wales, UK</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <a href="" class="close">&times;</a>
+    </div>
+</div>
+<div id="CH4" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+    <div class="challenge">
+        <h1>
+            Challenge 4 - Patterns II
+        </h1>
+        <hr>
+        <pre>
+Pecos Hank: (32.8,-89.11),(33.04,-88.65),6,3,1930
+Tim Samaras (RIP): (34.05,-88.45),(34.31,-87.92),137,23,2042
+Reed Timmer: (34.39,-85.98),(34.77,-85.52),0,25,2319
+Jo Harding: ???</pre>
+        <p>
+            Using the above, please answer the following:
+            <br>
+            <br>
+            <input type="checkbox" id="q1">
+            <label for="q1">What is the value for Jo Harding? (Give this in the same format as above)</label><br>
+            <input type="checkbox" id="q2">
+            <label for="q2">What is the common element?</label><br>
+        </p>
+        <div class="panel-group" id="accordion3">
+            <div class="panel panel-default">
+              <a data-toggle="collapse" data-parent="#accordion3" href="#collapse7"><div  class="panel-heading">
+                <h4  class="panel-title">
+                  Walkthrough
+                </h4>
+            </a>
+              </div>
+              <div id="collapse7" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        This seems harder than the last question, but we are also given a lot more information to compensate! Our pattern here follows a very strict format as well!                    
+                    </p>
+                    <pre>
+Name: Number Pair, Number Pair, number, number, number</pre>
+                    <p>
+                        At first glance, we can tell that the number pairs seem to be close together and look like Latitude/Longitude pairs. The middle two numbers seem odd, but the last number could be a year. However, this probably is not the case as we quickly go beyond the current date and some of these data points would be in the future. So, we have only three bits of actionable information: the name, the first Latitude/Longitude pair, and the second Latitude/Longitude pair. Let's try googling these names to start.                    </p>
+                    <p>
+                        It seems that these are storm chasers. So, we might be tracking storms or tornadoes with these data points. Let's try googling these Latitude/Longitude points and putting them on google maps.
+                    </p>
+                    <p>
+                        After putting them in Google maps, we can see that these are in Alabama and Mississipi. As we can assume that these are tornadoes, one pair of Latitude/Longitude should be the start or end point of the path the storm took.
+                    </p>
+                    <p>
+                        Let's try googling a tornado track database.
+                    </p>
+                    <div class="NOTE">
+<b>NOTE: </b><br>This walkthrough will assume that you are using the <a target="_blank" href="https://mrcc.purdue.edu/gismaps/cntytorn">MRCC Database</a> or <a target="_blank" href="https://tornadoarchive.com/explorer/2.2.1/">Tornado Archive</a></div>
+                    <p>
+                        After the google mapping of the Lat/Long pairs, we can see that one is in the eastern side of Mississippi towards the center and the other two are in the northern part of Alabama.
+                    </p>
+                    <p>
+                        After finding them in the database, we can see that they actually share a lot more than we first suspected! They are all EF5s that happened during the same outbreak! There should be only one other tornado that matches this criteria, try filtering for it on the database!
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse8"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+              </a>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+                        1. What is the value for Jo Harding? <em>(34.11,-88.15),(35.09,-86.15),145,72,2005</em><br>
+                        2. What is the common element? <em>These are all EF5 tornado tracks, specifically all from the same outbreak on April 27th, 2011. Each line is in the format:</em>
+                        <pre>(START Lat/Lon),(END Lat/Lon),Fatalities,Injuries,Time (UTC)</pre>
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <a href="" class="close">&times;</a>
+    </div>
+</div>
+<div id="CH5" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+    <div class="challenge">
+        <h1>
+            Challenge 5 - 
+        </h1>
+        <hr>
+        <p>
+            Based on the following image, can you identify the following bits of information:
+            <br>
+            <br>
+            <input type="checkbox" id="q1">
+            <label for="q1">What is the name of the video?</label><br>
+            <input type="checkbox" id="q2">
+            <label for="q2">Where was the video being reacted to originally posted?</label><br>
+            <input type="checkbox" id="q3">
+            <label for="q3">What country is the video being reacted to shot in?</label><br>
+            <input type="checkbox" id="q4">
+            <label for="q4">What type of battery was the cause of the critical failure?</label><br>
+        </p>
+        <img src="../../assets/OSINT_q5_q1.png" style="border-radius: 10px;" width="100%">
+        <br>
+        <br>
+        <div class="panel-group" id="accordion4">
+            <div class="panel panel-default">
+              <a data-toggle="collapse" data-parent="#accordion4" href="#collapse9"><div  class="panel-heading">
+                <h4  class="panel-title">
+                  Walkthrough
+                </h4>
+            </a>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        This one is much harder than the last one, but is still a good reverse image search experiment.
+                    </p>
+                    <p>
+                        You will quickly realize that reverse image search does not give any valuable information. So, we will need to resort to our powers of observation! We know that this is from a video. We know this both from the way that the question is asked and how the image is composed like a 'react' video from YouTube or other popular video sharing platforms. For this section, we will assume that this image is taken from a YouTube video given the aspect ratio. So we have an idea of where to search once we get more information on the image.
+                    </p>
+                    <p>
+                        Looking specificially at the video that is being reacted to in the image we can gain some more information. We can clearly see that the video has something on fire, however, the fire looks odd. Instead of being more traditional match/firewood/etc. fire, it is a brilliant white. This might seem to be inconsquectial, but we can gain more information from this. Next looking closely, we can see that the video was taken in what seems to be a parking lot. Looking at this, it seems that the thing burning is likely made of some metal. To determine this, we can look up <code>metals that burn white</code>, we get metals such as Magnesium, Titanium, Nickle, Chromium, and Aluminum. Given that the burning object takes up a small amount of space in the parking spot, so we can assume that the burning metal object is also lightweight. Some common metals that are used in transportation and are light weight, we can safely assume that it is made of either aluminum or titanium. So we know what the item is made of, but what could it be? For that, we can look up things that are commonly made of aluminum and are small. This will lead to something like a bike or scooter.
+                    </p>
+                    <p>
+                        Both of these are also have 'electric' versions of them. Next, we can see what powers the electric version of a bike or scooter. This will lead to a type of battery. Our instinct is confirmed as well given our last question asking what type of battery is the cause of the fire. After googling <code>electric scooter battery</code>, we can see that they are commonly using Lithium Ion batteries.
+                    </p>
+                    <p>
+                        Looking at we know now; we know that we are looking for a YouTube video, in which, the YouTuber is reacting to a video of an e-scooter or e-bike on fire that was powered by a lithium ion battery that failed. Knowing this, we know that the YouTube video will likely not have 'Lithium Ion Battery', 'e-bike fire', or 'e-scooter fire'. We can then return to google for more information. When googleing <code>lithium ion battery "slang"</code>, we will get "spicy pillow" as slang/common saying for 'Lithium Ion Batteries'. This seems like something that might be a good YouTube video title. So let's google <code>YouTuber reacts to spicy pillows</code>. The first result shows a YouTuber or seems to look similar to the one in our screenshot. Watching/skimming through the first result on YouTube, we can quickly confirm that this is the video that the screenshot was taken from.
+                    </p>
+                    <p>
+                        We can then go to the subreddit that posted the video using the keywords that were given in the video right before the YouTuber's reaction to the video. We should be able to find the video that was being reacted to. It turns out that the video was reposted from another subreddit. The subreddit that it was originally posted on is a country's subreddit, so we have answer 3. We can then use google translate to determine the rest of the answers.
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion4" href="#collapse10"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+              </a>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+                        1. What is the name of the video? <em>Spicy Pillows, Bulging Batteries, And You | Lexplanations ft. r/spicypillows</em><br>
+                        2. Where was the video being reacted to originally posted? <em>Viber or r/Slovenia</em><br>
+                        3. What country is the video being reacted to shot in? <em>Slovenia</em><br>
+                        4. What type of battery was the cause of the critical failure? <em>3.7V Li-ION 18650</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <a href="" class="close">&times;</a>
+</div>

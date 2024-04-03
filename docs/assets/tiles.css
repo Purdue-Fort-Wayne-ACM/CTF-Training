@@ -1,0 +1,31 @@
+content {
+    color :white;
+}
+content * {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+content h2 {
+    margin: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.catSection { 
+    flex: 1 0 300px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out; 
+    color:black
+} 
+  
+.catSection:hover { 
+    transform: scale(1.05); 
+} 
