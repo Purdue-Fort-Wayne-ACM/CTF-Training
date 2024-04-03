@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <!--SEO and Meta-->
+        <meta charset="UTF-8">        
+        <meta name="description" content="Learn how to be successful in CTFs through a collection of example challenges that you might face with walkthroughs and answers.">
+        <meta name="keywords" content="PFW, PFW ACM, ACM, CTF, Capture the Flag, Cybersecurity, cyber, security, NCL, national cyber league, norweigen cruse lines, education">
+        <meta name="author" content="Purdue University Fort Wayne Association for Computing Machinery Officer Committee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CTF Example Challenges</title>
+        <link rel="favicon" href="../assets/">
+
+        <!--Imports-->
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="../assets/input.css">
+        <link rel="stylesheet" href="../assets/popups.css">
+        <link rel="stylesheet" href="../assets/tiles.css">
+        <link rel="stylesheet" href="../assets/panels.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="../">Home</a>
+            <burger>
+                <a href="#popup-box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+            </burger> 
+            
+            <div id="popup-box" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+                <div class="content">
+                    <h1>
+                        Settings
+                    </h1>
+                    <div class="SettingMenuOption">
+                        <label for="setting" class="switchLabel">Dark Mode:</label>
+                        <label class="switch" name="setting">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <a href="" class="close">&times;</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <content>
+                <h1>Password Cracking</h1>
+                <h2>
+                    Challenges
+                </h2>
+                <hr>
+                <section class="container">
+                    <div class="catSection" onclick="location.href='#CH1'">
+                        <h3>Challenge 1 (Medium)</h3>
+                        <hr>
+                        <p>Exercise your reverse image searching skills to determine where a TV show was filmed.</p>
+                    </div>
+                </section>
+            </content>
+        </main>
+        <footer>
+            &copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved.
+            <a href="mailto:acm@pfw.edu">Contact Us!</a>
+        </footer>
+    </body>
+</html>
+
+
+<div id="CH1" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
+    <div class="challenge">
+        <h1>
+            Challenge 1 - Dump
+        </h1>
+        <hr>
+        <p>
+            We have obtained a hacker password dump, can you try to recover some passwords from it?
+            <div class="panel-group" id="accordion2">
+                <div class="panel panel-default">
+                  <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3"><div  class="panel-heading">
+                    <h4  class="panel-title">
+                      Password Dump
+                    </h4>
+                    </a>
+                  </div>
+                  <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="CodeBlock">
+                            c870152b79fd1f55e87c0b5af8d13aa1<br>
+                            d8b98e69f7298208b27886a30400a603<br>
+                            b5c0b187fe309af0f4d35982fd961d7e<br>
+                            627fe11eeef8994b7254fc1da4a0a3c7<br>
+                            daf839300e6394e455a0caf1cf80fb36<br>
+                            8470f3c26d43f5ceca7fc33982c22243<br>
+                            f9b20372fee2d3b8fb87deee330b12ff<br>
+                            f4021ad1ea872387461331899b86e8b1<br>
+                            c3a61b7e621781e5d688da556f11200c<br>
+                            015504c3b7b55e2202e6a71675d4b0c4<br>
+                            dd7536794b63bf90eccfd37f9b147d7f<br>
+                            7fc56270e7a70fa81a5935b72eacbe29<br>
+                            a1853eca7c7cc9b3284d9f91a27f88a4<br>
+                            d75dbd6d1a4e14db1deb9d479a66027a<br>
+                            3260fcbfd052121337ffd7b9175e27d6<br>
+                            5a5af20037bf6c096d7c21b09901781f<br>
+                            8644981e243b6db72a5a1ae779951acc<br>
+                            50f207163fcc448ca1c92f0684d7ca53<br>
+                            2bf548966d9f732596042bd4bb613fe6<br>
+                            71fa8d21fc965a94c99088bc7e6ad263<br>
+                            f01509181f2b21920bb2f4678e6711f5<br>
+                            1694384d1952ab9dee33c346130aea88<br>
+                            bd805a6be924ef32429f4538f72d4b9b<br>
+                            d31715d7098cbf0bd771bcc55af26162<br>
+                            95bd1e3f4ca5eb6fe0fde97155916582<br>
+                            78f17c5da35163a83e4cb55e0d8560be<br>
+                            b99834bc19bbad24580b3adfa04fb947<br>
+                            6f6179654ad5000f5df22e79c4c58404<br>
+                            38a2e462336b731aceec2501bfdc8772<br>
+                            4d78399408e3605b0a91bd2f40ff6253<br>
+                            726e4b9aa84a99321c9f06a5fb99689f<br>
+                            228709856c863ea7b614623aadd1c8b8<br>
+                            0359a9977c037fa2ddb16888580f232c<br>
+                            f27d5da236b2dee7be3d121d139ee7e3<br>
+                            77d6747db3c576327329253d93fc791b<br>
+                            05823fa16def5b8d7eba5dd9db70d92e<br>
+                            59251b907a068e66821223bfadeedca2<br>
+                            39136543e9117d842c4396f0e99f1b79<br>
+                            a9fb5cf3e8f7a465c8da0cd5789621d0<br>
+                            bd7656d444c2cd80a4f74b88b9544234<br>
+                            cd024ef739c2eb0042cea0e6963c86e8<br>
+                            be92b0d7ddbff2f36c4d9436267d3d4a<br>
+                            c5dd9539e8d4c2eb53b8dc818502ff5e<br>
+                            905a49a06e7c163ddc4a003bc59c7e01<br>
+                            1d22ed5a67ebe24f5a0fe4886c9cc1ff<br>
+                            ffbcde20e43136ba3740c72524aab8a5<br>
+                            530524db2a24c4cda31726822c8fdb49<br>
+                            b90091604524151559d3d231fc88a52d
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <p><a href="../challenge_assets/dump.txt" target="_blank">Download password dump</a></p>
+            <input type="checkbox" id="q1">
+            <label for="q1">What are the passwords?</label><br>
+        </p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><div  class="panel-heading">
+                <h4  class="panel-title">
+                  Walkthrough
+                </h4>
+                </a>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="NOTE">
+                        <b>NOTE:</b><br>
+                        We will use the tool <a href="https://gchq.github.io/CyberChef/#input=Li4uLi0vLS0tLS4vLS4uLi4vLi4uLi4vLS4uLi4vLS4uLi8tLi4uLi8tLi4vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLi4vLS4uLi4vLS0tLS4vLS0uLi4vLi4uLi0vLS0uLi4vLi4uLi4vLS4uLi4vLS0tLS4vLS4uLi4vLS0tLi4vLS0uLi4vLi0tLS0vLi4tLS0vLS0tLS0vLi4uLi0vLS4uLi4vLi4uLi0vLS0tLS4vLi4tLS0vLS0tLS0vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLS0vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLg">Hashcat Launcher</a> to work with this problem.
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+                  </a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="CodeBlock">
+                        we'reno<br>
+                        strangersto<br>
+                        love<br>
+                        y0u<br>
+                        kn0w<br>
+                        th3<br>
+                        rul32<br>
+                        4n6<br>
+                        2o<br>
+                        6o<br>
+                        I<br>
+                        A<br>
+                        FuLl<br>
+                        cOmMITmEnt'S<br>
+                        WhAT<br>
+                        I'M<br>
+                        tHINKinG<br>
+                        oF<br>
+                        y0U<br>
+                        w0uLDn'T<br>
+                        G3t<br>
+                        7Hi2<br>
+                        Fr0M<br>
+                        An9<br>
+                        O7h3R<br>
+                        gU9<br>
+                        |<br>
+                        Ju$7<br>
+                        w@nN@<br>
+                        T3||<br>
+                        y0|_|<br>
+                        H0\/\/<br>
+                        |'m<br>
+                        f33|iNG<br>
+                        G0++@<br>
+                        m@K3<br>
+                        Y0|_|<br>
+                        UNd3rsT@nD<br>
+                        never12<br>
+                        gonna872<br>
+                        give19#<br>
+                        you^&1<br>
+                        up()8<br>
+                        123never<br>
+                        456gonna<br>
+                        &*9let<br>
+                        )(1you<br>
+                        1*3down
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <a href="" class="close">&times;</a>
+    </div>
+</div>

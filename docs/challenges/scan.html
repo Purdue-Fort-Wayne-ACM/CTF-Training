@@ -50,7 +50,7 @@
         </header>
         <main>
             <content>
-                <h1>Web Application Security</h1>
+                <h1>Scanning</h1>
                 <h2>
                     Challenges
                 </h2>
@@ -59,14 +59,8 @@
                     <div class="catSection" onclick="location.href='#CH1'">
                         <h3>Challenge 1 (Easy)</h3>
                         <hr>
-                        <p>Attempt to log into an admin only web panel.</p>
+                        <p>Discover key information about a server given only its URL.</p>
                     </div>
-                    <div class="catSection" onclick="location.href='#CH2'">
-                        <h3>Challenge 2 (Medium)</h3>
-                        <hr>
-                        <p>Attempt to recreate a vulnerability on a server.</p>
-                    </div>
-                    
                 </section>
             </content>
         </main>
@@ -81,14 +75,17 @@
 <div id="CH1" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
     <div class="challenge">
         <h1>
-            Challenge 1 - Admins Only
+            Challenge 1 - Ping
         </h1>
         <hr>
         <p>
-            We found this vulnerable employee panel website, can you login to the site?<br>
-            <div><iframe src="../employeepanel/index.html"></iframe></div><br>
+            We think that there is something is hiding in the code of scanme.nmap.org, can you check it out and see what you can find?<br><br>
             <input type="checkbox" id="q1">
-            <label for="q1">Can you log into the site?</label><br>
+            <label for="q1">How many open ports are there?</label><br>
+            <input type="checkbox" id="q2">
+            <label for="q2">What is the most likely Operating system of the server?</label><br>
+            <input type="checkbox" id="q3">
+            <label for="q3">How long has the server been operational?</label>
         </p>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -102,57 +99,28 @@
                 <div class="panel-body">
                     <br>
                     <div class="NOTE">
-                        <b>NOTE:</b>
-                        <p>
-                            We will use the tool <a href="https://gchq.github.io/CyberChef/#input=Li4uLi0vLS0tLS4vLS4uLi4vLi4uLi4vLS4uLi4vLS4uLi8tLi4uLi8tLi4vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLi4vLS4uLi4vLS0tLS4vLS0uLi4vLi4uLi0vLS0uLi4vLi4uLi4vLS4uLi4vLS0tLS4vLS4uLi4vLS0tLi4vLS0uLi4vLi0tLS0vLi4tLS0vLS0tLS0vLi4uLi0vLS4uLi4vLi4uLi0vLS0tLS4vLi4tLS0vLS0tLS0vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLS0vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLg">Cyberchef</a> to work with this problem.
-                        </p>
+                        <b>NOTE:</b><br>
+                        We will use the tool <a href="https://gchq.github.io/CyberChef/#input=Li4uLi0vLS0tLS4vLS4uLi4vLi4uLi4vLS4uLi4vLS4uLi8tLi4uLi8tLi4vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLi4vLS4uLi4vLS0tLS4vLS0uLi4vLi4uLi0vLS0uLi4vLi4uLi4vLS4uLi4vLS0tLS4vLS4uLi4vLS0tLi4vLS0uLi4vLi0tLS0vLi4tLS0vLS0tLS0vLi4uLi0vLS4uLi4vLi4uLi0vLS0tLS4vLi4tLS0vLS0tLS0vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLS0vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLg">zenmap</a> to work with this problem.
                     </div>
-                    <p>
-                        We can see that the first encryption measure was into a cipher that replaces different characters with <code>.</code> or <code>-</code> and seperates different characters with <code>/</code>. This cipher is most likely a morse code cipher to start out with.
-                    </p>
-                    <p>
-                        After plugging in a <code>From Morse Code</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be going between 0 and F, so it is likely in hexidecimal.
-                    </p>
-                    <p>
-                        Plugging in a <code>From Hex</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be in regular text, just scrambled. There are a few common scramble ciphers (or shift ciphers). However, two main ones use a number as a key, a rail-fence cipher and a caesar cipher (or ROT). Let's try them both set to 10.
-                    </p>
-                    <p>
-                        We are going to plug in both for our Cyberchef (order does not matter). If you search for caesar cipher in the <i>operations</i> section of Cyberchef, there won't be any results. So we will want to use a ROT cipher instead. We can use ROT13 and modify the settings. We will also want to add a <code>Rail Fence Cipher Decode</code>. Let's try setting the <i>Key</i> for the Rail Fence cipher to 10 and the <i>Amount</i> for the ROT13 to 10 as well.
-                    </p>
                 </div>
               </div>
             </div>
-        </div>
-
-        <a href="" class="close">&times;</a>
-    </div>
-</div>
-<div id="CH2" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
-    <div class="challenge">
-        <h1>
-            Challenge 2 - OurSpace
-        </h1>
-        <hr>
-        <p>
-            We have been getting reports that the popular blog site OurSpace has been getting attacked lately. Can you find out how?<br>
-            <br><iframe src="../ourspace/index.html"></iframe><br>
-            <br>
-            <input type="checkbox" id="q1">
-            <label for="q1">Can you recreate the attack that this website is vulnerable to?</label><br>
-        </p>
-        <div class="panel-group" id="accordion1">
             <div class="panel panel-default">
-                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3"><div  class="panel-heading">
-                    <h4  class="panel-title">Walkthrough</h4>
-                </a>
-              </div>
-              <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p></p>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><div  class="panel-heading">
+                  <h4  class="panel-title">
+                    Answers
+                  </h4>
+                  </a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <a href="" class="close">&times;</a>
-        </div>
+        <a href="" class="close">&times;</a>
     </div>
 </div>

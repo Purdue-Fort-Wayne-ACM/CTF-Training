@@ -73,18 +73,6 @@ code {
     border-radius: 4px
 }
 
-pre {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    display: block;
-    padding: 9.5px;
-    margin: 10px 0 10px 0;
-    font-size: 13px;
-    color: #333;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow-y: auto;
-}
 
 pre code {
     padding: 0;
@@ -145,6 +133,19 @@ em {
     padding: 4px 12px;
     font-family: "Nunito", sans-serif;
     border-radius: 4px
+}
+
+.CodeBlock {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    display: block;
+    padding: 9.5px;
+    margin: 10px 0 10px 0;
+    font-size: 13px;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow-y: auto;
 }
 
 iframe {
