@@ -3,7 +3,7 @@
         <!--SEO and Meta-->
         <meta charset="UTF-8">        
         <meta name="description" content="Learn how to be successful in CTFs through a collection of example challenges that you might face with walkthroughs and answers.">
-        <meta name="keywords" content="PFW, PFW ACM, ACM, CTF, Capture the Flag, Cybersecurity, cyber, security, NCL, national cyber league, norweigen cruse lines, education">
+        <meta name="keywords" content="PFW, PFW ACM, ACM, CTF, Capture the Flag, Cybersecurity, cyber, security, NCL, national cyber league, Norwegian cruse lines, education">
         <meta name="author" content="Purdue University Fort Wayne Association for Computing Machinery Officer Committee">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CTF Example Challenges</title>
@@ -58,7 +58,7 @@
                     In this section we will be identifying common ciphers used and how to decode them.
                 </p>
                 <p>
-                    We call text we are decoding 'Ciphertext' and the text we feed in or get out of the encryption algorithm 'Plaintext'.
+                    We call the text we are decoding 'Ciphertext' and the text we feed in or get out of the encryption algorithm 'Plaintext'.
                 </p>
                 <h2>
                     Challenges
@@ -85,7 +85,6 @@
         </footer>
     </body>
 </html>
-
 
 <div id="CH1" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
     <div class="challenge">
@@ -119,16 +118,16 @@
                         We will use the tool <a href="https://gchq.github.io/CyberChef/#input=Li4uLi0vLS0tLS4vLS4uLi4vLi4uLi4vLS4uLi4vLS4uLi8tLi4uLi8tLi4vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLi4vLS4uLi4vLS0tLS4vLS0uLi4vLi4uLi0vLS0uLi4vLi4uLi4vLS4uLi4vLS0tLS4vLS4uLi4vLS0tLi4vLS0uLi4vLi0tLS0vLi4tLS0vLS0tLS0vLi4uLi0vLS4uLi4vLi4uLi0vLS0tLS4vLi4tLS0vLS0tLS0vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLS0vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLg">Cyberchef</a> to work with this problem.
                     </div>
                     <p>
-                        We can see that the first encryption measure was into a cipher that replaces different characters with <code>.</code> or <code>-</code> and seperates different characters with <code>/</code>. This cipher is most likely a morse code cipher to start out with.
+                        We can see that the first encryption measure was into a cipher that replaces different characters with <code>.</code> or <code>-</code> and separate different characters with <code>/</code>. This cipher is most likely a morse code cipher to start out with.
                     </p>
                     <p>
-                        After plugging in a <code>From Morse Code</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be going between 0 and F, so it is likely in hexidecimal.
+                        After plugging in a <code>From Morse Code</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be going between 0 and F, so it is likely in hexadecimal.
                     </p>
                     <p>
-                        Plugging in a <code>From Hex</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be in regular text, just scrambled. There are a few common scramble ciphers (or shift ciphers). However, two main ones use a number as a key, a rail-fence cipher and a caesar cipher (or ROT). Let's try them both set to 10.
+                        Plugging in a <code>From Hex</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be in regular text, just scrambled. There are a few common scramble ciphers (or shift ciphers). However, two main ones use a number as a key, a rail-fence cipher and a Caesar cipher (or ROT). Let's try them both set to 10.
                     </p>
                     <p>
-                        We are going to plug in both for our Cyberchef (order does not matter). If you search for caesar cipher in the <i>operations</i> section of Cyberchef, there won't be any results. So we will want to use a ROT cipher instead. We can use ROT13 and modify the settings. We will also want to add a <code>Rail Fence Cipher Decode</code>. Let's try setting the <i>Key</i> for the Rail Fence cipher to 10 and the <i>Amount</i> for the ROT13 to 10 as well.
+                        We are going to plug in both for our Cyberchef (order does not matter). If you search for Caesar cipher in the <i>operations</i> section of Cyberchef, there won't be any results. So we will want to use a ROT cipher instead. We can use ROT13 and modify the settings. We will also want to add a <code>Rail Fence Cipher Decode</code>. Let's try setting the <i>Key</i> for the Rail Fence cipher to 10 and the <i>Amount</i> for the ROT13 to 10 as well.
                     </p>
                 </div>
               </div>
@@ -156,7 +155,7 @@
 <div id="CH2" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
     <div class="challenge">
         <h1>
-            Challenge 2 - Stegenography
+            Challenge 2 - Steganography
         </h1>
         <hr>
         <p>
@@ -180,13 +179,13 @@
               <div id="collapse3" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
-                        There are only a few ways to hide information in an image without visually distorting the image. We could hide the data in the metadata, unused space in the file, or in the image itself. After analyzing the image's metadata and using the unix command <code>strings {FILE}</code> on it, we can see that the data must be hidden in a different way. The image itself...                      
+                        There are only a few ways to hide information in an image without visually distorting the image. We could hide the data in the metadata, unused space in the file, or in the image itself. After analyzing the image's metadata and using the UNIX command <code>strings {FILE}</code> on it, we can see that the data must be hidden in a different way. The image itself...                      
                     </p>
                     <p>
                         When we hide the data inside the image itself, we call it steganography. As we know, images are made up of pixels. Each pixel stores three values: R (Red), G (Green), and B (Blue); each ranging from 0 to 255. If we google <code>steganography decoder</code>, we can see several sites right away. A few will give gibberish, but some sites like <a href="https://futureboy.us/stegano/decinput.html" target="_blank">Steganographic Decoder</a> and <a href="https://www.aperisolve.com/" target="_blank">Aperi'Solve</a> will give us the correct plaintext. Both of these sites use a similar technique to find the information.
                     </p>
                     <div class="NOTE">
-                        <b>Aside:</b> Images are stored in pixels, as each pixel is a set of three values with a range of 256, this results in 256<sup>3</sup> different combinations or approximately 16,777,216 different colors that it can display. However, the average human eye can only detect around a million different colors. This gives us plenty of room to hide data by modifing small values of pixels. By changing small values in each pixel we can store our information in the image and have it visually look identical to the unmodified image.
+                        <b>Aside:</b> Images are stored in pixels, as each pixel is a set of three values with a range of 256, this results in 256<sup>3</sup> different combinations or approximately 16,777,216 different colors that it can display. However, the average human eye can only detect around a million different colors. This gives us plenty of room to hide data by modifying small values of pixels. By changing small values in each pixel, we can store our information in the image and have it visually look identical to the unmodified image.
                     </div>
                 </div>
               </div>

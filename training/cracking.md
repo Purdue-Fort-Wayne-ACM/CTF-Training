@@ -67,6 +67,41 @@ b90091604524151559d3d231fc88a52d
 <summary>Walkthrough</summary>
 </details>
 
+The first step in password cracking is hash identification. In a computer, your password is not stored as plain text (human-readable) instead, it is stored in something called a hash. These hashs are the product of a function called a hash function, these functions are designed to generate a unique identifier value that can be used to represent a value instead of the value itself. However, some hash functions remove data so that the hash generated fits a certain length. This means that some insecure hashes (like the ones above) are vulnerable to attacks.   
+
+After running these through a hash identifier, we can see that these passwords were stored using an MD5 hash algorithm. To solve this, we can use two methods:Google (most of these should be solvable on these sites)
+ 2. a password cracking software like ophcrack or hashcat.
+
+For this, we are going to be using hashcat.
+
+Hashcat has multiple different settings that we will need to know. Typically a call to hashcat will be in the format of `hashcat -m {FORMAT_ID} -a {ATTACK_ID} {HASH or HASH_FILE} {OTHER PARAMETERS}`. For MD5 hashs, the `FORMAT_ID` is `0`. To recover the passwords we will use the following commands.
+
+```bash
+hashcat -m0 -a7 -1 {HASHFILE} ?s?d ?1?1?1 lyrics.txt
+hashcat -m0 -a3 -1 {HASHFILE} ?d?l ?1?1?1?1?1?1
+hashcat -m0 -a3 -1 {HASHFILE} ?d?u?l ?1?1?1?1?1?1
+hashcat -m0 -a3 {HASHFILE} ?d?u?l?s ?1?1?1?1?1?1
+```
+After cracking some wiht the above methods, we can see that it could be lyrics *Never Going to Give You Up* by Rick Astely. Let's try to put the lyrics to the song in a text file name lyrics.txt and feed it into our program.
+```bash
+hashcat -m0 -a0 {HASHFILE} lyrics.txt
+hashcat -m0 -a1 {HASHFILE} lyrics.txt lyrics.txt
+hashcat -m0 -a6 {HASHFILE} lyrics.txt ?d?d?d
+hashcat -m0 -a7 {HASHFILE} ?d?d?d lyrics.txt
+hashcat -m0 -a6 {HASHFILE} lyrics.txt -j "" -1 ?d?s ?1?1?1
+```
+For a breakdown on what the `ATTACK_ID` does here is a small key:
+```bash
+-a 0 :: Straight (no modification)
+-a 1 :: Combination (Combines two wordlists)
+-a 3 :: Brute-force (try everythign)
+-a 6 :: Hybrid Wordlist + Mask (append a wordlist with a selected mask)
+-a 7 :: Hybrid Mask + Wordlist (prepend a wordlist with a selected mask)
+-a 9 :: Association ()
+```
+
+There is a lot of depth in the software so try to mess around with it!
+
 <details>
 <summary>Answers</summary>
 

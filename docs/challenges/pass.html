@@ -59,7 +59,7 @@
                     <div class="catSection" onclick="location.href='#CH1'">
                         <h3>Challenge 1 (Medium)</h3>
                         <hr>
-                        <p>Exercise your reverse image searching skills to determine where a TV show was filmed.</p>
+                        <p>Recover some passwords that were recovered from a captured hard drive.</p>
                     </div>
                 </section>
             </content>
@@ -158,10 +158,61 @@
               </div>
               <div id="collapse1" class="panel-collapse collapse">
                 <div class="panel-body">
+                    <br>
                     <div class="NOTE">
                         <b>NOTE:</b><br>
-                        We will use the tool <a href="https://gchq.github.io/CyberChef/#input=Li4uLi0vLS0tLS4vLS4uLi4vLi4uLi4vLS4uLi4vLS4uLi8tLi4uLi8tLi4vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLi4vLS4uLi4vLS0tLS4vLS0uLi4vLi4uLi0vLS0uLi4vLi4uLi4vLS4uLi4vLS0tLS4vLS4uLi4vLS0tLi4vLS0uLi4vLi0tLS0vLi4tLS0vLS0tLS0vLi4uLi0vLS4uLi4vLi4uLi0vLS0tLS4vLi4tLS0vLS0tLS0vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLS0vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLg">Hashcat Launcher</a> to work with this problem.
+                        We will use the tool Hashcat to work with this problem.
                     </div>
+                    <p>
+                        The first step in password cracking is hash identification. In a computer, your password is not stored as plain text (human readable) instead, it is stored in something called a hash. These hashs are the product of a function called a hash function, these functions are designed to generate a unique identifier value that can be used to represent a value instead of the value itself. However, some hash functions remove data so that the hash generated fits a certain length. This means that some insecure hashes (like the ones above) are vulnerable to attacks.
+                    </p>
+                    <p>
+                        After running these through a hash identifier, we can see that these passwords were stored using an MD5 hash algorithm. To solve this, we can use two methods:
+                    </p>
+                    <ol>
+                        <li>
+                            google (most of these should be solvable on these sites)
+                        </li>
+                        <li>
+                            a password cracking software like ophcrack or hashcat.
+                        </li>
+                    </ol>
+                    <p>
+                        For this, we are going to be using hashcat.
+                    </p>
+                    <p>
+                        Hashcat has multiple different settings that we will need to know. Typically a call to hashcat will be in the format of <code>hashcat -m {FORMAT_ID} -a {ATTACK_ID} {HASH or HASH_FILE} {OTHER PARAMETERS}</code>. For MD5 hashs, the <code>FORMAT_ID</code> is <code>0</code>. To recover the passwords we will use the following commands.
+                    </p>
+                    <div class="CodeBlock">
+                        hashcat -m0 -a7 -1 {HASHFILE} ?s?d ?1?1?1 lyrics.txt<br>
+hashcat -m0 -a3 -1 {HASHFILE} ?d?l ?1?1?1?1?1?1<br>
+hashcat -m0 -a3 -1 {HASHFILE} ?d?u?l ?1?1?1?1?1?1<br>
+hashcat -m0 -a3 {HASHFILE} ?d?u?l?s ?1?1?1?1?1?1
+                    </div>
+                    <p>
+                        After cracking some wiht the above methods, we can see that it could be lyrics <i>Never Going to Give You Up</i> by Rick Astely. Let's try to put the lyrics to the song in a text file name lyrics.txt and feed it into our program.
+                    </p>
+                    <div class="CodeBlock"> 
+                        hashcat -m0 -a0 {HASHFILE} lyrics.txt<br>
+hashcat -m0 -a1 {HASHFILE} lyrics.txt lyrics.txt<Br>
+hashcat -m0 -a6 {HASHFILE} lyrics.txt ?d?d?d<br>
+hashcat -m0 -a7 {HASHFILE} ?d?d?d lyrics.txt<br>
+hashcat -m0 -a6 {HASHFILE} lyrics.txt -j "" -1 ?d?s ?1?1?1
+                    </div>
+                    <p>
+                        For a breakdown on what the `ATTACK_ID` does here is a small key:
+                    </p>
+                    <div class="CodeBlock">
+                        -a 0 :: Straight (no modification)<br>
+                        -a 1 :: Combination (Combines two wordlists)<Br>
+                        -a 3 :: Brute-force (try everythign)<br>
+                        -a 6 :: Hybrid Wordlist + Mask (append a wordlist with a selected mask)<br>
+                        -a 7 :: Hybrid Mask + Wordlist (prepend a wordlist with a selected mask)<br>
+                        -a 9 :: Association ()
+                    </div>
+                    <p>
+                        There is a lot of depth in the software so try to mess around with it!
+                    </p>
                 </div>
               </div>
             </div>
