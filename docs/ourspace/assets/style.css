@@ -25,16 +25,18 @@ body {
 
 .blog post div {
     background-color: beige;
-    margin: 5px;
+    margin: 10px 5px 10px 5px;
     padding: 1px 10px 1px 10px;
     border-radius: 5px;
 }
 
 .blog post h3 {
     color: black;
+    font-weight: bold;
 }
 .blog post p {
     color: black;
+    font-style: italic;
 }
 
 form {
