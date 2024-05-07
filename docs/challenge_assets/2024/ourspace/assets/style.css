@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: "Quicksand", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+body {
+    background-color: #4A545D;
+    margin: auto;
+    padding:10%;
+    background-position: center;
+    width: 75%;
+}
+
+.blog div {
+    background-color: #DDC077;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border-color: #DDC077;
+}
+
+.blog post div {
+    background-color: beige;
+    margin: 10px 5px 10px 5px;
+    padding: 1px 10px 1px 10px;
+    border-radius: 5px;
+}
+
+.blog post h3 {
+    color: black;
+    font-weight: bold;
+}
+.blog post p {
+    color: black;
+    font-style: italic;
+}
+
+form {
+    background-color: #DDC077;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border-color: #DDC077;
+}
+
+form * {
+    color: black;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html id = "content">
+    <head>
+        <link rel="stylesheet" href="./assets/style.css" type="text/css">
+        <script src="./assets/scripts.js"></script>
+        <title>OurSpace</title>
+    </head>
+    <body onload="onload()">
+        <h1>OurSpace</h1>
+        <p>Welcome to OurSpace, a place where you can post anything that you want!</p>
+        <h2>Recent Posts</h2>
+        <blog class="blog">
+            <div id="BLOG">
+                <post class="post">
+                    <div>
+                        <h3>First Post</h3>
+                        <p>Hi! I'm a new user. Please be nice to me!</p>
+                    </div>
+                </post>
+                <post class="post">
+                    <div>
+                        <h3>[REDACTED]</h3>
+                        <p>Post was deleted by an admin</p>
+                    </div>
+                </post>
+                <post class="post">
+                    <div>
+                        <h3>New Feature!</h3>
+                        <p>This is so cool! Did you know that we can post images on this site?!</p>
+                        <p>See, look at this!</p>
+                        <img width="100%" style="margin-bottom: 5px;border-radius: 5px;" src="https://upload.wikimedia.org/wikipedia/commons/4/49/M%C3%A9li%C3%A8s%2C_L%27homme-orchestre_%28Star_Film_262-263%2C_1900%29_02.jpg">
+                    </div>
+                </post>
+                <post class="post">
+                    <div>
+                        <h3>[REDACTED]</h3>
+                        <p>Post was deleted by an admin</p>
+                    </div>
+                </post>
+                <post class="post">
+                    <div>
+                        <h3>ALERT!</h3>
+                        <p>We have noticed that hackers have been able to inflitrate the site!<br>Be sure not to use the add post form below until we are able to fix it!<br><br>Thanks,<br>-OurSpace Admin</p>
+                    </div>
+                </post>
+            </div>
+        </blog>
+        <h2>Add Post</h2>
+        <form onsubmit="OnSubmit()">
+            <label for="subject">Subject: </label><br>
+            <input type="text" id="subject" name="subject"><br><br>
+            <label for="message">What do you want to say?<br></label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

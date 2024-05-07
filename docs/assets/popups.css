@@ -43,5 +43,6 @@
     border-radius: 4px;
     max-height: 80%;
     max-width: 60%;
+    min-width: 40%;
     overflow-y: auto;
 }

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+body {
+    background-image: url("../assets/images/bg.jpg");
+    background-size: auto;
+    background-position: center;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Kode Mono", monospace;
+}
+
+div {
+    background-color: rgba(42,42,42, 0.6);
+    color: white;
+    font-weight: bold;
+    border: 6px solid #424242;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}

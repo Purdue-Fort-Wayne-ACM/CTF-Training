@@ -1,0 +1,462 @@
+{
+    "OSINT": [
+        {
+            "name": "The Village",
+            "difficulty": "Easy",
+            "short_description": "Exercise your reverse image searching skills to determine where a TV show was filmed.",
+            "description": "One of our field agents was captured by mysterious forces. Luckily, we got one picture from them before they went off the grid. Can you help us find them based on the image?",
+            "hasImage": true,
+            "assetURL": "../challenge_assets/2024/OSINT_q1_q1.png",
+            "questions": [
+                "Where was this image shot?",
+                "What is the name of the series this image was from?",
+                "What is the name of the episode this image was from?"
+            ],
+            "answers": [
+                "35d199bc642f05baaac575557450c74a7a21e4353ad0e1ca75dc4b6a96837f721ab7129d59eaf0f76800228e9f16c87b42cd4bee7a3a49b68e8cff0500cbd766",
+                "568abc7a9a55626a17e4317c163555c44e253a98ff1799e5f8fe901c2c8d1ad4d35ff07e2bc05cccb3ed4b9dff16b00e0d99d8469889bd414cb2303823908405",
+                "eb7a618236418b1b970141e3bc9f5a0ccb9d2cbbafccb04626228930dc9def69868d74ebb5d33957d4cff65bc717aed41effcf3fc5ea0fb44481d5df02d5c398"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": "How would we be able to get a location from a screengrab? In this section we discuss a fairly simple way to do just that!"
+                },
+                {
+                    "type": "p",
+                    "text": "How we would typically go about solving this type of question is to first start by reverse image searching. Most search engines will have an option when right clicking an image to do a reverse image search. This is essentially like googling, but instead of words you are googling with images. For instance, in chrome, you can right click on an image and select the <code>Search Image with Google</code> to open a side pane. This side pane will have the results of your image search in them and will link to external sites."
+                },
+                {
+                    "type": "p",
+                    "text": "In our case, as this image is from a TV show (we can tell this both by the question and the way that the image is composed), we will likely get a lot of hits. From there, once we get the episode number and series name (it should be one of the first results), we can use the google search <code>Where was {SERIES NAME}</code> filmed and get all of the required information."
+                }
+            ]
+        },
+        {
+            "name": "The Bridge",
+            "difficulty": "Easy",
+            "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
+            "description": "One of our operatives sent us this photo. We think that they are close to catching a SAB3RT00TH asset. Can you help us find them so we can send backup?",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/iMG9319.jpg",
+            "questions": [
+                "What city is in the image?",
+                "What is the name of the building that is directly in front of the camera?",
+                "What is the name of the bridge that the photo was taken on?",
+                "What were the camera settings used for this image give answer in the following format (Camera Brand, Camera Model, Lens Size, Aperture, Shutter Spped, ISO)?"
+            ],
+            "answers": [
+                "db2649fff7bec1629136fe845d9d5afde61756b715793791e6a94e57b7317aa83ba0eea637bf363d01d9437a8a0713af50749433031fa91835c86f036701e5b8",
+                "400a899b68a4b943feabe9246e4f761100247606a9e928ad686b9ce3949a8cce50d099e18cb1b52db6e74879dfed34c3016b7707bee9efd5c67373dd4a5f837e",
+                "a6b8485c253071959d75dfa823b41fe818dbed71081e9718a22cd2ca42a96d7a7561512a667a4cd76c30baaeca08e71e8269251cc07b225d49baa6b2de672f11",
+                "e5e190c00c772a9db53306d47216ed042945c3c6dac9771a39634a2997b08c369a13debad84b311052bf54ec9e6c26f4fa9d390d8d4ca7da7d04070766128e2d"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": "Let's start with the camera settings. When you take a picture, the phone or camera will save a little bit of information about the image in addition to the picture taken. This 'metadata' as we call it stores settings such as lens, aperture (how much light was let in), shutter speed (how long the shutter was open for), and more. There are plenty of free metadata viewers online."
+                },
+                {
+                    "type": "p",
+                    "text": "After finding the viewing the metadata, we found the camera settings, but unfortunately not the location of the image. We can try reverse image search to see if there are any hits. In doing this, we can see that there are two possible hits, one on a photo site and one on an Instagram post. Both were taken in the same city, but can we get down to the bridge? The Instagram post could help us with that. It was taken by Cloud Gate (aka the 'Chicago Bean'). On google maps, it shows that there are only two bridges near the bean, one to the east and one to the south. The one to the east doesn't seem to fit, so it must be the one to the south! We can then check what building the bridge is connecting."
+                }
+            ]
+        },
+        {
+            "name": "Versailles",
+            "difficulty": "Medium",
+            "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
+            "description": "A note was dropped off at our main office. Can you figure out what it could mean?",
+            "hasImage": false,
+            "assetCode": "Jenna Coleman: Deep Breath<br>Karen Gillan: The Girl Who Waited<br>Catherine Tate: Forest of the Dead<br>Billie Piper: ???",
+            "questions": [
+                "What is the missing title?"
+            ],
+            "answers": [
+                "400465055c560315f4c6dfced37313975d8586f2612d20059c431532f65dcbf8c37c41513e5ace3e156ac190c548492d1cc8d46ed354b64a016063feef2f85dd"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": "These seem to follow the same pattern, a name then a title. We can make a guess that these might be author's and their books or something similar. If we google one of the names, we can see that they are actors. If we google the title, we can see that these are all names of Doctor Who episodes. Let's use IMDb to figure out any other information about each episode. Let's try it with the last one, the <i>Forest of the Dead</i>."
+                },
+                {
+                    "type": "p",
+                    "text": "Looking at the cast, we can see that <i>Catherine Tate</i> is one of the actors who credited for the episode. We seem to be on the right track! If we do this with the others, we will also see that they follow the same pattern."
+                },
+                {
+                    "type": "p",
+                    "text": "Let's check the details of each episode to see if anything matches. If we look under filming locations, we can see that they all share a common filming location! Looking into this, we see that there are a total of 7 (as of writing) episodes that use this location on IMDb."
+                },
+                {
+                    "type": "p",
+                    "text": "To determine what the correct episode is, we can check which one (outside of the three that we know) has the actor <i>Billie Piper</i> credited in."
+                }
+            ]
+        },
+        {
+            "name": "Twister",
+            "difficulty": "Medium",
+            "short_description": "Take your pattern recognition skills to another level as you find the missing element of a complex pattern.",
+            "description": "We are tracking some SAB3RT00TH agents and found this slip of paper. We think that if we find the next value in the series, we could track down the agents.",
+            "hasImage": false,
+            "assetCode": "Pecos Hank: (32.8,-89.11),(33.04,-88.65),6,3,1930<br>Tim Samaras (RIP): (34.05,-88.45),(34.31,-87.92),137,23,2042<br>Reed Timmer: (34.39,-85.98),(34.77,-85.52),0,25,2319<br>Jo Harding: ???",
+            "questions": [
+                "What is the value of Jo Harding? (Give this in the same format as below)"
+            ],
+            "answers": [
+                "de1a7ae3844d578d5ddd4ee75e5357dbc8ceff1667cf7257f7d5a86006fcb280d1ccc30543b4c49fea33f75f56262fd79338dcaec31fab21ce380bde63cbcdea"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": "At first glance, we can tell that the number pairs seem to be close together and look like Latitude/Longitude pairs. The middle two numbers seem odd, but the last number could be a year. However, this probably is not the case as we quickly go beyond the current date and some of these data points would be in the future. So, we have only three bits of actionable information: the name, the first Latitude/Longitude pair, and the second Latitude/Longitude pair. Let's try googling these names to start."    
+                },
+                {
+                    "type": "p",
+                    "text": "It seems that these are storm chasers. So, we might be tracking storms or tornadoes with these data points. Let's try googling these Latitude/Longitude points and putting them on google maps."
+                },
+                {
+                    "type": "p",
+                    "text": "After putting them in Google maps, we can see that these are in Alabama and Mississippi. As we can assume that these are tornadoes, one pair of Latitude/Longitude should be the start or end point of the path the storm took."
+                },
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>This walkthrough will assume that you are using the <a target='_blank' href='https://mrcc.purdue.edu/gismaps/cntytorn'>MRCC Database</a> or <a target='_blank' href='https://tornadoarchive.com/explorer/2.2.1/'>Tornado Archive</a>"
+                },
+                {
+                    "type": "p",
+                    "text": "After the google mapping of the Lat/Long pairs, we can see that one is in the eastern side of Mississippi towards the center and the other two are in the northern part of Alabama."
+                },
+                {
+                    "type": "p",
+                    "text": "After finding them in the database, we can see that they actually share a lot more than we first suspected! They are all EF5s that happened during the same outbreak! There should be only one other tornado that matches these criteria, try filtering for it on the database!"
+                }
+            ]
+        },
+        {
+            "name": "Spicy",
+            "difficulty": "Hard",
+            "short_description": "Test your skills as you combine your reverse image searching skills, pattern recognition, and powers of observation to gain key information with minimal starting information.",
+            "description": "We stumbled upon this video, we think it contains crucial information. What can you find out?",
+            "hasImage": true,
+            "assetURL": "../challenge_assets/2024/OSINT_q5_q1.png",
+            "questions": [
+                "What is the name of the video?",
+                "Where was the video being reacted to originally posted?",
+                "What country is the video being reacted to shot in?",
+                "What model component was the cause of the critical failure?"
+            ],
+            "answers": [
+                "4d5b797e07532dcd007b0fd2fd02493c3e124483f8e18d4fda3241e7fc9043af6619691464962b6237d6f322284c9144d05137d63dfdb990f111594d2a8f53b5",
+                "bc7c7e84f79a953016ffbf5c63155a0199a36b0a1ee527b0a9e8c0633fd802da72273dbac2579a1c1a21010adf44a0c6e80b0bc772cf4e260cc3063d43d6049c",
+                "4107eb84daf2445dac3201c3646963f5b405f84434df0616945a33065ccfe31cc7a3305fe31636cfbc28b281680df578b04a5e28f678e7901593d8d30bdde135",
+                "0b83538da68e8d9329923d6ae90eb7346b8cd272ee61d1dd36567fee1775e1e5fc2d14ec0c029db6f98bc2d2540b318cc0fb3db2499923657e9fe8505c6a8c05"
+            ],
+            "walkthrough": [
+                {
+                    "type":"p",
+                    "text":"You will quickly realize that reverse image search does not give any valuable information. So, we will need to resort to our powers of observation! We know that this is from a video. We know this both from the way that the question is asked and how the image is composed like a 'react' video from YouTube or other popular video sharing platforms. For this section, we will assume that this image is taken from a YouTube video given the aspect ratio. So, we have an idea of where to search once we get more information on the image."
+                },
+                {
+                    "type":"p",
+                    "text":"Looking specifically at the video that is being reacted to in the image we can gain some more information. We can clearly see that the video has something on fire, however, the fire looks odd. Instead of being a more traditional match/firewood/etc. fire, it is a brilliant white. This might seem to be inconsequential, but we can gain more information from this. Next looking closely, we can see that the video was taken in what seems to be a parking lot. Looking at this, it seems that the thing burning is likely made of some metal. To determine this, we can look up <code>metals that burn white</code>, we get metals such as Magnesium, Titanium, Nickle, Chromium, and Aluminum. Given that the burning object takes up a small amount of space in the parking spot, we can assume that the burning metal object is also lightweight. Some common metals that are used in transportation and are light weight, we can safely assume that it is made of either aluminum or titanium. So, we know what the item is made of, but what could it be? For that, we can look up things that are commonly made of aluminum and are small. This will lead to something like a bike or scooter."
+                },
+                {
+                    "type": "p",
+                    "text": "Both of these also have 'electric' versions of them. Next, we can see what powers the electric version of a bike or scooter. This will lead to a type of battery. Our instinct is confirmed as well given our last question is asking what type of battery is the cause of the fire. After googling <code>electric scooter battery</code>, we can see that they are commonly using Lithium-Ion batteries."
+                }, 
+                {
+                    "type":"p",
+                    "text": "Looking at it we know now; we know that we are looking for a YouTube video, in which the YouTuber is reacting to a video of an e-scooter or e-bike on fire that was powered by a lithium-ion battery that failed. Knowing this, we know that the YouTube video will likely not have 'Lithium Ion Battery', 'e-bike fire', or 'e-scooter fire'. We can then return to google for more information. When googling <code>lithium-ion battery 'slang'</code>, we will get 'spicy pillow' as slang/common saying for 'Lithium-Ion Batteries'. This seems like something that might be a good YouTube video title. So, let's google <code>YouTuber reacts to spicy pillows</code>. The first result shows a YouTuber or seems to look similar to the one in our screenshot. Watching/skimming through the first result on YouTube, we can quickly confirm that this is the video that the screenshot was taken from."
+                },
+                {
+                   "type": "p",
+                   "text":"We can then go to the subreddit that posted the video using the keywords that were given in the video right before the YouTuber's reaction to the video. We should be able to find the video that was being reacted to. It turns out that the video was reposted from another subreddit. The subreddit that it was originally posted on is a country's subreddit, so we have answer 3. We can then use google translate to determine the rest of the answers."
+                }
+            ]
+        },
+        {
+            "name": "New Ride",
+            "difficulty": "Easy",
+            "short_description": "Exercise your reverse image searching skills to determine key information about a car.",
+            "description": "Our field officers tracked the evil SAB3RT00TH to a secret hiding spot. We have seen this car a few times. Can you identify the make, model, and year of the car so that we can issue a warning to law enforcement?",
+            "hasImage": true,
+            "assetURL": "../challenge_assets/2023/car.jpg",
+            "questions": [
+                "What is the make of the car?",
+                "What is the model of the car?",
+                "What is the year of the car?"
+            ],
+            "answers": [
+                "faa3d304760a9b150d84c00c4290a0b148b88838271373aed0e3d2735d2f538e4e95192bfb4bf18985ea0d915ab12129136342294b724ce24bc4712205b61278",
+                "b8a71510559a16569a05f59b96de9ae50366cfb717898662272b77d82f3fce7e2881f57dae14e7dd58e6bcf5bfdb01b8c358afba531124b5948abdf28167cfef",
+                "9955e8eeabf92e58d06d2f592d0d8d1edbaf207219068271259ba3fbe363e1456b200704d6d07b183c8ed791ef4dfd579d2a530ec029d4235e563352c2c31135"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Shopping",
+            "difficulty": "Medium",
+            "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
+            "description": "Our intel officers intercepted some suspicious numbers. What could they mean? And what is the evil SAB3RT00TH trying to build?",
+            "questions": [
+                "What is the 992.919.91?",
+                "What is the 105.476.36?",
+                "What is the 703.755.28?",
+                "What is the 605.113.62?"
+            ],
+            "answers": [
+                "ec014f82f09581999ea3bbd57f325a7c3af706e5524e59f1d094499e5efcb1fa22b62c84f2070e2428439b650dfa41affc48149967fdf73f1e4218e0da7ff3ab",
+                "cc777ae9bbd0c4a180990f34713831b4941b3f32ef2a26c3f102048233c030f18f4b9dcbe4c11f3acb83a0855126621717a428c7fdad312889b91a4f5a601a07",
+                "b555c4ca6c480d0c48d78146c000cd21c7cd3f4e46b173808692cabc0028eac35a4152d84b05c6a30377a2668892910d36f51206d7f6bd55b04703463a14e0c5",
+                "cc777ae9bbd0c4a180990f34713831b4941b3f32ef2a26c3f102048233c030f18f4b9dcbe4c11f3acb83a0855126621717a428c7fdad312889b91a4f5a601a07"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Travel",
+            "difficulty": "Medium",
+            "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
+            "description": "Good job foiling the plans of SAB3RT00TH! We have been watching their leader for a while now and they sent this image to the SAB3RT00TH Admins, can you find out what state the leader is in?",
+            "hasImage": true,
+            "assetURL": "../challenge_assets/2023/travel.jpg",
+            "questions": [
+                "What state is the leader of SAB3RT00TH in?",
+                "What is their address?"
+            ],
+            "answers": [
+                "999dec7744816a9a9cb3a3a9bdce1f74f9339ea94097267d8852757fff1fb174135ca2f60ba1cfdea5bcf31f4fdb00052b07c0108bda34154ea30f89cb66427e",
+                "5689c34ee2b1b4d5f70cb3b40815ad951e392c08e603edc6aec150e56c274455e74bcca423b9279c23b34d1ca12c2b21df4714cc3c297cab6863e13f86ddf57a"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Recon I",
+            "difficulty": "Easy",
+            "short_description": "Exercise your googling skills as you find a variety of information.",
+            "description": "We have found some interesting email behavior from some domains. Can you get us more information about how these domains handle their emails?",
+            "questions": [
+                "What is the policy for potential fraudulent emails sent by a pfw email?",
+                "What is the policy for potential fraudulent emails sent by a microsoft email?",
+                "What email address gets message-specific forensic information for a potentially fraudulent email sent from a microsoft account?"
+            ],
+            "answers": [
+                "33773131aad342fd29cc9efb3478770a2fd10c522e848dba433a855047ba7738d11b006635764a00e0534b62a56d22be3695873f00635330a7d115e9839a6735",
+                "571351677e4cf89cd7853a4d85eefea21f5817dda3322893441e3c16472985dd49b67c9a80635a90823d6221fd8d0c17580f913e55addb50891eacd24a70a943",                
+                "7ec2151ea5c3f1d3c6dded7e5de14a15f84591eaae251280abe7631fa2b741ed7b7586f1f6b424bd4809b6b9ec8d3b7a4cf85d9562ab339594ed1ba6b0401bc4"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Recon II",
+            "difficulty": "Easy",
+            "short_description": "Exercise your googling skills as you find a variety of information.",
+            "description": "We have some found that some SAB3RT00TH has switched how they are transmitting information. Can you crack their protocol?",
+            "questions": [
+                "When was RFC 2549 published (M/D/YYYY)?",
+                "Who published RFC 2549?",
+                "Who owns KLAF?",
+                "Who owns KFWA?"
+            ],
+            "answers": [
+                "7b8705b46afc894b0bef3e6810fa22d5a5fcd74c35239391a7b42df8e4b1508a4b339cefc3f2f96c3bca99eb9e58d5ac13b895d3562c28d705309881c6439b11",
+                "42d56581e318bbcb7e36fbc7c8dba1e9e3247e427dc72a2b9e3e298c05974fa63f7134802d54915900a6addd351f6e5894abed799681181e0ff4ac7782577b61",
+                "80eff33ab6af981380edd2ea203380b13aa11ec8bdb101f0f57f4432c19138a6120541455eebd8701837f841e5b86101679051ad127a3a4f107af19831709f3f",
+                "28cee625ff77b0c71687640702b7e22c2986d4e9d9e0c9393c9c975765698da9e862b19f3dcd916ddbf19a626b29cd4cdc6b9bc6c28d006670c57cbc3edcf166"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "The Numbers Speak to Me",
+            "difficulty": "Easy",
+            "short_description": "Use google to identify a variety of ciphers.",
+            "description": "We have found some mysterious numbers written on a sticky note that an operative managed to capture from SAB3RT00TH. Can you find what they might be?",
+            "questions": [
+                "What is 2539979203",
+                "What is 134744072",
+                "What is 3627729582"
+            ],
+            "answers": [
+                "ab6041b657e1ddf45e45f188a259b7584dbc664c4377a1ebf9e37e6f8d33619d164e7604b15157652948f008a2db5be0c9ca58f151087f938fbe0580ddf4bdce",
+                "1aae4721891b426e3389e9e76b50e727d2be6f5f247532081ddcb793638aa794aaf818181820965abcfe6b86a934c3ab75cb1f017411395bbdd0d815c2caa207",
+                "7d97069b49078b4cb1e1f548f270009fcd23705c8f90245793612958b033996a7ad50e3cdc0c7f68343d5bc59b3b5e387b08058c6bd4c324a33123f6cc2f4e06"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Old School",
+            "difficulty": "Easy",
+            "short_description": "Use google to identify a variety of ciphers.",
+            "description": "It seems that SAB3RT00TH has decided to go old school with some of their ciphers. We think that this will lead us to a dead drop location. Where could it be?",
+            "hasImage": true,
+            "assetURL": "../challenge_assets/2023/OldSchool.png",
+            "questions": [
+                "What is the hidden message?"
+            ],
+            "answers": [
+                "8bd6e47f587814f75192d63ff223624fea8448ee542dd94d6c5722deb7dca9cac108e0c7a18ece471838ddfc0a98ad9a3f0a562ebc8a01359582524a783fff02"
+            ],
+            "walkthrough": [
+                {
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Bill",
+            "difficulty": "Medium",
+            "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
+            "description": "We received this image from a field agent. We suspect that they have had an encounter with a six fingered man. Can you find out where they are before a deal is made?",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2023/Bill.jpg",
+            "questions": [
+                "Where was this image supposedly taken?",
+                "At what time was this image taken (M/D/YYYY H:MMam/pm)?",
+                "What was the type of camera used to take this image?",
+                "Where was this image actually taken?"
+            ],
+            "answers": [
+                "37d460787c8a5a5ca5b2888a35b106afd5d5c5fbe1fee1b241e4ae2872ebcee028eee4b0624b8527c1a4ab08d881385cd955edba67c6389b58662d3ff47ad01f",
+                "0dbf15dd6ceb0d23a7d675c4e18bea628c6b980ee84c04e8b9314498eb31bd6afa91ff4de8649eab902a200fa9385b440aacbbf5e08021823e5ec74bd69de192",
+                "fdfaaa3515a5cde903eb772ea6a11000ffcc910de1c87252b218d3838bb2b8b4752c17a3d02463768ca57aa51e90feaa18c4e6c27957461f47ea9276f5879f2f",
+                "d139534b749fedade19646a2c064318882c5c936bed51561327dcd9b951b72dacbfbe31d272f0d1a522b0f4b016da24c34d42cba2226f66bd9a235a0b0503149"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Blown Away",
+            "difficulty": "Medium",
+            "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
+            "description": "SAB3RT00TH was sending the attached image to one of their field agents telling them to pick up a dead drop at a certain location. We think it has something to do with where the image was taken. Can you track them down?",
+            "hasImage": true,
+            "assetURL": "../challenge_assets/2023/Tornado.jpg",
+            "questions": [
+                "What tornado is pictured?",
+                "What is this image commonly called?",
+                "Who took this photo?",
+                "What was the address where this image was taken?",
+                "(BONUS) Was the provided image modified?"
+            ],
+            "answers": [
+                "2df7f8be54739daaf8856497d443811aafe7830ea59cd342840bd3d8fcc170b7d0246a634937984a67afe238002839e67f9e141a410f8487c4ca730aec1633a0",
+                "96132bdbb7b2a23d6c929b7d523ca40d386e2bfa66e792013c3ce17f49794e8de9d3d57e328f08d73f85258afad75bce614bda7ddc2a9ac9016bb209b77c3461",
+                "1a4dbd479be69eb48c856c12f82c0a8e0cb267e2bed90e3223720f801cf44fc2ad658c429b24c3d967394f0758ba2ca74dad1fab307ff065cdbe22eaf0a2e817",
+                "e46df517a1f66b76ac3ecd69b19d48e167797534c4d1f95a0b9d20ff3395fadcf9a9248ccce0d25423ea07984269505041877347f27e31347c4132f22478925e",
+                "7573dbd5c3467c75c236abad84e7948881b0d192910d0755af74f50f2cef99cda1d57acc6d0ff600f75c6299dfde8e7ff2e5f44c9945769b8f1d946df2946195"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Alert",
+            "difficulty": "Hard",
+            "short_description": "Decode a radio transmission to get key insights.",
+            "description": "We have some found that some SAB3RT00TH have switched how they are transmitting information. Can you crack their protocol?",
+            "hasAudio": true,
+            "assetURL": "../challenge_assets/2023/radio.wav",
+            "questions": [
+                "What is the encoding method?",
+                "What counties are affected?",
+                "At what time is the event?",
+                "What is the event?",
+                "Who sent the message?"
+            ],
+            "answers": [
+                "f526c281a280e51fba6e75444bbcd837f6b90741e3a3f9ff9299a6afff9d32ec02643b79e44dccde109800b57a9d374f0a2afded4a66bca1382bbdf2e444dd46",
+                "cba57ac34dcb01698f57e75c69135921d6cbd061d902b4b689d25cbede32e77a656d126b2f424b70247c32715b2611cabe07268443440e94e1e8c8ac7310c9a4",
+                "b5e3d15e69398488973baa85241b10b37f0e0a8cbd4b2ae3f638a7d6549dafeaf4d385370360643c1007da8760354a3bbef366c3f48e9943a1206d71dc0ead66",
+                "adbfde0aff057d361aef5a3b54cf30a42a47dcd2bc6f5e8f023b84821ff12f39f4dc4bb1b20f5b826ee50e6a6fdcc484f416b247aa8dd3b9516bcf2bfec863ee",
+                "47fd8e64890900511d893431b07f34dcad2b96993645ad27b64c4f67ab24b4e9010342bf0a99f24260a2be3682e1a97b4f5a8cfe721369a0cbc9af73a61e36dc"
+            ],
+            "walkthrough": [
+{
+                    "type":"p",
+                    "text":""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        }
+    ]
+}

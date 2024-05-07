@@ -51,6 +51,14 @@ main {
     overflow-y: auto;
 }
 
+audio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -64,12 +72,21 @@ footer {
 }
 
 
-code {
+code.DARK {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     padding: 2px 4px;
     font-size: 90%;
     color: #fff;
     background-color: #555;
+    border-radius: 4px
+}
+
+code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #aeaeae;
     border-radius: 4px
 }
 
@@ -81,6 +98,39 @@ pre code {
     white-space: pre-wrap;
     background-color: transparent;
     border-radius: 0
+}
+
+.Question.wrong {
+    background-color: #ff000055;
+}
+
+img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+input {
+    border-radius: 5px;
+    padding:5px;
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+
+.check {
+    border-radius: 5px;
+    padding:5px;
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+    color: green;
+    text-align: center;
+    font-weight: bolder;
+}
+
+table {
+    width:100%;
+    background-color:#BCCBCC;
+    border-radius:5px;
+    padding:10px;
 }
 
 burger {
@@ -154,4 +204,26 @@ iframe {
     margin: auto;
     border: 1px hidden #000;
     border-radius: 4px;
+}
+
+td {
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+    padding: 0px 0px 0px 10px;
+}
+
+.bar2 {
+    border-color: #BCCBCC;
+    border-radius: 5px;
+}
+
+.DOWNLOAD {
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    background-color: #BCCBCC;
+    border-radius: 5px;
 }
