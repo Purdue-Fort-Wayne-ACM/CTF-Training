@@ -1,4 +1,4 @@
-{
+export default {
     "General": {
         "OSINT": {
             "Title": "Open-Source Intelligence",

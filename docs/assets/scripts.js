@@ -1,7 +1,7 @@
 /**
  * Import Challenges from the JSON
  */
-import CHALLENGES from "../assets/challenges.json" with { type: "json" }
+import CHALLENGES from "./challenges.js"
 
 const challenge_container = document.getElementById("challenge_container");
 const challenge_modules = document.getElementById("challenge_modules");
