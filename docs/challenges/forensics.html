@@ -1,143 +1,72 @@
 <html>
-    <head>
-        <!--SEO and Meta-->
-        <meta charset="UTF-8">        
-        <meta name="description" content="Learn how to be successful in CTFs through a collection of example challenges that you might face with walkthroughs and answers.">
-        <meta name="keywords" content="PFW, PFW ACM, ACM, CTF, Capture the Flag, Cybersecurity, cyber, security, NCL, national cyber league, norweigen cruse lines, education">
-        <meta name="author" content="Purdue University Fort Wayne Association for Computing Machinery Officer Committee">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CTF Example Challenges</title>
-        <link rel="favicon" href="../assets/">
+<head>
+  <!--SEO and Meta-->
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Learn how to be successful in CTFs through a collection of example challenges that you might face with walkthroughs and answers.">
+  <meta name="keywords"
+    content="PFW, PFW ACM, ACM, CTF, Capture the Flag, Cybersecurity, cyber, security, NCL, national cyber league, Norwegian cruise lines, education">
+  <meta name="author" content="Purdue University Fort Wayne Association for Computing Machinery Officer Committee">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTF Example Challenges</title>
+  <link rel="favicon" href="../assets/">
 
-        <!--Imports-->
-        <link rel="stylesheet" href="../assets/style.css">
-        <link rel="stylesheet" href="../assets/input.css">
-        <link rel="stylesheet" href="../assets/popups.css">
-        <link rel="stylesheet" href="../assets/tiles.css">
-        <link rel="stylesheet" href="../assets/panels.css">
+  <!--Imports-->
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/input.css">
+  <link rel="stylesheet" href="../assets/popups.css">
+  <link rel="stylesheet" href="../assets/tiles.css">
+  <link rel="stylesheet" href="../assets/panels.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script type="module">
+    import { LoadChallenges, Validate } from "../assets/scripts.js";
+    window.LoadChallenges = LoadChallenges;
+    window.Validate = Validate;
+  </script>
 
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <a href="../">Home</a>
-            <burger>
-                <a href="#popup-box">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </a>
-            </burger> 
-            
-            <div id="popup-box" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
-                <div class="content">
-                    <h1>
-                        Settings
-                    </h1>
-                    <div class="SettingMenuOption">
-                        <label for="setting" class="switchLabel">Dark Mode:</label>
-                        <label class="switch" name="setting">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    
-                    <a href="" class="close">&times;</a>
-                </div>
-            </div>
-        </header>
-        <main>
-            <content>
-                <h1>Digital Forensics</h1>
-                <h2>
-                    Challenges
-                </h2>
-                <hr>
-                <section class="container">
-                    <div class="catSection" onclick="location.href='#CH1'">
-                        <h3>Challenge 1 (Easy)</h3>
-                        <hr>
-                        <p>Recover information that appears to have been corrupted.</p>
-                    </div>
-                </section>
-            </content>
-        </main>
-        <footer>
-            &copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved.
-            <a href="mailto:acm@pfw.edu">Contact Us!</a>
-        </footer>
-    </body>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body id="host" class="alt" onload="LoadChallenges('Digital Forensics')">
+  <div id="sidebar">
+    <header>
+      <h1>PFW ACM's CTF Practice</h1>
+      <hr>
+      <a id="home" href="../" class="alt">Home</a><br>
+      <a href="../resources.html" class="alt">Resources</a>
+      <hr>
+      <a href="./OSINT.html">Open-Source Intelligence</a>
+      <a href="./crypto.html">Cryptography</a>
+      <a href="./pass.html">Password Cracking</a>
+      <a href="./wires.html">Wi-Fi Analysis</a>
+      <a href="./log.html">Log Analysis</a>
+      <a href="./scan.html">Network Scanning</a>
+      <a href="./forensics.html">Digital Forensics</a>
+      <a href="./enum.html">Reverse Engineering</a>
+      <a href="./webapp.html">Web Application Security</a>
+    </header>
+  </div>
+  <div id="content" class="host alt">
+    <main>
+      <content>
+        <h1>Digital Forensics</h1>
+        <h2>
+          Challenges
+        </h2>
+        <hr>
+        <section class="container" id="challenge_container"></section>
+      </content>
+    </main>
+  </div>
+  <footer>
+    &copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved.
+    <a href="mailto:acm@pfw.edu">Contact Us!</a>
+  </footer>
+</body>
 </html>
 
-
-<div id="CH1" class="modal" onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
-    <div class="challenge">
-        <h1>
-            Challenge 1 - Corrupted
-        </h1>
-        <hr>
-        <p>
-            We have recovered a word document. It seems to be corrupted though.<br>
-            <br><a href="../challenge_assets/capturedfile.docx">Download File</a><br><br>
-            <input type="checkbox" id="q1">
-            <label for="q1">Who made the document?</label><br>
-            <input type="checkbox" id="q2">
-            <label for="q2">Are there any fonts embedded in the document?</label><br>
-            <input type="checkbox" id="q3">
-            <label for="q3">Are there any images in the document?</label><br>
-            <input type="checkbox" id="q4">
-            <label for="q4">What is the text in the document?</label><br>
-            <input type="checkbox" id="q5">
-            <label for="q5">What is the password to deactivate the document?</label>
-        </p>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><div  class="panel-heading">
-                <h4  class="panel-title">
-                  Walkthrough
-                </h4>
-                </a>
-              </div>
-              <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>
-
-                    </p>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><div  class="panel-heading">
-                  <h4  class="panel-title">
-                    Answers
-                  </h4>
-                  </a>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p>
-                        1. Who made the document? <em>Sabertooth</em><br>
-                        2. Are there any fonts embedded in the document? <em>Yes, 11</em><br>
-                        3. Are there any images in the document? <em>Yes, 1. rickroll.gif</em><br>
-                        4. What is the text in the document?<br>
-                        <div class="CodeBlock">
-                            MEMO to head office<br>
-                            We have successfully infiltrated our target.<br>
-                            To make our presence known we have made it so that every time that a user attempts to open a file, it will rick rolls them. <br>
-                            The password to deactivate is 5f4dcc3b5aa765d61d8327deb882cf99.<br><br>
-                            
-                            We stand ready for future attacks and are awaiting orders from head office.<br><br>
-                            
-                            Sabertooth
-                        </div>
-                        5. What is the password to deactivate the document? <em>password</em>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        <a href="" class="close">&times;</a>
-    </div>
-</div>
+<div id="challenge_modules"></div>
