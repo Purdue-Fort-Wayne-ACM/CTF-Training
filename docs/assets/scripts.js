@@ -1,7 +1,7 @@
 /**
  * Import Challenges from the JSON
  */
-import CHALLENGES from "../assets/challenges.json" with { type:"json" }
+import CHALLENGES from "../assets/challenges.json" with { type: "json" }
 
 const challenge_container = document.getElementById("challenge_container");
 const challenge_modules = document.getElementById("challenge_modules");
@@ -11,8 +11,8 @@ var challengeList;
 
 function CreateCheckBox() {
     var tmp = document.createElement("input");
-    tmp.setAttribute("type", "checkbox"); 
-    return tmp;   
+    tmp.setAttribute("type", "checkbox");
+    return tmp;
 }
 function CreateBar() {
     return document.createElement("hr");
@@ -20,14 +20,14 @@ function CreateBar() {
 function CreateBreak() {
     return document.createElement("br");
 }
-function CreateClose(){
+function CreateClose() {
     var tmp = document.createElement("a");
-    tmp.href = "";
+    tmp.href = "#?";
     tmp.classList.add("close");
     tmp.innerHTML = "&times;";
     return tmp;
 }
-function CreateAccordian(index){
+function CreateAccordian(index) {
     var tmp = document.createElement("div");
     tmp.classList.add("panel-group");
     tmp.id = "accordian" + index;
@@ -39,16 +39,46 @@ const DifficultyRatings = [
     "Hard"
 ];
 
+export async function LoadChallengesOnLoad(defaultOption) {
+    var tmp = new URLSearchParams(window.location.search).get('cat');
+    if (tmp !== null) {
+        LoadChallenges(tmp);
+    } else {
+        LoadChallenges(defaultOption);
+    }
+//    window.history.replaceState( { id: "100"; }, document.title, './');
+
+    var obj = CHALLENGES.General[tmp == null ? defaultOption : tmp];
+
+    document.getElementById("title").textContent = obj.Title;
+    const host = document.getElementById("summary");
+    obj.Background.forEach(element => {
+        var tmpObj = null;
+        switch (element.type) {
+            case "p":
+                tmpObj = document.createElement("p");
+                tmpObj.textContent = element.text;
+                break;
+            case "NOTE":
+                tmpObj = document.createElement("div");
+                tmpObj.classList.add("NOTE");
+                tmpObj.innerHTML = element.text;
+                break;
+        }
+        host.appendChild(tmpObj);
+    });
+}
+
 /**
  * Loads all challenges related to a certain category.
  * @param {string} category - the category of the webpage.
  */
 export async function LoadChallenges(category) {
-    
+
     var CurIndex = 0;
 
     switch (category) {
-        case "OSINT": 
+        case "OSINT":
             challengeList = CHALLENGES.OSINT;
             break;
         case "Cryptography":
@@ -88,18 +118,18 @@ export async function LoadChallenges(category) {
 
 }
 
-export async function Validate(ChallengeID, SubmittedAnswer){
+export async function Validate(ChallengeID, SubmittedAnswer) {
     var userAnswer = await GetHash(await GetHash(SubmittedAnswer));
     if (userAnswer === challengeList[ChallengeID.split("_")[0]].answers[ChallengeID.split("_")[1]]) {
-        var host = document.getElementById(ChallengeID+"BOUND");
+        var host = document.getElementById(ChallengeID + "BOUND");
         var checkBox = document.createElement("div");
         checkBox.innerHTML = "&check;";
         checkBox.classList.add("check");
         host.removeChild(host.firstChild);
         host.appendChild(checkBox);
         host
-    }else {
-        document.getElementById(ChallengeID+"BOUND").firstChild.classList.add("wrong");
+    } else {
+        document.getElementById(ChallengeID + "BOUND").firstChild.classList.add("wrong");
     }
 }
 
@@ -111,26 +141,26 @@ async function GetHash(message) {
 }
 
 function buf2hex(buffer) {
-    return [...new Uint8Array(buffer)].map(x=>x.toString(16).padStart(2,'0')).join('');
+    return [...new Uint8Array(buffer)].map(x => x.toString(16).padStart(2, '0')).join('');
 }
 
 /**
  * 
  * @param {JSON} challenge - the challenge that will be displayed
  */
-function AddChallengeSummary(challenge, index){
+function AddChallengeSummary(challenge, index) {
     // Create a challenge summary object
     var challengeSummaryParent = document.createElement("div");
     var challengeSummaryHeader = document.createElement("h3");
     var challengeSummaryDescription = document.createElement("p");
-    
+
     challengeSummaryHeader.textContent = challenge.name + " (" + challenge.difficulty + ")";
     challengeSummaryDescription.textContent = challenge.short_description;
-    
+
     challengeSummaryParent.appendChild(challengeSummaryHeader);
     challengeSummaryParent.appendChild(CreateBar());
     challengeSummaryParent.appendChild(challengeSummaryDescription);
-    
+
     challengeSummaryParent.classList.add("catSection");
     challengeSummaryParent.setAttribute("onclick", "location.href='#CH" + index + "'");
 
@@ -138,7 +168,7 @@ function AddChallengeSummary(challenge, index){
     challenge_container.appendChild(challengeSummaryParent);
 }
 
-function AddChallengeModule(challenge, index){
+function AddChallengeModule(challenge, index) {
     // Create a Challenge Module Object
     var challengeModuleParent = document.createElement("div");
     var challengeModuleContainer = document.createElement("div");
@@ -153,46 +183,48 @@ function AddChallengeModule(challenge, index){
     challengeModuleContainer.appendChild(CreateBar());
     challengeModuleContainer.appendChild(challengeModuleDescription);
 
-    var challengeModuleTable = document.createElement("table");
-    var challengeModuleTableBody = document.createElement("tbody");
+    if (challenge.hasQuestion !== false) {
+        var challengeModuleTable = document.createElement("table");
+        var challengeModuleTableBody = document.createElement("tbody");
 
-    var QIndex = 0;
-    challenge.questions.forEach(question => {
-        var row = document.createElement("tr");
-        var data1 = document.createElement("td");
-        var Label = document.createElement("label");
-        Label.textContent = question;
-        data1.appendChild(Label);
-        row.appendChild(data1);
-        var data2 = document.createElement("td");
-        data2.id = index + "_" + QIndex + "BOUND";
-        var InputBox = document.createElement("input");
-        InputBox.id = index + "_" + QIndex;
-        InputBox.classList.add("Question");
-        InputBox.placeholder = "Answer...";
-        InputBox.type = "search";
-        InputBox.setAttribute("onkeydown", "if(event.keyCode === 13) { Validate('"+index + "_" + QIndex+"',document.getElementById('" + index+ "_" + QIndex + "').value); }");
-        data2.appendChild(InputBox);
-        row.appendChild(data2);
-        challengeModuleTableBody.appendChild(row);
-        
-        if (QIndex !== (challenge.questions.length - 1)) {
-            challengeModuleTableBody.appendChild(CreateBar());
-            challengeModuleTableBody.lastChild.classList.add("bar2");
-        }
+        var QIndex = 0;
+        challenge.questions.forEach(question => {
+            var row = document.createElement("tr");
+            var data1 = document.createElement("td");
+            var Label = document.createElement("label");
+            Label.textContent = question;
+            data1.appendChild(Label);
+            row.appendChild(data1);
+            var data2 = document.createElement("td");
+            data2.id = index + "_" + QIndex + "BOUND";
+            var InputBox = document.createElement("input");
+            InputBox.id = index + "_" + QIndex;
+            InputBox.classList.add("Question");
+            InputBox.placeholder = "Answer...";
+            InputBox.type = "search";
+            InputBox.setAttribute("onkeydown", "if(event.keyCode === 13) { Validate('" + index + "_" + QIndex + "',document.getElementById('" + index + "_" + QIndex + "').value); }");
+            data2.appendChild(InputBox);
+            row.appendChild(data2);
+            challengeModuleTableBody.appendChild(row);
 
-        QIndex++;
-    });
+            if (QIndex !== (challenge.questions.length - 1)) {
+                challengeModuleTableBody.appendChild(CreateBar());
+                challengeModuleTableBody.lastChild.classList.add("bar2");
+            }
 
-    challengeModuleTable.appendChild(challengeModuleTableBody);
-    challengeModuleContainer.appendChild(challengeModuleTable);
+            QIndex++;
+        });
+
+        challengeModuleTable.appendChild(challengeModuleTableBody);
+        challengeModuleContainer.appendChild(challengeModuleTable);
+    }
 
     if (challenge.canDownload) {
         challengeModuleContainer.appendChild(CreateBreak());
         var label = document.createElement("a");
         label.textContent = "Download Challenge Assets";
         label.href = challenge.assetURL;
-        label.setAttribute("download", "CTF Challenge - " + challenge.name);
+        label.setAttribute("download", "CTF Challenge - " + challenge.name + GetFileName(challenge.assetURL));
         label.classList.add("DOWNLOAD");
         challengeModuleContainer.appendChild(label);
     }
@@ -221,12 +253,19 @@ function AddChallengeModule(challenge, index){
         audio.appendChild(source);
         challengeModuleContainer.appendChild(audio);
         challengeModuleContainer.appendChild(CreateBreak());
+    } else if (challenge.isIframe) {
+        challengeModuleContainer.appendChild(CreateBreak());
+        var iFrame = document.createElement("iframe");
+        iFrame.src = challenge.assetURL;
+        challengeModuleContainer.appendChild(iFrame);
+        challengeModuleContainer.appendChild(CreateBreak());
+        challengeModuleContainer.appendChild(CreateBreak());
     } else {
         challengeModuleContainer.appendChild(CreateBreak());
     }
 
     challengeAccordian.appendChild(AddChallengeWalkthrough(challenge, index));
-    
+
     challengeModuleContainer.appendChild(challengeAccordian);
 
     challengeModuleParent.appendChild(challengeModuleContainer);
@@ -257,7 +296,7 @@ function AddChallengeWalkthrough(challenge, index) {
     challengeModuleWalkthrough.appendChild(challengeModuleCollapse_Walkthrough_Header);
     challengeModuleCollapse_Walkthrough_Header.appendChild(challengeModuleCollapse_Walkthrough_collapse);
     challengeModuleCollapse_Walkthrough_collapse.appendChild(challengeModuleCollapse_Walkthrough_heading);
-    
+
     var challengeModuleCollapse_Walkthrough_ContentWrapper = document.createElement("div");
     challengeModuleCollapse_Walkthrough_ContentWrapper.id = "collapse" + AccordianCounter;
     challengeModuleCollapse_Walkthrough_ContentWrapper.classList.add("panel-collapse");
@@ -290,55 +329,12 @@ function AddChallengeWalkthrough(challenge, index) {
 
     challengeModuleWalkthrough.appendChild(challengeModuleCollapse_Walkthrough_ContentWrapper);
     challengeModuleCollapse_Walkthrough_ContentWrapper.appendChild(challengeModuleCollapse_Walkthrough_ContentBody);
-    
+
     AccordianCounter++;
-    
+
     return challengeModuleWalkthrough;
 }
 
-function AddChallengeAnswers(challenge, index){
-    var challengeModuleAnswer = document.createElement("div");
-    challengeModuleAnswer.classList.add("panel");
-    challengeModuleAnswer.classList.add("panel-default");
-
-    var challengeModuleCollapse_Answer_collapse = document.createElement("a");
-    challengeModuleCollapse_Answer_collapse.setAttribute("data-toggle", "collapse");
-    challengeModuleCollapse_Answer_collapse.setAttribute("data-parent", "#accordion" + index);
-    challengeModuleCollapse_Answer_collapse.setAttribute("href", "#collapse" + AccordianCounter);
-
-    var challengeModuleCollapse_Answer_Header = document.createElement("div");
-    challengeModuleCollapse_Answer_Header.classList.add("panel-heading");
-
-    var challengeModuleCollapse_Answer_heading = document.createElement("h4");
-    challengeModuleCollapse_Answer_heading.classList.add("panel-title");
-    challengeModuleCollapse_Answer_heading.textContent = "Answers";
-
-    challengeModuleAnswer.appendChild(challengeModuleCollapse_Answer_Header);
-    challengeModuleCollapse_Answer_Header.appendChild(challengeModuleCollapse_Answer_collapse);
-    challengeModuleCollapse_Answer_collapse.appendChild(challengeModuleCollapse_Answer_heading);
-    
-    var challengeModuleCollapse_Answer_ContentWrapper = document.createElement("div");
-    challengeModuleCollapse_Answer_ContentWrapper.id = "collapse" + AccordianCounter;
-    challengeModuleCollapse_Answer_ContentWrapper.classList.add("panel-collapse");
-    challengeModuleCollapse_Answer_ContentWrapper.classList.add("collapse");
-
-    var challengeModuleCollapse_Answer_ContentBody = document.createElement("div");
-    challengeModuleCollapse_Answer_ContentBody.classList.add("panel-body");
-    var challengeModuleCollapse_Answers = document.createElement("p");
-
-    var QIndex = 1;
-    challenge.answers.forEach(element => {
-        var container = document.createElement(element.type);
-        container.innerHTML = QIndex + ". " + element;
-        challengeModuleCollapse_Answers.appendChild(container);
-        QIndex++
-    });
-
-    challengeModuleAnswer.appendChild(challengeModuleCollapse_Answer_ContentWrapper);
-    challengeModuleCollapse_Answer_ContentWrapper.appendChild(challengeModuleCollapse_Answer_ContentBody);
-    challengeModuleCollapse_Answer_ContentBody.appendChild(challengeModuleCollapse_Answers);
-
-    AccordianCounter++;
-
-    return challengeModuleAnswer;
+function GetFileName(URL) {
+    return "." + URL.substring(URL.indexOf(" "));
 }

@@ -1,4 +1,99 @@
 {
+    "General": {
+        "OSINT": {
+            "Title": "Open-Source Intelligence",
+            "Background": [
+                {
+                    "type": "p",
+                    "text": "Open-source intelligence is the process of gathering information from publicly accessible sources."
+                },
+                {
+                    "type": "p",
+                    "text": "In the following challenges we will be utilizing a variety of free online tools, and information that is obtained by googling."
+                }
+            ]
+        },
+        "Cryptography": {
+            "Title": "Cryptography",
+            "Background": [
+                {
+                    "type": "p",
+                    "text": "Cryptography is the process of hiding or encoding information so that only those intended to read the message can."
+                },
+                {
+                    "type": "p",
+                    "text": "In this section we will be identifying common ciphers used and how to decode them."
+                },
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>We call the text we are decoding 'Ciphertext' and the text we feed in or get out of the encryption algorithm 'Plaintext'."
+                }
+            ]
+        },
+        "Digital Forensics": {
+            "Title": "Digital Forensics",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        },
+        "Log Analysis": {
+            "Title": "Log Analysis",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        },
+        "Password Cracking": {
+            "Title": "Password Cracking",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        },
+        "Scanning": {
+            "Title": "Network Scanning",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        },
+        "Network Traffic Analysis": {
+            "Title": "Wi-Fi Analysis",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        },
+        "Web Application Exploitation": {
+            "Title": "Web Application Security",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        },
+        "Reverse Engineering": {
+            "Title": "Reverse Engineering",
+            "Background": [
+                {
+                    "type": "NOTE",
+                    "text": "<b>NOTE: </b><br>Coming Soon..."
+                }
+            ]
+        }
+    },
     "OSINT": [
         {
             "name": "The Village",
@@ -111,7 +206,7 @@
             "walkthrough": [
                 {
                     "type": "p",
-                    "text": "At first glance, we can tell that the number pairs seem to be close together and look like Latitude/Longitude pairs. The middle two numbers seem odd, but the last number could be a year. However, this probably is not the case as we quickly go beyond the current date and some of these data points would be in the future. So, we have only three bits of actionable information: the name, the first Latitude/Longitude pair, and the second Latitude/Longitude pair. Let's try googling these names to start."    
+                    "text": "At first glance, we can tell that the number pairs seem to be close together and look like Latitude/Longitude pairs. The middle two numbers seem odd, but the last number could be a year. However, this probably is not the case as we quickly go beyond the current date and some of these data points would be in the future. So, we have only three bits of actionable information: the name, the first Latitude/Longitude pair, and the second Latitude/Longitude pair. Let's try googling these names to start."
                 },
                 {
                     "type": "p",
@@ -156,24 +251,24 @@
             ],
             "walkthrough": [
                 {
-                    "type":"p",
-                    "text":"You will quickly realize that reverse image search does not give any valuable information. So, we will need to resort to our powers of observation! We know that this is from a video. We know this both from the way that the question is asked and how the image is composed like a 'react' video from YouTube or other popular video sharing platforms. For this section, we will assume that this image is taken from a YouTube video given the aspect ratio. So, we have an idea of where to search once we get more information on the image."
+                    "type": "p",
+                    "text": "You will quickly realize that reverse image search does not give any valuable information. So, we will need to resort to our powers of observation! We know that this is from a video. We know this both from the way that the question is asked and how the image is composed like a 'react' video from YouTube or other popular video sharing platforms. For this section, we will assume that this image is taken from a YouTube video given the aspect ratio. So, we have an idea of where to search once we get more information on the image."
                 },
                 {
-                    "type":"p",
-                    "text":"Looking specifically at the video that is being reacted to in the image we can gain some more information. We can clearly see that the video has something on fire, however, the fire looks odd. Instead of being a more traditional match/firewood/etc. fire, it is a brilliant white. This might seem to be inconsequential, but we can gain more information from this. Next looking closely, we can see that the video was taken in what seems to be a parking lot. Looking at this, it seems that the thing burning is likely made of some metal. To determine this, we can look up <code>metals that burn white</code>, we get metals such as Magnesium, Titanium, Nickle, Chromium, and Aluminum. Given that the burning object takes up a small amount of space in the parking spot, we can assume that the burning metal object is also lightweight. Some common metals that are used in transportation and are light weight, we can safely assume that it is made of either aluminum or titanium. So, we know what the item is made of, but what could it be? For that, we can look up things that are commonly made of aluminum and are small. This will lead to something like a bike or scooter."
+                    "type": "p",
+                    "text": "Looking specifically at the video that is being reacted to in the image we can gain some more information. We can clearly see that the video has something on fire, however, the fire looks odd. Instead of being a more traditional match/firewood/etc. fire, it is a brilliant white. This might seem to be inconsequential, but we can gain more information from this. Next looking closely, we can see that the video was taken in what seems to be a parking lot. Looking at this, it seems that the thing burning is likely made of some metal. To determine this, we can look up <code>metals that burn white</code>, we get metals such as Magnesium, Titanium, Nickle, Chromium, and Aluminum. Given that the burning object takes up a small amount of space in the parking spot, we can assume that the burning metal object is also lightweight. Some common metals that are used in transportation and are light weight, we can safely assume that it is made of either aluminum or titanium. So, we know what the item is made of, but what could it be? For that, we can look up things that are commonly made of aluminum and are small. This will lead to something like a bike or scooter."
                 },
                 {
                     "type": "p",
                     "text": "Both of these also have 'electric' versions of them. Next, we can see what powers the electric version of a bike or scooter. This will lead to a type of battery. Our instinct is confirmed as well given our last question is asking what type of battery is the cause of the fire. After googling <code>electric scooter battery</code>, we can see that they are commonly using Lithium-Ion batteries."
-                }, 
+                },
                 {
-                    "type":"p",
+                    "type": "p",
                     "text": "Looking at it we know now; we know that we are looking for a YouTube video, in which the YouTuber is reacting to a video of an e-scooter or e-bike on fire that was powered by a lithium-ion battery that failed. Knowing this, we know that the YouTube video will likely not have 'Lithium Ion Battery', 'e-bike fire', or 'e-scooter fire'. We can then return to google for more information. When googling <code>lithium-ion battery 'slang'</code>, we will get 'spicy pillow' as slang/common saying for 'Lithium-Ion Batteries'. This seems like something that might be a good YouTube video title. So, let's google <code>YouTuber reacts to spicy pillows</code>. The first result shows a YouTuber or seems to look similar to the one in our screenshot. Watching/skimming through the first result on YouTube, we can quickly confirm that this is the video that the screenshot was taken from."
                 },
                 {
-                   "type": "p",
-                   "text":"We can then go to the subreddit that posted the video using the keywords that were given in the video right before the YouTuber's reaction to the video. We should be able to find the video that was being reacted to. It turns out that the video was reposted from another subreddit. The subreddit that it was originally posted on is a country's subreddit, so we have answer 3. We can then use google translate to determine the rest of the answers."
+                    "type": "p",
+                    "text": "We can then go to the subreddit that posted the video using the keywords that were given in the video right before the YouTuber's reaction to the video. We should be able to find the video that was being reacted to. It turns out that the video was reposted from another subreddit. The subreddit that it was originally posted on is a country's subreddit, so we have answer 3. We can then use google translate to determine the rest of the answers."
                 }
             ]
         },
@@ -195,9 +290,9 @@
                 "9955e8eeabf92e58d06d2f592d0d8d1edbaf207219068271259ba3fbe363e1456b200704d6d07b183c8ed791ef4dfd579d2a530ec029d4235e563352c2c31135"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -223,9 +318,9 @@
                 "cc777ae9bbd0c4a180990f34713831b4941b3f32ef2a26c3f102048233c030f18f4b9dcbe4c11f3acb83a0855126621717a428c7fdad312889b91a4f5a601a07"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -249,9 +344,9 @@
                 "5689c34ee2b1b4d5f70cb3b40815ad951e392c08e603edc6aec150e56c274455e74bcca423b9279c23b34d1ca12c2b21df4714cc3c297cab6863e13f86ddf57a"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -271,13 +366,13 @@
             ],
             "answers": [
                 "33773131aad342fd29cc9efb3478770a2fd10c522e848dba433a855047ba7738d11b006635764a00e0534b62a56d22be3695873f00635330a7d115e9839a6735",
-                "571351677e4cf89cd7853a4d85eefea21f5817dda3322893441e3c16472985dd49b67c9a80635a90823d6221fd8d0c17580f913e55addb50891eacd24a70a943",                
+                "571351677e4cf89cd7853a4d85eefea21f5817dda3322893441e3c16472985dd49b67c9a80635a90823d6221fd8d0c17580f913e55addb50891eacd24a70a943",
                 "7ec2151ea5c3f1d3c6dded7e5de14a15f84591eaae251280abe7631fa2b741ed7b7586f1f6b424bd4809b6b9ec8d3b7a4cf85d9562ab339594ed1ba6b0401bc4"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -303,9 +398,9 @@
                 "28cee625ff77b0c71687640702b7e22c2986d4e9d9e0c9393c9c975765698da9e862b19f3dcd916ddbf19a626b29cd4cdc6b9bc6c28d006670c57cbc3edcf166"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -329,9 +424,9 @@
                 "7d97069b49078b4cb1e1f548f270009fcd23705c8f90245793612958b033996a7ad50e3cdc0c7f68343d5bc59b3b5e387b08058c6bd4c324a33123f6cc2f4e06"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -354,8 +449,8 @@
             ],
             "walkthrough": [
                 {
-                    "type":"p",
-                    "text":""
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -384,9 +479,9 @@
                 "d139534b749fedade19646a2c064318882c5c936bed51561327dcd9b951b72dacbfbe31d272f0d1a522b0f4b016da24c34d42cba2226f66bd9a235a0b0503149"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -416,9 +511,9 @@
                 "7573dbd5c3467c75c236abad84e7948881b0d192910d0755af74f50f2cef99cda1d57acc6d0ff600f75c6299dfde8e7ff2e5f44c9945769b8f1d946df2946195"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
@@ -448,15 +543,409 @@
                 "47fd8e64890900511d893431b07f34dcad2b96993645ad27b64c4f67ab24b4e9010342bf0a99f24260a2be3682e1a97b4f5a8cfe721369a0cbc9af73a61e36dc"
             ],
             "walkthrough": [
-{
-                    "type":"p",
-                    "text":""
+                {
+                    "type": "p",
+                    "text": ""
                 },
                 {
                     "type": "NOTE",
                     "text": "Coming soon..."
                 }
             ]
+        }
+    ],
+    "Cryptography": [
+        {
+            "name": "Dots and Dashes",
+            "difficulty": "Medium",
+            "short_description": "Exercise your puzzle solving skills to decrypt text that has been encrypted multiple times.",
+            "description": "We have captured this message, we think that it was encoded multiple times. We also found the number 10 near it, could this be important?",
+            "assetCode": "....-/----./-..../...../-..../-.../-..../-../-..../---../-..../-..../-..../----./--.../....-/--.../...../-..../----./-..../---../--.../.----/..---/-----/....-/-..../....-/----./..---/-----/--.../...../--.../...../--.../...--/-..../---../-..../-...",
+            "questions": [
+                "How many times was this encrypted?",
+                "What is the plain text?"
+            ],
+            "answers": [
+                "9536c1dde53c7b959941fcd4a11caa96c77983e25a26cfa1d631ca26e24f217a4fd1c9ab5bf6631f8f2f994804685b47b46fa5d232404208266336910ec8ed28",
+                "420d993150cb9f8f57b79efb6cd1ef7ffede4456a5846b0a380f5bd13b8a9ac505a2776783702e7d086725830050f624dd218c07975f2eac2a9a045d585b0a37"
+            ],
+            "walkthrough": [
+                {
+                    "type": "NOTE",
+                    "text": "We will use the tool <a target=\"_blank\" href=\"https://gchq.github.io/CyberChef/#input=Li4uLi0vLS0tLS4vLS4uLi4vLi4uLi4vLS4uLi4vLS4uLi8tLi4uLi8tLi4vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLi4vLS4uLi4vLS0tLS4vLS0uLi4vLi4uLi0vLS0uLi4vLi4uLi4vLS4uLi4vLS0tLS4vLS4uLi4vLS0tLi4vLS0uLi4vLi0tLS0vLi4tLS0vLS0tLS0vLi4uLi0vLS4uLi4vLi4uLi0vLS0tLS4vLi4tLS0vLS0tLS0vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLi4vLS0uLi4vLi4uLS0vLS4uLi4vLS0tLi4vLS4uLi4vLS4uLg\">Cyberchef</a> to work with this problem."
+                },
+                {
+                    "type": "p",
+                    "text": "We can see that the first encryption measure was into a cipher that replaces different characters with <code>.</code> or <code>-</code> and separate different characters with <code>/</code>. This cipher is most likely a morse code cipher to start out with."
+                },
+                {
+                    "type": "p",
+                    "text": "After plugging in a <code>From Morse Code</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be going between 0 and F, so it is likely in hexadecimal."
+                },
+                {
+                    "type": "p",
+                    "text": "Plugging in a <code>From Hex</code> block in Cyberchef, we can see that the output is now in yet another cipher. This one seems to be in regular text, just scrambled. There are a few common scramble ciphers (or shift ciphers). However, two main ones use a number as a key, a rail-fence cipher and a Caesar cipher (or ROT). Let's try them both set to 10."
+                },
+                {
+                    "type": "p",
+                    "text": "We are going to plug in both for our Cyberchef (order does not matter). If you search for Caesar cipher in the <i>operations</i> section of Cyberchef, there won't be any results. So we will want to use a ROT cipher instead. We can use ROT13 and modify the settings. We will also want to add a <code>Rail Fence Cipher Decode</code>. Let's try setting the <i>Key</i> for the Rail Fence cipher to 10 and the <i>Amount</i> for the ROT13 to 10 as well."
+                }
+            ]
+        },
+        {
+            "name": "Ricky",
+            "difficulty": "Medium",
+            "short_description": "Find data that has been hidden in plain sight.",
+            "description": "We captured this image from a hacker. We think that it contains a hidden message can you find it?",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/rickysteg.jpg",
+            "questions": [
+                "How was this image encrypted?",
+                "What is the plaintext?"
+            ],
+            "answers": [
+                "81e0798180596c0a76deb6c3155a32b5dd5164fd2238cc628cbe1860ba0a1272331aa595a1b9b7c3836a121b70b6563c31be4bfc0da07a21c87dc043af0443ef",
+                "72471b4ea3028b00163bf51876b7ffc036ca493d8192e2a84dfd367331c5b8d40c1619a79eca1a612b57e573191f32e932238f5fe8af0aa4e491e9ac03383ed1"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": "There are only a few ways to hide information in an image without visually distorting the image. We could hide the data in the metadata, unused space in the file, or in the image itself. After analyzing the image's metadata and using the UNIX command <code>strings {FILE}</code> on it, we can see that the data must be hidden in a different way. The image itself..."
+                },
+                {
+                    "type": "p",
+                    "text": "When we hide the data inside the image itself, we call it steganography. As we know, images are made up of pixels. Each pixel stores three values: R (Red), G (Green), and B (Blue); each ranging from 0 to 255. If we google <code>steganography decoder</code>, we can see several sites right away. A few will give gibberish, but some sites like <a href=\"https://futureboy.us/stegano/decinput.html\" target=\"_blank\">Steganographic Decoder</a> and <a href=\"https://www.aperisolve.com/\" target=\"_blank\">Aperi'Solve</a> will give us the correct plaintext. Both of these sites use a similar technique to find the information."
+                },
+                {
+                    "type": "NOTE",
+                    "text": "<i>Aside: </i><br>Images are stored in pixels, as each pixel is a set of three values with a range of 256, this results in 256<sup>3</sup> different combinations or approximately 16,777,216 different colors that it can display. However, the average human eye can only detect around a million different colors. This gives us plenty of room to hide data by modifying small values of pixels. By changing small values in each pixel, we can store our information in the image and have it visually look identical to the unmodified image."
+                }
+            ]
+        },
+        {
+            "name": "Dance Monkey",
+            "difficulty": "Medium",
+            "short_description": "Identify the cipher and decrypt to find the plaintext.",
+            "description": "",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2023/DanceMonkey.png",
+            "questions": [
+                "What is the plaintext?"
+            ],
+            "answers": [
+                "e02dbc3139cd1addbdd3ea97ae35f12498dcf16b58c6eaca245845e14ef6de52fb366aef7eb8a0d1dea2849806ad359c83ce4935e2def06fff2c28ab7277491c"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Pikachu",
+            "difficulty": "Medium",
+            "short_description": "We captured this image from a hacker. We think that it contains a hidden message can you find it?",
+            "description": "",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2023/captain_pikachusteg.jpg",
+            "questions": [
+                "What is the plaintext?"
+            ],
+            "answers": [
+                "138da1b09fc11f84f452d573861c9fecba4146afb90873bee98857f1e851f194d14587473ed58a8440a3663949991f3315be1ed7cc3ff9108310a35eb6877ae0"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Shifty",
+            "difficulty": "Easy",
+            "short_description": "Identify the cipher and decrypt to find the plaintext.",
+            "description": "",
+            "questions": [
+                "What is Bmeeiadp?",
+                "What is xdlyaf?",
+                "What is Snbbrn?",
+                "What is dwyoqvi?",
+                "What is praodsws"
+            ],
+            "answers": [
+                "dceb060f775b65369bec51c97da2b12e874eb093a59d8eb867988f9b44d42eacb5ae7aff471874b9b943d1313501876477844452c1c73aaee72121253ee0d69b",
+                "a5cd272287098b7b4c9f6c359b9d25f7367b3c0b7360b0eea29c72544d7b88d9c301e55417675e26bf23f9fc88ab37929f0b34c122d6ca56b3a46249b18f85b2",
+                "cdb3004752b3674032f5e17ba60c404b8dbeea9f57cf4cf71eac461f1e5d5ad96580b3f245ee00d3b97c33d0f04a417a96c50eb60f4891f7961691295a87a6a8",
+                "cbf922713ad64bf6d53635ad4c8cf3bc0cad8cd7a90a68b7f64b543d5a60ab7b404fdec3752f56c331f11b2a4f7fac9e31b3d271751e2631c3fa04f496796591",
+                "afe99137967ee6f5ec8f08df89dd8076db932e13d4ca8d7b32feda3dc919ae3e1657cf30616523d28500727755eddad5a6e18fe255b407a9c5f6dd8de1a43b99"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "The Basics",
+            "difficulty": "Easy",
+            "short_description": "Identify the cipher and decrypt to find the plaintext.",
+            "description": "",
+            "questions": [
+                "What is 01010000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011?",
+                "What is 6578616D706C65?",
+                "What is IFSG22LONFZXI4TBORXXE===?",
+                "What is R2lvdmFubmk=?"
+            ],
+            "answers": [
+                "52e9a1424242b276c60732a3dee61fc5fba68d55e53c87e256320ea016b209b755ee68aaae13b2cc09de0c22a880794fffcd2e454032e00d9d65c36f0c00eb22",
+                "666122910be45bf57a3092136e92bb95765cf250c8f6df980da7de112b528989fed89fa5e8bb7c13c5a6e6c295bd31eddf706dd63a7a48721003906216764207",
+                "67d87ed793494f774a54c07aec789b897435baeee3600598b112fb9cefc76e83ccb4a83403f7c630b9068c9d17919bd93cb33e6f3f0ffeffe8905ecd30c74585",
+                "0ca96fa9de394ec3e9f681e244e06b8c2031eeff4597504bf07afb5c4c7581f87b561316dd65ffd405e96f9b9bb1cc5d5ea9b31ea1efee3a83369a705812531b"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "What do you Meme?",
+            "difficulty": "Hard",
+            "short_description": "Find data that has been hidden in plain sight.",
+            "description": "We captured this image from a hacker. We think that it contains a hidden message can you find it?",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2023/WhatDoYouMeme.png",
+            "questions": [
+                "What method was used to hide the information?",
+                "What site did SAB3RT00TH log in to?",
+                "What is the flag?"
+            ],
+            "answers": [
+                "01e54c9f375cbdbb570da3ab2a8f691bd0ab10cbb00b93dd0c791b5cf3cd8c0e24db89396193ccb957b5621230ece46d8ed4e9587656d6abed78a0784d0e5b61",
+                "e6eec7885bf1dd2c67e3d7304db145b3f39560109df68f58231ec49a9347192ed226e987c3ba2223f0cfd92f448beacd8cb53b38b44e812354c31cb474f5962d",
+                "0016399256e5f353ba8ac14048a9a0d9587ec73a11f8fbc869b5c493f2b7972d2462ff9da183fb29db28e1644a44cdc4bd56502e04806a0ca92fdf5ba978914b"
+            ],
+            "walkthrough": []
+        }
+    ],
+    "Forensics": [
+        {
+            "name": "Corrupted",
+            "difficulty": "Easy",
+            "short_description": "Recover information that appears to have been corrupted.",
+            "description": "We have recovered a word document. It seems to be corrupted though.",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/capturedfile.docx",
+            "questions": [
+                "Who made the document?",
+                "How many fonts are embedded in the document?",
+                "What is the name of the hidden file?",
+                "What is the password to deactivate the document?"
+            ],
+            "answers": [
+                "53e3564ee992e7a29c877ee6f1e577d0aebd4c10cd5d0ebabd131399320a7e82310749d911f8dabf285865de0ddcfaf907033bbcdc2d3b0e95b2d0048290d4e5",
+                "9c449bbc7edb91888598df45955cd44c9925d4bf945fae86977fecf399da3a4a3c43ae6650c840aaabb00abae5b7fd85a9f10c6a592c6e95fbc3fcef3e83abe8",
+                "48e3eb8289c5b961821241ccb81bde8ac1f7b0f37ab2e0faee3aaa6f00e846c073903e9a1fcb938cca1f624d956eaf6787337010cd5354088f6f775542c8277f",
+                "afe99137967ee6f5ec8f08df89dd8076db932e13d4ca8d7b32feda3dc919ae3e1657cf30616523d28500727755eddad5a6e18fe255b407a9c5f6dd8de1a43b99"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Saved",
+            "difficulty": "Easy",
+            "short_description": "Recover information that appears to have been corrupted.",
+            "description": "We have managed to recover a backup file on a server belonging to SAB3RT00TH. Can you tell us anything about it?",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2023/Giovanni.sav",
+            "questions": [
+                "What is the rival’s name?",
+                "What is the trainer id of the save?",
+                "What members of the party are from other players?",
+                "What are the stats of the strongest party member?"
+            ],
+            "answers": [
+                "a2657ec579414e7f042b0c5992361eac615f491aff47c75b012a4df1043d5002a0fe30a714c50863bb7f1493c5fd7bd89dcd62d461fa7b4be82af3a8a0a1dbeb",
+                "27159f6e140c8c9d2652f2c07b74c8a485593f08a6da8b955d2887102a127a4508fff44e74dffae07ccf546b5d3be5fa4f1ec14a2dc9f6a2576635e623f50c87",
+                "fead72b1a6ec3a9b59bfb1be2c9ae6401cf1e15eac86290005629d92e7bfb3bc4ed1ce37a3f9b0a9793db9432d7f96536cd64cdbe58b1020cc6c866d72c5ef40",
+                "1fbf239ccfb8b0060f94b0c1a578c58a58c0114f34dce41a3f17f5dfdf9cf40c9e4c3efdd511363918cfa11389f35e2cffa89782619fd07dc39d298dc3a34c2d"
+            ],
+            "walkthrough": []
+        }
+    ],
+    "Log": [
+        {
+            "name": "Crash",
+            "difficulty": "Hard",
+            "short_description": "Exercise your sleuthing skills to find out what happened in an operating room.",
+            "description": "We have recovered a log file from computer and we want to find out more about what it is.",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/LogAnalysis.patient.ssx",
+            "questions": [
+                "What was the model used?",
+                "What was the manufacturer used?",
+                "What computer was this captured on?",
+                "Did the patient live?",
+                "How many shocks did the patient receive?",
+                "When was this recorded?"
+            ],
+            "answers": [
+                "eebb601f070a7e3356cc53a270cb9b268bb19230494f0986ea788b55b7e624662e2debadbe46f0be820f15b492e0f0043e0c9475bd238ab10930023dc0e9dcef",
+                "b317260e6888a947b1704c6819e346332710c37c4efad66227d316a548a8c22da2b03f6ca20e94c9197d19830e358751ef57e86c571cd851b5eab4e1caadf5c9",
+                "801c3057374624351563eab46929b3bb335a3684b6a95fec023e91014cec6bb1d5115eab61c83e7f4c792b2bff0db641ca7df0773f014ebd6a4eb971a76fa337",
+                "3d7b895c45098fd40b4f2fc28708745c4e155c502627eea080ceb01052a5f10884d0f56c24a312cf66b6b9e02b8ccc59eb9350bafbfdc26f6c1f8a249fb65899",
+                "453b7d143d32100ed56dbc69e28869bc20750985eac3fe0ae089da0751b1c27f77fccd2ffd2db3d19e25e41982775117812b60000fbaa621775be33060dc3793",
+                "a220d46181f4aa133669cac2af7fbd75e1aa64249c1857c14025b8a60f29c6658d55c30bcee597b008345930bf7b8741d234c157369ad0f21200bdb3d40a2851"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Soaked",
+            "difficulty": "Medium",
+            "short_description": "Exercise your sleuthing skills to find out key information from a mysterious log.",
+            "description": "We have recovered a log file from computer and we want to find out more about what it is.",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2023/soaked.log",
+            "questions": [
+                "What county made the most reports?",
+                "How many stations made less than 5 observations during the time period?",
+                "What was the total amount recorded from all stations across the time period?",
+                "How many times were measurements of T or M recorded?"
+            ],
+            "answers": [
+                "147aedeb411d9a6eda270e0d571c15c15087db80f49fe591bed710fce83cc5a7f76ae8f00ef1133c1c64add80fb08e46b8c815ab17b727b5ae2624eb48e0bcf7",
+                "55a535b9169f98b41a31f9ff9ec1584debb89d6f0b9eca954b4c674023eecb2b05b10b1796fb28911d69c58045a8809a0487ed662a36ad939f742745bf5fc366",
+                "bf24ce97e549d7cb56e633bc8d782ac3f6f2134d213c113d553749738d2a56ebcdc7d081dd9b50ea9a5d8e6051a260f8e3cc5428754ec4d84dd2797f5edbfe97",
+                "5b9ae06e45fb0233273b9dd2db678949773890f4f08a33c71175710926b9941a27fb23f5cf29e5588d1c1ede27d25b5097b3a3fccf15b9adfec6aa68335cf0d8"
+            ],
+            "walkthrough": []
+        }
+    ],
+    "Cracking": [
+        {
+            "name": "Common",
+            "difficulty": "Easy",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
+            "questions": [
+                "What is 42f749ade7f9e195bf475f37a44cafcb?",
+                "What is A532443f3e04a9e00295a8cd2a75e080?",
+                "What is 99adebc7cea629b373992e519849cd88dc7d1ef2?",
+                "What is b1b3773a05c0ed0176787a4f1574ff0075f7521e?"
+            ],
+            "answers": [
+                "52e9a1424242b276c60732a3dee61fc5fba68d55e53c87e256320ea016b209b755ee68aaae13b2cc09de0c22a880794fffcd2e454032e00d9d65c36f0c00eb22",
+                "aefd9bde048a6e86c7b625d335fcc64912c748fe98ae9cf7eed864864653b7550e358aa30442386f05d76bb1762317efda8003da43a01584e63b0e9e2d77088e",
+                "90016e2a99d168926149adef0eb6d04183cbddf5d919136f8c9e97b00eb172545ac5844a81583835135e75589ed6c79b060c593ddd24919947ae38a5e2fbb09a",
+                "a5cd272287098b7b4c9f6c359b9d25f7367b3c0b7360b0eea29c72544d7b88d9c301e55417675e26bf23f9fc88ab37929f0b34c122d6ca56b3a46249b18f85b2"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "There's a Leak in the Boat!",
+            "difficulty": "Medium",
+            "short_description": "Recover some passwords that were found in a password leak.",
+            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed in a pattern similar to those found in the RockYou Breach. Can you decrypt them?",
+            "questions": [
+                "What is e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4?",
+                "What is 4bbf2ddc38798e41cdc1d415c756faa92ba47ffd?",
+                "What is d3d918987cc94953e596480e4759a8f8c209fc16?",
+                "What is Admin:$1$Etg2ExUZ$0e52e7aaeb2ecadf0f99ee7a39d43d8b"
+            ],
+            "answers": [
+                "db6a3145a6a15399ed08a67a4433a8eef5cfd1a57b48340ab9d77b3e801c23e438965f507fc3fcfb5d4688e85d1c5d39f071d3fb19ac5fad00a15b5b6928c6f9",
+                "882533f7dfa654393b77c7ba65da47e2035e892b79f35d444bd7c0a5ddab7c1f103dc37c4220b5af4a2bd60076adcd213b4a14d52f64f01a4eaf00392c497633",
+                "1496747b2dd420a553bdc45a312d0a57a8e0bbcadf209437a88a490e4979eafd9dfa16f9e84dda17b79abbdd7a70d040c8014d109ccc9826a500c3da2885e86b",
+                "afe99137967ee6f5ec8f08df89dd8076db932e13d4ca8d7b32feda3dc919ae3e1657cf30616523d28500727755eddad5a6e18fe255b407a9c5f6dd8de1a43b99"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Masked",
+            "difficulty": "Easy",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. They seem to follow a pattern though, PFW-AAAA-###. Can you decrypt them?",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/LogAnalysis.patient.ssx",
+            "questions": [
+                "What is 32824d5c7270e2bc18efe66e96badf34?",
+                "What is 92bb53e02de7efd03b0ded37df6b7903?"
+            ],
+            "answers": [
+                "ef647a5fdb62371de66a62c50ac0d0434dd8ecaa2b9298695831da96f5061e61d3fe7f67cc2f44f8caf08ec377a1b30efc0f5e43d29a7cc0749b1b40b709596e",
+                "a0bd5eb84513607ce681594e94c63280a079359dc65484d94debd67cd0dca830e0daf2fe7bd705a9c7ba6d66614d6e506d60ba344749d24b61d8e02552dc1026"
+            ],
+            "walkthrough": []
+        }
+    ],
+    "Scan": [
+        {
+            "name": "Ping",
+            "difficulty": "Easy",
+            "short_description": "Discover key information about a server given only its URL.",
+            "description": "We think that there is something is hiding in the code of scanme.nmap.org, can you check it out and see what you can find?",
+            "questions": [
+                "How many open ports are there?",
+                "What is the most likely Operating system of the server?",
+                "What is the version of ther service running on the second lowest port?"
+            ],
+            "answers": [
+                "9536c1dde53c7b959941fcd4a11caa96c77983e25a26cfa1d631ca26e24f217a4fd1c9ab5bf6631f8f2f994804685b47b46fa5d232404208266336910ec8ed28",
+                "b995a52f58bf4ba4a31efc31cc6c084386e293f18dda28d74b3d1a43cc440bd9b5633515d43e5e2e4bdb8abeb70dab7dba7bebbe21eac76f2b00b558b0c9a1f4",
+                "6a75ec188bc716be7cb86d0459eb3b4ebdb2467327054445930a598005f69d4654af7b256139a0a7d47ef6cb0ed8fc7951ede06af2ae16c335fad60880b8e21d"
+            ],
+            "walkthrough": []
+        }
+    ],
+    "Enum": [
+        {
+            "name": "Login",
+            "difficulty": "Easy",
+            "short_description": "Find and recover the password to a website.",
+            "description": "We have found this site that requires a password, can you get into the website?",
+            "isIframe": true,
+            "assetURL": "../challenge_assets/2024/enum/obfuscatedCode_one.html",
+            "questions": [
+                "What is the password?"
+            ],
+            "answers": [
+                "393398a36eb9f806a120ac849e9050276fdf695d6303661a0fb65c5bb98c17480ab1422463688f3e6130b834584dbe87e17d7efc10d4c3a8f775ec94bdea357c"
+            ],
+            "walkthrough": []
+        }
+    ],
+    "WebApp": [
+        {
+            "name": "Employees Only",
+            "difficulty": "Easy",
+            "short_description": "Exploit a website's vulnerabilities to gain access to restricted information.",
+            "description": "We can't seem to login to this employee panel. Can you login as an admin for us?",
+            "isIframe": true,
+            "assetURL": "../challenge_assets/2024/employeepanel/",
+            "hasQuestion": false,
+            "walkthrough": []
+        },
+        {
+            "name": "OurSpace",
+            "difficulty": "Easy",
+            "short_description": "Exploit a website's vulnerabilities to gain access to restricted information.",
+            "description": "We have found this site that requires a password, can you get into the website?",
+            "isIframe": true,
+            "assetURL": "../challenge_assets/2024/ourspace/",
+            "hasQuestion": false,
+            "walkthrough": []
+        }
+    ],
+    "Net": [
+        {
+            "name": "Sus",
+            "difficulty": "Medium",
+            "short_description": "Learn how to read network traffic and see what information is being transmitted.",
+            "description": "Our hackers seem to communicate a lot over online games. Luckily our analysts were able to capture a few of their games can you tell us anything from the network traffic capture?",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/sus_export.pcapng",
+            "questions": [
+                "What is the game?",
+                "How many players where there?",
+                "What player wore the brain slug item?",
+                "What was the IP address of the game server?",
+                "What was the host port number?"
+            ],
+            "answers": [
+                "9c6aabf0a3284b074764905d64ce73cca1560904822a1a80fb977e8411ef645410cf79027a2033645cc1b4bd8ddd6a7ee80c8fe29970b23799201ea7e55c1aa8",
+                "64c008d6460c2b98aba616b1d0d11a06b9df564b87d3aeedda83b36aacd3d0c160465109eb06c62e86e360cf026faa27a616dbbf2bec269be9ad128af96073bb",
+                "95b45d176fc3170304e79acd0f1fbbce97514ccfe06098f4d6972953c9f58a3457777f96d04a9cb7b6739e6780b2c26dddf374b298ac85d367598296ac3b015f",
+                "ec122ea6e0bf6693e39c161523fa504b0d51606dc54bd3a1b1859e268a8db9e09aa26346e4588b85ed013a33c7ff9f1db28fb7e284b7470d4c0f6153b60aee1a",
+                "8fdae124319c363c45392d4170b15be05022167562abcccd0f9bac5addc68ade9042744f2bdcc3b0eb8a0bd4338984fc42448cac41568e93fea00dcbfe50b04d"
+            ],
+            "walkthrough": []
         }
     ]
 }
