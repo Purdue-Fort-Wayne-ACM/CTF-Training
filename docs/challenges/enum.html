@@ -59,13 +59,7 @@
           Challenges
         </h2>
         <hr>
-        <section class="container">
-          <div class="catSection" onclick="location.href='#CH1'">
-            <h3>Login (Easy)</h3>
-            <hr>
-            <p>Find and recover the password to a website.</p>
-          </div>
-        </section>
+        <section class="container" id="challenge_container"></section>
       </content>
     </main>
   </div>
@@ -74,61 +68,6 @@
     <a href="mailto:acm@pfw.edu">Contact Us!</a>
   </footer>
 </body>
-
 </html>
 
-
-<div id="CH1" class="modal"
-  onload="history.pushState('', document.title, window.location.pathname + window.location.search);">
-  <div class="challenge">
-    <h1>
-      Login
-    </h1>
-    <hr>
-    <p>
-      We have found this site that requires a super secret password, can you get into the website?<br>
-
-    <div>
-      <iframe name="code" src="../challenge_assets/2024/enum/obfuscatedCode_one.html"></iframe>
-    </div>
-
-    <input type="checkbox" id="q1">
-    <label for="q1">What is the password?</label><br>
-    </p>
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              Walkthrough
-            </h4>
-        </a>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body">
-          <p>
-
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            Answers
-          </h4>
-      </a>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-        <p>
-          1. Password to site: <em>mySecretPassword</em>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-<a href="" class="close">&times;</a>
-</div>
-</div>
+<div id="challenge_modules"></div>
