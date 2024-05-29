@@ -4,6 +4,7 @@ content {
 content * {
     padding-left: 10px;
     padding-right: 10px;
+    background-color: transparent;
 }
 content h2 {
     margin: 5px;
@@ -18,14 +19,15 @@ content h2 {
 
 .catSection { 
     flex: 1 0 300px; 
-    background-color: #eee; 
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     padding: 20px; 
-    border-radius: 5px; 
+    border-radius: 15px; 
     transition: transform 0.3s ease-in-out; 
     color:black
 } 
   
 .catSection:hover { 
-    transform: scale(1.05); 
+    transform: scale(1.05);
+    cursor: pointer;
 } 
