@@ -44,9 +44,8 @@ Palette
     width: 100%;
     z-index: 10;
     padding: 15px 75px;
-    background-color: #0D324D;
+    background: linear-gradient(90deg, #2C2B3C, #1B2432);
 }
-
 
 .site-title h1 {
     font-family: pSemiBold;
@@ -82,17 +81,16 @@ Palette
 
 .hero-section {
     width: 100%;
-    /*background-color: #0D324D;*/
     padding: 40px 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #0D324D, #1b6499);
+    background: linear-gradient(90deg, #2C2B3C, #1B2432);
 }
 
 .hero-section .text {
-    background-color: rgba(255, 255, 255, 0.14);
+    background-color: #515060dd;
     font-family: pRegular;
     max-width: 55%;
     padding: 20px 20px;
@@ -113,12 +111,18 @@ Palette
 }
 
 .hero-section .text a {
-    padding: 3px 10px;
-    background-color: #c598ca;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.696);
     border-radius: 10px;
     color: black;
     font-size: 17px;
     text-decoration: none;
+}
+
+.hero-section .text a:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.632);
 }
 
 .hero-section .display {
@@ -130,5 +134,49 @@ Palette
     max-width: 450px;
     border-radius: 20px;
 }
+
+.category-container-parent {
+    background-color: white !important;
+    display: flex;
+    padding: 40px 75px;
+    flex-direction: column;
+    border-radius: 65px 65px 0px 0px;
+}
+
+.category-container-parent h2 {
+    font-family: pSemiBold;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.catcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 75px 20px 75px;
+    background: white !important;
+    font-family: pRegular;
+    font-size: 13px;
+    color: black;
+}
+
+footer div a {
+    color: #5c5a73;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(90deg, #2C2B3C, #1B2432);
+
+}
+
 
 
