@@ -44,7 +44,6 @@ Palette
     width: 100%;
     z-index: 10;
     padding: 15px 75px;
-    background: linear-gradient(90deg, #2C2B3C, #1B2432);
 }
 
 .site-title h1 {
@@ -86,14 +85,11 @@ Palette
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #2C2B3C, #1B2432);
 }
 
 .hero-section .text {
-    background-color: #515060dd;
     font-family: pRegular;
-    max-width: 55%;
-    padding: 20px 20px;
+    max-width: 45%;
     border-radius: 10px;
     color: white;
 }
@@ -141,6 +137,7 @@ Palette
     padding: 40px 75px;
     flex-direction: column;
     border-radius: 65px 65px 0px 0px;
+    align-items: center;
 }
 
 .category-container-parent h2 {
@@ -154,6 +151,7 @@ Palette
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 1750px;
 }
 
 footer {
@@ -174,9 +172,83 @@ footer div a {
 }
 
 body {
-    background: linear-gradient(90deg, #2C2B3C, #1B2432);
-
+    background-color: #1f2338;
+    animation: gradientAnimation 15s linear infinite;
 }
 
+@keyframes gradientAnimation {
+    0%, 100% {background-color: #1f2338;}
+    20% {background-color: #311c24;}
+    40% {background-color: #31301c;}
+    60% {background-color: #1e311c;}
+    80% {background-color: #1c312a;}
+}
 
+@media (max-width: 1400px) {
+    .quick-links a {
+        font-size: 12px;
+    }
+}
 
+@media (max-width: 1250px) {
+    .catcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .quick-links a {
+        display: none;
+    }
+}
+
+@media (max-width: 1030px) {
+    
+    .hero-section {
+       flex-direction: column-reverse;
+       justify-content: center;
+    }
+
+    .hero-section .text {
+        font-family: pRegular;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-section .display {
+        display: none;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 815px) {
+
+    .hero-section .display {
+        display: none;
+        margin-bottom: 40px;
+    }
+
+    .catcontainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer div p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 20px 20px;
+    }
+
+    .hero-section {
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .category-container-parent {
+        border-radius: 0px;
+    }
+}

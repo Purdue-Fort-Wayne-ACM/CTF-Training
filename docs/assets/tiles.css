@@ -38,7 +38,6 @@ content h2 {
 }
 
 .catSection { 
-    flex: 1 0 300px; 
     background-color: #F2F2F2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     padding: 20px; 
@@ -79,3 +78,19 @@ content h2 {
     background-color:  #51506088;
     color: black;
 } 
+
+@media screen and (max-width: 475px) {
+
+    .catSection div {
+       text-align: center;
+    }
+
+    .catSection div img {
+        align-self: center;
+    }
+
+    .header div h1 {
+        font-size: 20px;
+    }
+
+}
