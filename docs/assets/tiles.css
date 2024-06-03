@@ -1,9 +1,30 @@
+@font-face {
+    font-family: pBold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: pRegular;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: pMedium;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: pSemiBold;
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+
 content {
-    color :black;
+    color :rgb(23, 23, 23);
 }
 content * {
     padding-left: 10px;
     padding-right: 10px;
+    background-color: transparent;
 }
 content h2 {
     margin: 5px;
@@ -17,15 +38,59 @@ content h2 {
 }
 
 .catSection { 
-    flex: 1 0 300px; 
-    background-color: #eee; 
+    background-color: #F2F2F2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     padding: 20px; 
-    border-radius: 5px; 
+    border-radius: 15px; 
     transition: transform 0.3s ease-in-out; 
-    color:black
+    color: black;
 } 
+
+.catSection div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.catSection div h3 {
+    font-family: pMedium;
+    font-size: 20px;
+}
+
+.catSection div img {
+    height: 20px;
+    width: 20px;
+}
+
+.catSection p {
+    text-align: center;
+    font-family: pRegular;
+    font-size: 14px;
+}
+
   
 .catSection:hover { 
-    transform: scale(1.05); 
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color:  #51506088;
+    color: black;
 } 
+
+@media screen and (max-width: 475px) {
+
+    .catSection div {
+       text-align: center;
+    }
+
+    .catSection div img {
+        align-self: center;
+    }
+
+    .header div h1 {
+        font-size: 20px;
+    }
+
+}
