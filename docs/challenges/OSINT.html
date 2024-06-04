@@ -33,48 +33,73 @@
 </head>
 
 <body id="host" class="alt" onload="LoadChallenges('OSINT')">
-  <div id="sidebar">
-    <header>
-      <h1>PFW ACM's CTF Practice</h1>
-      <hr>
-      <a id="home" href="../" class="alt">Home</a><br>
-      <a href="../resources.html" class="alt">Resources</a>
-      <hr>
-      <a href="./OSINT.html">Open-Source Intelligence</a>
-      <a href="./crypto.html">Cryptography</a>
-      <a href="./pass.html">Password Cracking</a>
-      <a href="./wires.html">Wi-Fi Analysis</a>
-      <a href="./log.html">Log Analysis</a>
-      <a href="./scan.html">Network Scanning</a>
-      <a href="./forensics.html">Digital Forensics</a>
-      <a href="./enum.html">Reverse Engineering</a>
-      <a href="./webapp.html">Web Application Security</a>
-    </header>
+  
+  <div class="header">
+    <div class="site-title">
+        <h1>PFW ACM's CTF Practice</h1>
+    </div>
+    <div class="quick-links">
+        <a id="home" href="../index.html" class="alt">Home</a>
+        <a href="./resources.html" class="alt">Resources</a>
+        <a href="./challenges/OSINT.html">OSINT</a>
+        <a href="./challenges/crypto.html">Crypto</a>
+        <a href="./challenges/pass.html">Passwords</a>
+        <a href="./challenges/wires.html">Wi-Fi</a>
+        <a href="./challenges/log.html">Log</a>
+        <a href="./challenges/scan.html">Network</a>
+        <a href="./challenges/forensics.html">Forensics</a>
+        <a href="./challenges/enum.html">Reverse Engineering</a>
+        <a href="./challenges/webapp.html">Web App</a>
+    </div>
+    <a id="menu-button" onclick="openMenu();" hidden>
+        <h1 class="mobile-navigation" id="hamburger-icon" hidden>☰</h1>
+    </a>
+
   </div>
-  <div id="content" class="host alt">
-    <main>
-      <content>
-        <h1>Open-Source Intelligence</h1>
-        <p>
-          Open-source intelligence is the process of gathering information from publicly accessible sources.
-        </p>
-        <p>
-          In the following challenges we will be utilizing a variety of free online tools, and information that is
-          obtained by googling.
-        </p>
-        <h2>
-          Challenges
-        </h2>
-        <hr>
-        <section class="container" id="challenge_container"></section>
-      </content>
-    </main>
+
+  <!-- for mobile -->
+  <div class="mobile-hrefs">
+    <div class="close-button-container">
+        <button id="close-menu-button" onclick="closeMenu();"><h1>✕</h1></button>
+    </div>
+    <div class="content-container">
+        <h1>PFW ACM Cyber Practice</h1>
+        <a id="home" href="" class="alt">Home</a>
+        <a href="./resources.html" class="alt">Resources</a>
+        <a href="./challenges/OSINT.html">OSINT</a>
+        <a href="./challenges/crypto.html">Cryptography</a>
+        <a href="./challenges/pass.html">Password Cracking</a>
+        <a href="./challenges/wires.html">Wi-Fi Analysis</a>
+        <a href="./challenges/log.html">Log Analysis</a>
+        <a href="./challenges/scan.html">Network Analysis</a>
+        <a href="./challenges/forensics.html">Forensics</a>
+        <a href="./challenges/enum.html">Reverse Engineering</a>
+        <a href="./challenges/webapp.html">Web Application</a>
+    </div>
+
+  </div>
+
+  <script src="./assets/mobile-navigation.js"></script>
+
+  <div class="hero-section-category">
+    <div class="text">
+        <h3>Open-Source Intelligence</h3>
+        <p> Open-source intelligence is the process of gathering information from publicly accessible sources. In the following challenges we will be utilizing a variety of free online tools, and information that is
+          obtained by googling.</p>
+    </div>
+  </div>
+
+  <div id="Categories" class="category-container-parent">
+    <h2>Challenges</h2>
+      <section class="catcontainer" id="challenge_container"></section>
   </div>
 
   <footer>
-    &copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved.
-    <a href="mailto:acm@pfw.edu">Contact Us!</a>
+    <div>
+        <p>&copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved. <a href="mailto:acm@pfw.edu">Contact Us!</a></p>
+    </div>
   </footer>
+
 </body>
 
 </html>

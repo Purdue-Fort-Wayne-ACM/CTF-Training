@@ -98,6 +98,7 @@ export default {
         {
             "name": "The Village",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/village-svgrepo-com.svg",
             "short_description": "Exercise your reverse image searching skills to determine where a TV show was filmed.",
             "description": "One of our field agents was captured by mysterious forces. Luckily, we got one picture from them before they went off the grid. Can you help us find them based on the image?",
             "hasImage": true,
@@ -130,6 +131,7 @@ export default {
         {
             "name": "The Bridge",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/bridge-engineering-svgrepo-com.svg",
             "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
             "description": "One of our operatives sent us this photo. We think that they are close to catching a SAB3RT00TH asset. Can you help us find them so we can send backup?",
             "hasImage": true,
@@ -161,6 +163,7 @@ export default {
         {
             "name": "Versailles",
             "difficulty": "Medium",
+            "icon": "../assets/index_assets/SVG/castle-svgrepo-com.svg",
             "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
             "description": "A note was dropped off at our main office. Can you figure out what it could mean?",
             "hasImage": false,
@@ -193,6 +196,7 @@ export default {
         {
             "name": "Twister",
             "difficulty": "Medium",
+            "icon": "../assets/index_assets/SVG/tornado-svgrepo-com.svg",
             "short_description": "Take your pattern recognition skills to another level as you find the missing element of a complex pattern.",
             "description": "We are tracking some SAB3RT00TH agents and found this slip of paper. We think that if we find the next value in the series, we could track down the agents.",
             "hasImage": false,
@@ -233,6 +237,7 @@ export default {
         {
             "name": "Spicy",
             "difficulty": "Hard",
+            "icon": "../assets/index_assets/SVG/image-1-svgrepo-com.svg",
             "short_description": "Test your skills as you combine your reverse image searching skills, pattern recognition, and powers of observation to gain key information with minimal starting information.",
             "description": "We stumbled upon this video, we think it contains crucial information. What can you find out?",
             "hasImage": true,
@@ -275,6 +280,7 @@ export default {
         {
             "name": "New Ride",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/car-side-svgrepo-com.svg",
             "short_description": "Exercise your reverse image searching skills to determine key information about a car.",
             "description": "Our field officers tracked the evil SAB3RT00TH to a secret hiding spot. We have seen this car a few times. Can you identify the make, model, and year of the car so that we can issue a warning to law enforcement?",
             "hasImage": true,
@@ -303,6 +309,7 @@ export default {
         {
             "name": "Shopping",
             "difficulty": "Medium",
+            "icon": "../assets/index_assets/SVG/shopping-cart-svgrepo-com.svg",
             "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
             "description": "Our intel officers intercepted some suspicious numbers. What could they mean? And what is the evil SAB3RT00TH trying to build?",
             "questions": [
@@ -331,6 +338,7 @@ export default {
         {
             "name": "Travel",
             "difficulty": "Medium",
+            "icon": "../assets/index_assets/SVG/plane-svgrepo-com.svg",
             "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
             "description": "Good job foiling the plans of SAB3RT00TH! We have been watching their leader for a while now and they sent this image to the SAB3RT00TH Admins, can you find out what state the leader is in?",
             "hasImage": true,
@@ -357,6 +365,7 @@ export default {
         {
             "name": "Recon I",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/search-alt-1-svgrepo-com.svg",
             "short_description": "Exercise your googling skills as you find a variety of information.",
             "description": "We have found some interesting email behavior from some domains. Can you get us more information about how these domains handle their emails?",
             "questions": [
@@ -383,6 +392,7 @@ export default {
         {
             "name": "Recon II",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/search-alt-1-svgrepo-com.svg",
             "short_description": "Exercise your googling skills as you find a variety of information.",
             "description": "We have some found that some SAB3RT00TH has switched how they are transmitting information. Can you crack their protocol?",
             "questions": [
@@ -411,6 +421,7 @@ export default {
         {
             "name": "The Numbers Speak to Me",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/math-formula-svgrepo-com.svg",
             "short_description": "Use google to identify a variety of ciphers.",
             "description": "We have found some mysterious numbers written on a sticky note that an operative managed to capture from SAB3RT00TH. Can you find what they might be?",
             "questions": [
@@ -437,6 +448,7 @@ export default {
         {
             "name": "Old School",
             "difficulty": "Easy",
+            "icon": "../assets/index_assets/SVG/school-svgrepo-com.svg",
             "short_description": "Use google to identify a variety of ciphers.",
             "description": "It seems that SAB3RT00TH has decided to go old school with some of their ciphers. We think that this will lead us to a dead drop location. Where could it be?",
             "hasImage": true,
@@ -461,6 +473,7 @@ export default {
         {
             "name": "Bill",
             "difficulty": "Medium",
+            "icon": "../assets/index_assets/SVG/eye-svgrepo-com.svg",
             "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
             "description": "We received this image from a field agent. We suspect that they have had an encounter with a six fingered man. Can you find out where they are before a deal is made?",
             "hasImage": true,
@@ -492,6 +505,7 @@ export default {
         {
             "name": "Blown Away",
             "difficulty": "Medium",
+            "icon": "../assets/index_assets/SVG/storm-svgrepo-com.svg",
             "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
             "description": "SAB3RT00TH was sending the attached image to one of their field agents telling them to pick up a dead drop at a certain location. We think it has something to do with where the image was taken. Can you track them down?",
             "hasImage": true,
@@ -524,6 +538,7 @@ export default {
         {
             "name": "Alert",
             "difficulty": "Hard",
+            "icon": "../assets/index_assets/SVG/alert-square-svgrepo-com.svg",
             "short_description": "Decode a radio transmission to get key insights.",
             "description": "We have some found that some SAB3RT00TH have switched how they are transmitting information. Can you crack their protocol?",
             "hasAudio": true,

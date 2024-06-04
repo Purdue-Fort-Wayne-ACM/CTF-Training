@@ -151,14 +151,29 @@ function buf2hex(buffer) {
 function AddChallengeSummary(challenge, index) {
     // Create a challenge summary object
     var challengeSummaryParent = document.createElement("div");
+    var challengeSummaryChildDiv = document.createElement("div");
     var challengeSummaryHeader = document.createElement("h3");
+    var challengeSummaryDifficulty = document.createElement("h6")
     var challengeSummaryDescription = document.createElement("p");
+    var challengeIcon = document.createElement("img");
 
-    challengeSummaryHeader.textContent = challenge.name + " (" + challenge.difficulty + ")";
+    challengeIcon.src = challenge.icon;
+    challengeSummaryHeader.textContent = challenge.name;
     challengeSummaryDescription.textContent = challenge.short_description;
+    challengeSummaryDifficulty.textContent = challenge.difficulty;
 
-    challengeSummaryParent.appendChild(challengeSummaryHeader);
-    challengeSummaryParent.appendChild(CreateBar());
+    if (challengeSummaryDifficulty.textContent == "Easy"){
+        challengeSummaryDifficulty.classList.add("difficulty-easy");
+    } else if (challengeSummaryDifficulty.textContent == "Medium"){
+        challengeSummaryDifficulty.classList.add("difficulty-medium");
+    } else {
+        challengeSummaryDifficulty.classList.add("difficulty-hard");
+    }
+
+    challengeSummaryParent.appendChild(challengeSummaryChildDiv);
+    challengeSummaryChildDiv.appendChild(challengeIcon);
+    challengeSummaryChildDiv.appendChild(challengeSummaryHeader);
+    challengeSummaryChildDiv.appendChild(challengeSummaryDifficulty);
     challengeSummaryParent.appendChild(challengeSummaryDescription);
 
     challengeSummaryParent.classList.add("catSection");
