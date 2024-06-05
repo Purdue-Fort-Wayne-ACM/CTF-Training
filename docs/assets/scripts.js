@@ -235,13 +235,14 @@ function AddChallengeModule(challenge, index) {
         image.src = challenge.assetURL;
         challengeModuleContainer.appendChild(image);
         challengeModuleContainer.appendChild(CreateBreak());
-        challengeModuleContainer.appendChild(CreateBreak());
-    } else if (challenge.assetCode) {
+    }
+    if (challenge.assetCode) {
         var codeBlock = document.createElement("div");
         codeBlock.classList.add("CodeBlock");
         codeBlock.innerHTML = challenge.assetCode;
         challengeModuleContainer.appendChild(codeBlock);
-    } else if (challenge.hasAudio) {
+    }
+    if (challenge.hasAudio) {
         challengeModuleContainer.appendChild(CreateBreak());
         var audio = document.createElement("audio");
         audio.setAttribute("controls", "controls");
@@ -253,14 +254,32 @@ function AddChallengeModule(challenge, index) {
         audio.appendChild(source);
         challengeModuleContainer.appendChild(audio);
         challengeModuleContainer.appendChild(CreateBreak());
-    } else if (challenge.isIframe) {
+    }
+
+    if (challenge.hasVideo) {
+        challengeModuleContainer.appendChild(CreateBreak());
+        var video = document.createElement("video");
+        video.setAttribute("controls", "controls");
+        video.setAttribute("controlsList", "nodownload");
+        video.appendChild(CreateBreak());
+        var source = document.createElement("source");
+        source.setAttribute("src", challenge.assetURL);
+        source.setAttribute("type", "video/mp4");
+        video.appendChild(source);
+        challengeModuleContainer.appendChild(video);
+        challengeModuleContainer.appendChild(CreateBreak());
+        challengeModuleContainer.appendChild(CreateBreak());
+    }
+
+    if (challenge.isIframe) {
         challengeModuleContainer.appendChild(CreateBreak());
         var iFrame = document.createElement("iframe");
         iFrame.src = challenge.assetURL;
         challengeModuleContainer.appendChild(iFrame);
         challengeModuleContainer.appendChild(CreateBreak());
         challengeModuleContainer.appendChild(CreateBreak());
-    } else {
+    }
+    if (challengeModuleContainer.children.length === 4) {
         challengeModuleContainer.appendChild(CreateBreak());
     }
 
