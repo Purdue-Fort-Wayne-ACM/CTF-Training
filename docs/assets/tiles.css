@@ -1,23 +1,10 @@
-@font-face {
-    font-family: pBold;
-    src: url(fonts/Poppins-Bold.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@font-face {
-    font-family: pRegular;
-    src: url(fonts/Poppins-Regular.ttf);
+* {
+    font-family: 'Poppins', sans-serif;
+    font-style:normal;
+    font-weight: 400;
 }
-
-@font-face {
-    font-family: pMedium;
-    src: url(fonts/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: pSemiBold;
-    src: url(fonts/Poppins-SemiBold.ttf);
-}
-
 content {
     color :rgb(23, 23, 23);
 }
@@ -56,7 +43,7 @@ content h2 {
 }
 
 .catSection div h3 {
-    font-family: pMedium;
+    font-weight: 500;
     font-size: 20px;
 }
 
@@ -67,13 +54,11 @@ content h2 {
 
 .catSection p {
     text-align: center;
-    font-family: pRegular;
     font-size: 14px;
 }
 
 .difficulty-easy {
     font-size: 12px;
-    font-family: pRegular;
     padding: 2px 8px;
     background-color: #69995D;
     border-radius: 10px;
@@ -82,7 +67,6 @@ content h2 {
 
 .difficulty-medium {
     font-size: 12px;
-    font-family: pRegular;
     padding: 2px 8px;
     background-color: #998f5d;
     border-radius: 10px;
@@ -91,7 +75,6 @@ content h2 {
 
 .difficulty-hard {
     font-size: 12px;
-    font-family: pRegular;
     padding: 2px 8px;
     background-color: #99665d;
     border-radius: 10px;

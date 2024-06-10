@@ -25,6 +25,7 @@ function CreateClose() {
     tmp.href = "#?";
     tmp.classList.add("close");
     tmp.innerHTML = "&times;";
+    tmp.setAttribute("onclick", "stopMedia()");
     return tmp;
 }
 function CreateAccordian(index) {
@@ -193,10 +194,11 @@ function AddChallengeModule(challenge, index) {
 
     challengeModuleHeader.textContent = challenge.name;
     challengeModuleDescription.textContent = challenge.description;
-
     challengeModuleContainer.appendChild(challengeModuleHeader);
     challengeModuleContainer.appendChild(CreateBar());
+    challengeModuleContainer.appendChild(CreateBreak());
     challengeModuleContainer.appendChild(challengeModuleDescription);
+    challengeModuleContainer.appendChild(CreateBreak());
 
     if (challenge.hasQuestion !== false) {
         var challengeModuleTable = document.createElement("table");
@@ -250,13 +252,14 @@ function AddChallengeModule(challenge, index) {
         image.src = challenge.assetURL;
         challengeModuleContainer.appendChild(image);
         challengeModuleContainer.appendChild(CreateBreak());
-        challengeModuleContainer.appendChild(CreateBreak());
-    } else if (challenge.assetCode) {
+    }
+    if (challenge.assetCode) {
         var codeBlock = document.createElement("div");
         codeBlock.classList.add("CodeBlock");
         codeBlock.innerHTML = challenge.assetCode;
         challengeModuleContainer.appendChild(codeBlock);
-    } else if (challenge.hasAudio) {
+    }
+    if (challenge.hasAudio) {
         challengeModuleContainer.appendChild(CreateBreak());
         var audio = document.createElement("audio");
         audio.setAttribute("controls", "controls");
@@ -268,17 +271,34 @@ function AddChallengeModule(challenge, index) {
         audio.appendChild(source);
         challengeModuleContainer.appendChild(audio);
         challengeModuleContainer.appendChild(CreateBreak());
-    } else if (challenge.isIframe) {
+    }
+
+    if (challenge.hasVideo) {
+        challengeModuleContainer.appendChild(CreateBreak());
+        var video = document.createElement("video");
+        video.setAttribute("controls", "controls");
+        video.setAttribute("controlsList", "nodownload");
+        video.appendChild(CreateBreak());
+        var source = document.createElement("source");
+        source.setAttribute("src", challenge.assetURL);
+        source.setAttribute("type", "video/mp4");
+        video.appendChild(source);
+        challengeModuleContainer.appendChild(video);
+        challengeModuleContainer.appendChild(CreateBreak());
+        challengeModuleContainer.appendChild(CreateBreak());
+    }
+
+    if (challenge.isIframe) {
         challengeModuleContainer.appendChild(CreateBreak());
         var iFrame = document.createElement("iframe");
         iFrame.src = challenge.assetURL;
         challengeModuleContainer.appendChild(iFrame);
         challengeModuleContainer.appendChild(CreateBreak());
         challengeModuleContainer.appendChild(CreateBreak());
-    } else {
+    }
+    if (challengeModuleContainer.children.length === 6) {
         challengeModuleContainer.appendChild(CreateBreak());
     }
-
     challengeAccordian.appendChild(AddChallengeWalkthrough(challenge, index));
 
     challengeModuleContainer.appendChild(challengeAccordian);
@@ -352,4 +372,7 @@ function AddChallengeWalkthrough(challenge, index) {
 
 function GetFileName(URL) {
     return "." + URL.substring(URL.indexOf(" "));
+}
+export function stopMedia() {
+    [...document.getElementsByTagName('audio'), ...document.getElementsByTagName('video')].forEach(media => { media.pause(); media.currentTime = 0;});
 }

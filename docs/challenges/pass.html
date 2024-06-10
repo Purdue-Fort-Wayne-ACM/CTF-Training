@@ -18,76 +18,79 @@
   <link rel="stylesheet" href="../assets/popups.css">
   <link rel="stylesheet" href="../assets/tiles.css">
   <link rel="stylesheet" href="../assets/panels.css">
+  <link rel="stylesheet" href="../assets/challenges.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <script type="module">
-    import { LoadChallenges, Validate } from "../assets/scripts.js";
+    import { LoadChallenges, Validate, stopMedia } from "../assets/scripts.js";
     window.LoadChallenges = LoadChallenges;
     window.Validate = Validate;
+    window.stopMedia = stopMedia;
   </script>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body id="host" class="alt" onload="LoadChallenges('Password Cracking')">
-  <div id="sidebar">
-    <header>
-      <h1>PFW ACM's CTF Practice</h1>
-      <hr>
-      <a id="home" href="../" class="alt">Home</a><br>
+  <div class="header">
+    <div class="site-title">
+      <a href="../" style="text-decoration: none;"><h1>PFW ACM's CTF Practice</h1></a>
+    </div>
+    <div class="quick-links">
+      <a id="home" href="../" class="alt">Home</a>
       <a href="../resources.html" class="alt">Resources</a>
-      <hr>
+      <a href="./OSINT.html">OSINT</a>
+      <a href="./crypto.html">Crypto</a>
+      <a href="./pass.html">Passwords</a>
+      <a href="./wires.html">Wi-Fi</a>
+      <a href="./log.html">Log</a>
+      <a href="./scan.html">Network</a>
+      <a href="./forensics.html">Forensics</a>
+      <a href="./enum.html">Reverse Engineering</a>
+      <a href="./webapp.html">Web App</a>
+    </div>
+    <a id="menu-button" onclick="openMenu();" hidden>
+      <h1 class="mobile-navigation" id="hamburger-icon" hidden>☰</h1>
+    </a>
+
+  </div>
+
+  <!-- for mobile -->
+  <div id="mobile-hrefs">
+    <div class="close-button-container">
+      <button id="close-menu-button" onclick="closeMenu();">
+        <h1>✕</h1>
+      </button>
+    </div>
+    <div class="content-container">
+      <a href="../"><h1>PFW ACM's CTF Practice</h1></a>
+      <a id="home" href="../" class="alt">Home</a>
+      <a href="../resources.html" class="alt">Resources</a>
       <a href="./OSINT.html">Open-Source Intelligence</a>
       <a href="./crypto.html">Cryptography</a>
       <a href="./pass.html">Password Cracking</a>
-      <a href="./wires.html">Wi-Fi Analysis</a>
+      <a href="./wires.html">Wi-Fi Traffic Analysis</a>
       <a href="./log.html">Log Analysis</a>
-      <a href="./scan.html">Network Scanning</a>
+      <a href="./scan.html">Network Vulnerability Analysis</a>
       <a href="./forensics.html">Digital Forensics</a>
       <a href="./enum.html">Reverse Engineering</a>
-      <a href="./webapp.html">Web Application Security</a>
-    </header>
+      <a href="./webapp.html">Web App Exploitation</a>
+    </div>
+
   </div>
-  <div id="content" class="host alt">
-    <main>
-      <content>
-        <h1>Password Cracking</h1>
-        <h2>
-          Challenges
-        </h2>
-        <hr>
-        <section class="container" id="challenge_container">
-          <div class="catSection" onclick="location.href='#CH99'">
-          <!--<div class="catSection" onclick="location.href='#CH1'">
-            <h3>There's a Leak in the Boat! (Medium)</h3>
-            <hr>
-            <p>Recover some passwords that were found in a password leak.</p>
-          </div>
-          <div class="catSection" onclick="location.href='#CH1'">
-            <h3>Masks (Medium)</h3>
-            <hr>
-            <p>Recover some passwords that follow a certain pattern.</p>
-          </div>
-          <div class="catSection" onclick="location.href='#CH1'">
-            <h3>Common (Easy)</h3>
-            <hr>
-            <p>Recover some common passwords that were found on a mysterious flashdrive.</p>
-          </div>
-          <div class="catSection" onclick="location.href='#CH1'">
-            <h3>An Open Window (Easy)</h3>
-            <hr>
-            <p>Recover some passwords that were recovered from a captured hard drive.</p>
-          </div>-->
-          <h3>Dump (Medium)</h3>
-            <hr>
-            <p>Recover some passwords that were recovered from a captured hard drive.</p>
-          </div>
-        </section>
-      </content>
-    </main>
+  <script src="../assets/mobile-navigation.js"></script>
+
+  <div class="hero-section-category">
+
+    <div class="text">
+      <h3>Password Cracking</h3>
+      <p>Password cracking is a popular attack method used by hackers to determine a user's password.</p>
+      <p>Passwords are traditionally stored in a form called a password hash, a theoretically unique identifier that cannot be traced to the password text. By attacking the hash, we can obtain the plaintext password.</p>
+    </div>
+  </div>
+  <div id="Categories" class="category-container-parent">
+    <h2>Challenges</h2>
+    <section class="catcontainer" id="challenge_container"></section>
+  </div>
   </div>
   <footer>
     &copy 2024 Purdue University Fort Wayne Association for Computing Machinery. All rights reserved.
@@ -96,6 +99,7 @@
 </body>
 
 </html>
+
 <div id="challenge_modules"></div>
 
 <div id="CH99" class="modal"

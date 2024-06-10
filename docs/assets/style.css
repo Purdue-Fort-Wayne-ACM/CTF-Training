@@ -6,33 +6,24 @@ Palette
 #a188a6
 #9da2ab
 */
-
-@font-face {
-    font-family: pBold;
-    src: url(fonts/Poppins-Bold.ttf);
-}
-
-@font-face {
-    font-family: pRegular;
-    src: url(fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
-    font-family: pMedium;
-    src: url(fonts/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: pSemiBold;
-    src: url(fonts/Poppins-SemiBold.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
 
 .header {
     display: flex;
@@ -47,7 +38,7 @@ Palette
 }
 
 .site-title h1 {
-    font-family: pSemiBold;
+    font-weight: 600;
     font-size: 25px;
     color: white;
 }
@@ -58,7 +49,6 @@ Palette
     font-family: monospace;
     margin-right: 14px;
     font-size: 14px;
-    font-family: pMedium;
     color: white;
     position: relative;
 }
@@ -67,10 +57,10 @@ Palette
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0; 
-    width: 0; 
-    height: 2px;  
-    background-color: currentColor;  
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
     transition: width 0.3s ease;
 }
 
@@ -96,40 +86,39 @@ Palette
 }
 
 .hero-section-category .text {
-    font-family: pRegular;
     max-width: 45%;
     border-radius: 10px;
     color: white;
 }
 
 .hero-section .text {
-    font-family: pRegular;
     max-width: 45%;
     border-radius: 10px;
     color: white;
 }
 
 .hero-section-category .text h3 {
-    font-family: pBold;
+    font-weight: 700;
     font-size: 35px;
     text-align: center;
 }
 
 .hero-section .text h3 {
-    font-family: pBold;
+    font-weight: 700;
     font-size: 35px;
 }
 
 .hero-section-category .text p {
-    font-family: pRegular;
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 20px;
-    text-align: center;
+}
+
+.hero-section-category .text b{
+    font-weight: 600;
 }
 
 .hero-section .text p {
-    font-family: pRegular;
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 20px;
@@ -176,10 +165,14 @@ Palette
     flex-direction: column;
     border-radius: 65px 65px 0px 0px;
     align-items: center;
+    bottom: 0px;
+    height: auto;
+    position: relative;
+    flex-grow: 1;
 }
 
 .category-container-parent h2 {
-    font-family: pSemiBold;
+    font-weight: 600;
     font-size: 30px;
     margin-bottom: 40px;
     text-align: center;
@@ -199,7 +192,6 @@ footer {
     justify-content: center;
     padding: 10px 75px 20px 75px;
     background: white !important;
-    font-family: pRegular;
     font-size: 13px;
     color: black;
 }
@@ -215,11 +207,27 @@ body {
 }
 
 @keyframes gradientAnimation {
-    0%, 100% {background-color: #1f2338;}
-    20% {background-color: #311c24;}
-    40% {background-color: #31301c;}
-    60% {background-color: #1e311c;}
-    80% {background-color: #1c312a;}
+
+    0%,
+    100% {
+        background-color: #1f2338;
+    }
+
+    20% {
+        background-color: #311c24;
+    }
+
+    40% {
+        background-color: #31301c;
+    }
+
+    60% {
+        background-color: #1e311c;
+    }
+
+    80% {
+        background-color: #1c312a;
+    }
 }
 
 #hamburger-icon {
@@ -227,7 +235,7 @@ body {
     background-color: transparent !important;
 }
 
-.mobile-hrefs {
+#mobile-hrefs {
     position: fixed;
     top: 0;
     left: 0;
@@ -239,7 +247,7 @@ body {
     display: none;
 }
 
-.mobile-hrefs .content-container {
+#mobile-hrefs .content-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -247,19 +255,18 @@ body {
 }
 
 
-.mobile-hrefs .content-container a {
+#mobile-hrefs .content-container a {
     color: white;
     text-decoration: none;
     font-size: 22px;
     margin-bottom: 8px;
     text-align: center;
-    font-family: pRegular;
 }
 
-.mobile-hrefs .content-container h1 {
+#mobile-hrefs .content-container h1 {
     color: white;
     text-align: center;
-    font-family: pSemiBold;
+    font-weight: 600;
     font-size: 27px;
     margin-bottom: 20px;
 }
@@ -277,7 +284,6 @@ body {
     width: 50px;
     border-radius: 100%;
     border: none;
-
 }
 
 @media (max-width: 1400px) {
@@ -291,28 +297,33 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .quick-links a {
         display: none;
+    }
+
+    .mobile-navigation {
+        display: block;
+    }
+
+    #menu-button {
+        display: block;
     }
 }
 
 @media (max-width: 1030px) {
-    
+
     .hero-section {
-       flex-direction: column-reverse;
-       justify-content: center;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 
     .hero-section .text {
-        font-family: pRegular;
         max-width: 100%;
         text-align: center;
     }
 
-    .hero-section .display {
-        display: none;
-        margin-bottom: 40px;
-    }
+
 }
 
 @media (max-width: 815px) {
