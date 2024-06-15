@@ -626,6 +626,95 @@ export default {
                     "text": "Coming soon..."
                 }
             ]
+        },
+        {
+            "name": "Threats",
+            "difficulty": "Easy",
+            "short_description": "Research key information about potential cyber threats.",
+            "description": "We think that some APTs that we are tracking have taken inspiration from other famous APTs. Can you find out more about some?",
+            "questions": [
+                "Who is Housefly connected to?",
+                "What country is connected to Stardust Chollima?",
+                "Who released the NotPetya worm?",
+                "What is the Mandiant APT id for BRONZE FLEETWOOD?",
+                "Who identified Monster Libra?"
+            ],
+            "answers": [
+                "bd92eddcc897c1063aecff3b3fa4f4266ea7ed6e159b0625ba83b5cd33c1a79433f1a3364e6871d831233a392eb3e8219b0a8df778d83782fa606ff464a930a2",
+                "27a24ad143e371046200645747ba5eb8815ebe28d87ed69f4121f5e573b37bb6acd9759834a710513d226dac102c36f92a605b30d308b64e2ec84d24b16e2862",
+                "47ef59f7edf37a96707c081fbefba62ea3154878461c6dcb34692e656a27bf5de0612b6d7633ee292869957421712adcd11844f76bfaaabaf17d2bf3692b2041",
+                "ec2283d40cbe6e1f46b8e120423be27694ef51f05054f7d568b940c5527b13586489901b9f2f0d04f6605455c18039077a6a3bd3e75db93b7f363be7c4f55a0b",
+                "200b3093c79a9acb31dd0fed651c135ca601eb534076099d0654b76a82a8dd26259c29ef2565c09e8a2fcf48e745d9f731e65a42cadbdd084d02d38abdc29e80"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "Foodie",
+            "difficulty": "Medium",
+            "short_description": "Use a clip from a video to gain critical information.",
+            "description": "We found this video saved on a hard drive belonging to Apollo. We think that Apollo is going to get the cookie reviewed in the video, but we don't know where.",
+            "hasVideo": true,
+            "assetURL": "../challenge_assets/2024/Foodie.mp4",
+            "questions": [
+                "What is the full name of the person reviewing the cookie?",
+                "Where was the cookie bought? (Town, State/Territory)",
+                "When was this cookie made? (MM/DD/YYYY HH:MM)",
+                "What is the ID of the video?"
+            ],
+            "answers": [
+                "345fff10b03eaf290d199814c99472aee3c4d96758ee2875bc15b7bbf645ef6219fb900b3cb34efeb4970e07201e908c4baf42653892cf27bb31a8e78fe07caf",
+                "662d091e906ebbc2fc12474917d78723eb3cb25221c689a1b48e5b9e38e504a77ef78314ae8ed431fe684bcaa6c0c8bb18df28924752730bfc28ae9ae5cf0540",
+                "c888a24c703f7bee86faf12fb959682e371d71861d000083dcd38c237f69c0678c804c019eb1844eb7df2302ceb0f24da2ef6eba3436e6db652aa55141c23339",
+                "f9b8f90256677da53c6fe39ff0ecb04c19ebb12ca9d843b3640c283f6e548e2b177d9ebb8aaf5c75700bef90eacd169e0efa851dd42453892cc64d9a847be1dd"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "On Par",
+            "difficulty": "Hard",
+            "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
+            "description": "We have tracked the locations of several radio transmissions sent by Centipede, but we can't find the last one. We suspect that they will be heading somewhere in North Dakota.",
+            "assetCode": "38.3266625, -77.0405319<br>29.4639600, -98.4514000<br>42.2987200, -87.8648600",
+            "questions": [
+                "What are the GPS coordinates of the next location?",
+                "What was the model that all locations had in common?",
+                "If the signal was sent from the model, how many feet could it have been effectively heard from?",
+                "How tall is the device in cm?"
+            ],
+            "answers": [
+                "bb19c4f8144eecf53f84512c20ccdaaccddce59c63913550cd555184b9eb01dfbf28dc244c14d15d5fe0546d50438d11f5621ed976f5bff843dca31f0d8fcec3",
+                "6fecb5826cfac219bede55825cc11441cf9a5f1224f3899de7dab52ec7409c84a55c149db7723c57671e0a4213b22d361d49d8fae257bf04ad5c31671faf40d3",
+                "3c93457c61411a0c77df29385f6ced1df6a8bc8bb5d1bb3575430481b6b9057e2187b03de67c16cd79f391f42ca8f28c77f2679723e137c7e69e2fa29ad72d4f",
+                "c5734030523aab44f03d71d22e43b4cc2094b4bf76fc601dceb2063d643253635105e1a49fb9765c38ee3dbd697677ca0dab17edca87570454bc1ee26b3f75f8"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
         }
     ],
     "Cryptography": [
