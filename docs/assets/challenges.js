@@ -536,39 +536,6 @@ export default {
             ]
         },
         {
-            "name": "Alert",
-            "difficulty": "Hard",
-            "icon": "https://www.svgrepo.com/show/507464/alert-square.svg",
-            "short_description": "Decode a radio transmission to get key insights.",
-            "description": "We have some found that some SAB3RT00TH have switched how they are transmitting information. Can you crack their protocol?",
-            "hasAudio": true,
-            "assetURL": "../challenge_assets/2023/radio.wav",
-            "questions": [
-                "What is the encoding method?",
-                "What counties are affected?",
-                "At what time is the event?",
-                "What is the event?",
-                "Who sent the message?"
-            ],
-            "answers": [
-                "f526c281a280e51fba6e75444bbcd837f6b90741e3a3f9ff9299a6afff9d32ec02643b79e44dccde109800b57a9d374f0a2afded4a66bca1382bbdf2e444dd46",
-                "cba57ac34dcb01698f57e75c69135921d6cbd061d902b4b689d25cbede32e77a656d126b2f424b70247c32715b2611cabe07268443440e94e1e8c8ac7310c9a4",
-                "b5e3d15e69398488973baa85241b10b37f0e0a8cbd4b2ae3f638a7d6549dafeaf4d385370360643c1007da8760354a3bbef366c3f48e9943a1206d71dc0ead66",
-                "adbfde0aff057d361aef5a3b54cf30a42a47dcd2bc6f5e8f023b84821ff12f39f4dc4bb1b20f5b826ee50e6a6fdcc484f416b247aa8dd3b9516bcf2bfec863ee",
-                "47fd8e64890900511d893431b07f34dcad2b96993645ad27b64c4f67ab24b4e9010342bf0a99f24260a2be3682e1a97b4f5a8cfe721369a0cbc9af73a61e36dc"
-            ],
-            "walkthrough": [
-                {
-                    "type": "p",
-                    "text": ""
-                },
-                {
-                    "type": "NOTE",
-                    "text": "Coming soon..."
-                }
-            ]
-        },
-        {
             "name": "Threats",
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/483652/hacker.svg",
@@ -632,22 +599,22 @@ export default {
         },
         {
             "name": "On Par",
-            "difficulty": "Hard",
+            "difficulty": "Challenge",
             "icon": "https://www.svgrepo.com/show/480491/golf-8.svg",
             "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
-            "description": "We have tracked the locations of several radio transmissions sent by Centipede, but we can't find the last one. We suspect that they will be heading somewhere in North Dakota.",
-            "assetCode": "38.3266625, -77.0405319<br>29.4639600, -98.4514000<br>42.2987200, -87.8648600",
+            "description": "We have tracked the locations of several radio transmissions sent by Centipede, but we can't find the last one. We suspect that the next signal will be sent from a device somewhere in California.",
+            "assetCode": "38.3266625, -77.0405319<br>29.4639600, -98.4514000<br>42.298649, -87.851212",
             "questions": [
-                "What are the GPS coordinates of the next location?",
-                "What was the model that all locations had in common?",
-                "If the signal was sent from the model, how many feet could it have been effectively heard from?",
-                "How tall is the device in cm?"
+                "What is the make and model of the device that all locations had in common?",
+                "If the signal was sent from the device, how many feet could it have been effectively heard from?",
+                "How tall is the device in cm?",
+                "What are the GPS coordinates of the next location?"
             ],
             "answers": [
-                "bb19c4f8144eecf53f84512c20ccdaaccddce59c63913550cd555184b9eb01dfbf28dc244c14d15d5fe0546d50438d11f5621ed976f5bff843dca31f0d8fcec3",
                 "6fecb5826cfac219bede55825cc11441cf9a5f1224f3899de7dab52ec7409c84a55c149db7723c57671e0a4213b22d361d49d8fae257bf04ad5c31671faf40d3",
                 "3c93457c61411a0c77df29385f6ced1df6a8bc8bb5d1bb3575430481b6b9057e2187b03de67c16cd79f391f42ca8f28c77f2679723e137c7e69e2fa29ad72d4f",
-                "c5734030523aab44f03d71d22e43b4cc2094b4bf76fc601dceb2063d643253635105e1a49fb9765c38ee3dbd697677ca0dab17edca87570454bc1ee26b3f75f8"
+                "c5734030523aab44f03d71d22e43b4cc2094b4bf76fc601dceb2063d643253635105e1a49fb9765c38ee3dbd697677ca0dab17edca87570454bc1ee26b3f75f8",
+                "949865821d2e90633673d84f6e3e2894fc970d54e5ad1625f73e3c0cc56b9c3c2a762325aa1c2873b2ba99e83607799c481797a6ced2c9bd2224c9bd55aecf9a"
             ],
             "walkthrough": [
                 {
@@ -846,6 +813,39 @@ export default {
                 "e549195a6558df6afb6428b1727d5d3470713aa1ec13624c51d4923517795135526954578961665ba4ae1380d8d4625130016d33ecb247952c43a7a8bacb8f95"
             ],
             "walkthrough": []
+        },
+        {
+            "name": "Alert",
+            "difficulty": "Challenge",
+            "icon": "https://www.svgrepo.com/show/507464/alert-square.svg",
+            "short_description": "Decode a radio transmission to get key insights.",
+            "description": "We have some found that some Corrupted Cancer agents have switched how they are transmitting information. Can you crack their new protocol?",
+            "hasAudio": true,
+            "assetURL": "../challenge_assets/2023/radio1.wav",
+            "questions": [
+                "What is the encoding method?",
+                "What counties are affected? (County 1, County 2, ...)",
+                "At what day is the event? (MM/DD)",
+                "What is the event?",
+                "Who sent the message?"
+            ],
+            "answers": [
+                "f526c281a280e51fba6e75444bbcd837f6b90741e3a3f9ff9299a6afff9d32ec02643b79e44dccde109800b57a9d374f0a2afded4a66bca1382bbdf2e444dd46",
+                "b10d1191fa5605874e08e25b3d280a2f30d53bb310b6b3646a803ef139c2036074feec66afa2af59fea48a0b32f4b995b661caaf81c5a46edfbd819d6383b5f6",
+                "64a963c5f480c9c44ff19ff63f7c8be47e090de00816c30a09db2e6459fdae748491a969b2540f8637b02f5b0541e80a3fab192efcf23906b9e1e2956367e1fb",
+                "e322ea913e8176231d2d352ca571444ac87ff2099ca4f93af9929eeb0fccf2bfdad28575ccf8de9eed0763debba1f2f5e73ff9c216990c6e7c6264d3a10884e7",
+                "91709414ff48e9c1a18da9fb29ae0ab2d74390ecaaa22e6682344cfd14000b307c7d56678da8578a82dbcff1049280b20efc1997813c80bb7d2ce0a7d4ec5b3b"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
         }
     ],
     "Forensics": [
@@ -1067,7 +1067,7 @@ export default {
     "Net": [
         {
             "name": "Sus",
-            "difficulty": "Medium",
+            "difficulty": "Hard",
             "icon": "https://www.svgrepo.com/show/426779/space-suit.svg",
             "short_description": "Learn how to read network traffic and see what information is being transmitted.",
             "description": "Our hackers seem to communicate a lot over online games. Luckily our analysts were able to capture a few of their games can you tell us anything from the network traffic capture?",
@@ -1086,6 +1086,26 @@ export default {
                 "95b45d176fc3170304e79acd0f1fbbce97514ccfe06098f4d6972953c9f58a3457777f96d04a9cb7b6739e6780b2c26dddf374b298ac85d367598296ac3b015f",
                 "ec122ea6e0bf6693e39c161523fa504b0d51606dc54bd3a1b1859e268a8db9e09aa26346e4588b85ed013a33c7ff9f1db28fb7e284b7470d4c0f6153b60aee1a",
                 "8fdae124319c363c45392d4170b15be05022167562abcccd0f9bac5addc68ade9042744f2bdcc3b0eb8a0bd4338984fc42448cac41568e93fea00dcbfe50b04d"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Grinch",
+            "difficulty": "Easy",
+            "icon": "https://www.svgrepo.com/show/487201/christmas-tree.svg",
+            "short_description": "Learn how to read network traffic and see what information is being transmitted.",
+            "description": "Our hackers seem to communicate a lot over online games. Luckily our analysts were able to capture a few of their games can you tell us anything from the network traffic capture?",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/grinch.pcapng",
+            "questions": [
+                "What is the IPv4 of the server being scanned?",
+                "What is the IPv4 of the scanner?",
+                "What kind of scan attack was captured?"
+            ],
+            "answers": [
+                "ef859f894084b064c8623ab7cb0ee7dcf029e1cff36330715c4fd21c0ead4ed7234424d8db8834cd4d867675a9db131e3e9bf41a9487fd9d54faeb69cd100c1a",
+                "6a50497f6d52aa9bd59eb5293f15b608651e797d8227d07b05ec1f0b67678eca6ffa5f80e12d7f83156e95c63ff13987694de6768f53ea006b903e2d8778f2fb",
+                "9d06dbb00cf6377997239acc8ef4fc186dbdc773230484eb6546490d786d0235476d1342e6d6c72bdc292edfc2c6679157cf524b3b1340e62fdc8e46bdf9432c"
             ],
             "walkthrough": []
         }
