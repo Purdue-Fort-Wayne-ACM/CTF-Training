@@ -155,31 +155,24 @@ function AddChallengeSummary(challenge, index) {
     var challengeSummaryParent = document.createElement("div");
     var challengeSummaryChildDiv = document.createElement("div");
     var challengeSummaryHeader = document.createElement("h3");
+    var breakLine = document.createElement("hr");
     var challengeSummaryDifficulty = document.createElement("h6")
     var challengeSummaryDescription = document.createElement("p");
-    var challengeIcon = document.createElement("img");
+    //var challengeIcon = document.createElement("img");
 
-    challengeIcon.src = challenge.icon;
+    //challengeIcon.src = challenge.icon;
     challengeSummaryHeader.textContent = challenge.name;
     challengeSummaryDescription.textContent = challenge.short_description;
     challengeSummaryDifficulty.textContent = challenge.difficulty;
     challengeSummaryParent.classList.add("catSection");
 
-    if (challenge.difficulty == "Easy"){
-        challengeSummaryDifficulty.classList.add("difficulty-easy");
-    } else if (challenge.difficulty == "Medium"){
-        challengeSummaryDifficulty.classList.add("difficulty-medium");
-    } else if (challenge.difficulty == "Hard") {
-        challengeSummaryDifficulty.classList.add("difficulty-hard");
-    } else {
-        challengeSummaryDifficulty.classList.add("difficulty-challenge");
-        challengeSummaryParent.classList.add("challengeMode");
-    }
+    challengeSummaryDifficulty.classList.add(getChallengeDifficulty(challenge));
 
     challengeSummaryParent.appendChild(challengeSummaryChildDiv);
-    challengeSummaryChildDiv.appendChild(challengeIcon);
+    //challengeSummaryChildDiv.appendChild(challengeIcon);
     challengeSummaryChildDiv.appendChild(challengeSummaryHeader);
     challengeSummaryChildDiv.appendChild(challengeSummaryDifficulty);
+    challengeSummaryParent.appendChild(breakLine);
     challengeSummaryParent.appendChild(challengeSummaryDescription);
 
     challengeSummaryParent.setAttribute("onclick", "location.href='#CH" + index + "'");
@@ -193,13 +186,24 @@ function AddChallengeModule(challenge, index) {
     var challengeModuleParent = document.createElement("div");
     var challengeModuleContainer = document.createElement("div");
     var challengeModuleHeader = document.createElement("h1");
+    var challengeSummaryDifficulty = document.createElement("h6")
+
     var challengeModuleDescription = document.createElement("p");
     var challengeAccordian = CreateAccordian(index);
 
+    var header_container = document.createElement("div");
+
+    challengeSummaryDifficulty.textContent = challenge.difficulty;
+    challengeSummaryDifficulty.id = "panel";
+    challengeSummaryDifficulty.classList.add(getChallengeDifficulty(challenge));
     challengeModuleHeader.textContent = challenge.name;
+
+    header_container.classList.add("header_container");
+    header_container.appendChild(challengeModuleHeader);
+    header_container.appendChild(challengeSummaryDifficulty);
+
     challengeModuleDescription.textContent = challenge.description;
-    challengeModuleContainer.appendChild(challengeModuleHeader);
-    challengeModuleContainer.appendChild(CreateBar());
+    challengeModuleContainer.appendChild(header_container);
     challengeModuleContainer.appendChild(CreateBreak());
     challengeModuleContainer.appendChild(challengeModuleDescription);
     challengeModuleContainer.appendChild(CreateBreak());
@@ -218,6 +222,7 @@ function AddChallengeModule(challenge, index) {
             row.appendChild(data1);
             var data2 = document.createElement("td");
             data2.id = index + "_" + QIndex + "BOUND";
+            data2.className = "input_fields";
             var InputBox = document.createElement("input");
             InputBox.id = index + "_" + QIndex;
             InputBox.classList.add("Question");
@@ -373,6 +378,22 @@ function AddChallengeWalkthrough(challenge, index) {
     AccordianCounter++;
 
     return challengeModuleWalkthrough;
+}
+
+function getChallengeDifficulty(challenge) {
+
+    switch (challenge.difficulty) {
+
+        case "Easy":
+            return "difficulty-easy";
+        case "Medium":
+            return "difficulty-medium";
+        case "Hard":
+            return "difficulty-hard";
+        default:
+            return "difficulty-challenge"
+    }
+
 }
 
 function GetFileName(URL) {

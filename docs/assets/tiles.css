@@ -57,13 +57,22 @@ content h2 {
     font-size: 14px;
 }
 
+.catSection hr {
+    border: 2px solid rgba(65, 65, 65, 0.117);
+    width: 250px;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
   
 .catSection:hover { 
     transform: scale(1.05);
     cursor: pointer;
-    background-color:  #51506088;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.125), rgba(255, 0, 0, 0.125));
     color: black;
 } 
 

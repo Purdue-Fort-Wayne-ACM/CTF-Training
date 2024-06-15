@@ -88,12 +88,16 @@ td {
 
 .DOWNLOAD {
     padding: 10px;
-    width: 60%;
+    width: 35%;
     text-align: center;
     display: block;
     margin: auto;
-    background-color: #BCCBCC;
-    border-radius: 5px;
+    background-color: #405df1;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 video {
@@ -122,6 +126,11 @@ video {
     padding: 4px 12px;
     border-radius: 4px;
     color: #333;
+}
+
+.NOTE p b {
+    font-family: Poppins;
+    font-weight: 600;
 }
 
 iframe {
