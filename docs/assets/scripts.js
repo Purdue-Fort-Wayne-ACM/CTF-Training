@@ -37,7 +37,8 @@ function CreateAccordian(index) {
 const DifficultyRatings = [
     "Easy",
     "Medium",
-    "Hard"
+    "Hard",
+    "Challenge"
 ];
 
 export async function LoadChallengesOnLoad(defaultOption) {
@@ -162,13 +163,17 @@ function AddChallengeSummary(challenge, index) {
     challengeSummaryHeader.textContent = challenge.name;
     challengeSummaryDescription.textContent = challenge.short_description;
     challengeSummaryDifficulty.textContent = challenge.difficulty;
+    challengeSummaryParent.classList.add("catSection");
 
-    if (challengeSummaryDifficulty.textContent == "Easy"){
+    if (challenge.difficulty == "Easy"){
         challengeSummaryDifficulty.classList.add("difficulty-easy");
-    } else if (challengeSummaryDifficulty.textContent == "Medium"){
+    } else if (challenge.difficulty == "Medium"){
         challengeSummaryDifficulty.classList.add("difficulty-medium");
-    } else {
+    } else if (challenge.difficulty == "Hard") {
         challengeSummaryDifficulty.classList.add("difficulty-hard");
+    } else {
+        challengeSummaryDifficulty.classList.add("difficulty-challenge");
+        challengeSummaryParent.classList.add("challengeMode");
     }
 
     challengeSummaryParent.appendChild(challengeSummaryChildDiv);
@@ -177,7 +182,6 @@ function AddChallengeSummary(challenge, index) {
     challengeSummaryChildDiv.appendChild(challengeSummaryDifficulty);
     challengeSummaryParent.appendChild(challengeSummaryDescription);
 
-    challengeSummaryParent.classList.add("catSection");
     challengeSummaryParent.setAttribute("onclick", "location.href='#CH" + index + "'");
 
     //append the challenge summary object
@@ -244,6 +248,7 @@ function AddChallengeModule(challenge, index) {
         label.setAttribute("download", "CTF Challenge - " + challenge.name + GetFileName(challenge.assetURL));
         label.classList.add("DOWNLOAD");
         challengeModuleContainer.appendChild(label);
+        challengeModuleContainer.appendChild(CreateBreak());
     }
 
     if (challenge.hasImage) {
@@ -371,7 +376,7 @@ function AddChallengeWalkthrough(challenge, index) {
 }
 
 function GetFileName(URL) {
-    return "." + URL.substring(URL.indexOf(" "));
+    return URL.substring(URL.lastIndexOf("."));
 }
 export function stopMedia() {
     [...document.getElementsByTagName('audio'), ...document.getElementsByTagName('video')].forEach(media => { media.pause(); media.currentTime = 0;});

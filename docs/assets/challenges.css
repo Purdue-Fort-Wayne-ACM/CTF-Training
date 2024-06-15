@@ -52,14 +52,14 @@ pre code {
 
 input {
     border-radius: 5px;
-    padding:5px;
+    padding: 5px;
     width: 100%;
     margin: 5px 0px 5px 0px;
 }
 
 .check {
     border-radius: 5px;
-    padding:5px;
+    padding: 5px;
     width: 100%;
     margin: 5px 0px 5px 0px;
     color: green;
@@ -68,11 +68,12 @@ input {
 }
 
 table {
-    width:100%;
-    background-color:#BCCBCC;
-    border-radius:5px;
-    padding:10px;
+    width: 100%;
+    background-color: #BCCBCC;
+    border-radius: 5px;
+    padding: 10px;
 }
+
 td {
     width: 50%;
     height: 100%;
@@ -95,7 +96,7 @@ td {
     border-radius: 5px;
 }
 
-video  {
+video {
     border-radius: 10px;
     display: block;
     margin-left: auto;
@@ -106,6 +107,7 @@ video  {
     max-height: 25%;
     max-width: 50%;
 }
+
 .challenge img {
     border-radius: 10px;
     width: 75%;
@@ -119,5 +121,95 @@ video  {
     margin-bottom: 15px;
     padding: 4px 12px;
     border-radius: 4px;
-    color:#333;
+    color: #333;
+}
+
+iframe {
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    border: 1px hidden #000;
+    border-radius: 4px;
+    resize: both;
+    display: block;
+}
+
+.difficulty-easy {
+    font-size: 12px;
+    padding: 2px 8px;
+    background-color: #00A08A;
+    border-radius: 10px;
+    color: white;
+}
+
+.difficulty-medium {
+    font-size: 12px;
+    padding: 2px 8px;
+    background-color: #F98400;
+    border-radius: 10px;
+    color: white;
+}
+
+.difficulty-hard {
+    font-size: 12px;
+    padding: 2px 8px;
+    background-color: #F21A00;
+    border-radius: 10px;
+    color: white;
+}
+
+.difficulty-challenge {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #d4d714, #1de840, #3dc5cc, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    animation: rainbow 9s ease infinite;
+    border-color: #33333333;
+    border-width: 1px;
+    color: white;
+}
+
+.challengeMode:hover {
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #d4d714, #1de840, #3dc5cc, #2b1de8, #dd00f3, #dd00f3);
+        border-radius: 10px;
+        background-size: 1800% 1800%;
+        animation: rainbow 12s reverse infinite;
+        z-index: -1;
+        border-radius: 20px;
+    }
+
+    &:content {
+        background: linear-gradient(0deg, #000, #262626);
+    }
+
+    &:after {
+        top: -8px;
+        left: -8px;
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        filter: blur(24px);
+    }
+
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
 }

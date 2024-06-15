@@ -57,29 +57,7 @@ content h2 {
     font-size: 14px;
 }
 
-.difficulty-easy {
-    font-size: 12px;
-    padding: 2px 8px;
-    background-color: #69995D;
-    border-radius: 10px;
-    color: white;
-}
 
-.difficulty-medium {
-    font-size: 12px;
-    padding: 2px 8px;
-    background-color: #998f5d;
-    border-radius: 10px;
-    color: white;
-}
-
-.difficulty-hard {
-    font-size: 12px;
-    padding: 2px 8px;
-    background-color: #99665d;
-    border-radius: 10px;
-    color: white;
-}
 
   
 .catSection:hover { 

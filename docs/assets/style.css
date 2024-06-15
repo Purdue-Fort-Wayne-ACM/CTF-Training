@@ -25,6 +25,11 @@ html, body {
     scroll-behavior: smooth;
 }
 
+em {
+    font-weight: bold;
+    font-style: italic;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
