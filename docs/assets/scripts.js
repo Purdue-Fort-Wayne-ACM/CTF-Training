@@ -25,6 +25,7 @@ function CreateClose() {
     tmp.href = "#?";
     tmp.classList.add("close");
     tmp.innerHTML = "&times;";
+    tmp.setAttribute("onclick", "stopMedia()");
     return tmp;
 }
 function CreateAccordian(index) {
@@ -36,7 +37,8 @@ function CreateAccordian(index) {
 const DifficultyRatings = [
     "Easy",
     "Medium",
-    "Hard"
+    "Hard",
+    "Challenge"
 ];
 
 export async function LoadChallengesOnLoad(defaultOption) {
@@ -151,17 +153,28 @@ function buf2hex(buffer) {
 function AddChallengeSummary(challenge, index) {
     // Create a challenge summary object
     var challengeSummaryParent = document.createElement("div");
+    var challengeSummaryChildDiv = document.createElement("div");
     var challengeSummaryHeader = document.createElement("h3");
+    var breakLine = document.createElement("hr");
+    var challengeSummaryDifficulty = document.createElement("h6")
     var challengeSummaryDescription = document.createElement("p");
+    //var challengeIcon = document.createElement("img");
 
-    challengeSummaryHeader.textContent = challenge.name + " (" + challenge.difficulty + ")";
+    //challengeIcon.src = challenge.icon;
+    challengeSummaryHeader.textContent = challenge.name;
     challengeSummaryDescription.textContent = challenge.short_description;
+    challengeSummaryDifficulty.textContent = challenge.difficulty;
+    challengeSummaryParent.classList.add("catSection");
 
-    challengeSummaryParent.appendChild(challengeSummaryHeader);
-    challengeSummaryParent.appendChild(CreateBar());
+    challengeSummaryDifficulty.classList.add(getChallengeDifficulty(challenge));
+
+    challengeSummaryParent.appendChild(challengeSummaryChildDiv);
+    //challengeSummaryChildDiv.appendChild(challengeIcon);
+    challengeSummaryChildDiv.appendChild(challengeSummaryHeader);
+    challengeSummaryChildDiv.appendChild(challengeSummaryDifficulty);
+    challengeSummaryParent.appendChild(breakLine);
     challengeSummaryParent.appendChild(challengeSummaryDescription);
 
-    challengeSummaryParent.classList.add("catSection");
     challengeSummaryParent.setAttribute("onclick", "location.href='#CH" + index + "'");
 
     //append the challenge summary object
@@ -173,15 +186,27 @@ function AddChallengeModule(challenge, index) {
     var challengeModuleParent = document.createElement("div");
     var challengeModuleContainer = document.createElement("div");
     var challengeModuleHeader = document.createElement("h1");
+    var challengeSummaryDifficulty = document.createElement("h6")
+
     var challengeModuleDescription = document.createElement("p");
     var challengeAccordian = CreateAccordian(index);
 
-    challengeModuleHeader.textContent = challenge.name;
-    challengeModuleDescription.textContent = challenge.description;
+    var header_container = document.createElement("div");
 
-    challengeModuleContainer.appendChild(challengeModuleHeader);
-    challengeModuleContainer.appendChild(CreateBar());
+    challengeSummaryDifficulty.textContent = challenge.difficulty;
+    challengeSummaryDifficulty.id = "panel";
+    challengeSummaryDifficulty.classList.add(getChallengeDifficulty(challenge));
+    challengeModuleHeader.textContent = challenge.name;
+
+    header_container.classList.add("header_container");
+    header_container.appendChild(challengeModuleHeader);
+    header_container.appendChild(challengeSummaryDifficulty);
+
+    challengeModuleDescription.textContent = challenge.description;
+    challengeModuleContainer.appendChild(header_container);
+    challengeModuleContainer.appendChild(CreateBreak());
     challengeModuleContainer.appendChild(challengeModuleDescription);
+    challengeModuleContainer.appendChild(CreateBreak());
 
     if (challenge.hasQuestion !== false) {
         var challengeModuleTable = document.createElement("table");
@@ -197,6 +222,7 @@ function AddChallengeModule(challenge, index) {
             row.appendChild(data1);
             var data2 = document.createElement("td");
             data2.id = index + "_" + QIndex + "BOUND";
+            data2.className = "input_fields";
             var InputBox = document.createElement("input");
             InputBox.id = index + "_" + QIndex;
             InputBox.classList.add("Question");
@@ -227,6 +253,7 @@ function AddChallengeModule(challenge, index) {
         label.setAttribute("download", "CTF Challenge - " + challenge.name + GetFileName(challenge.assetURL));
         label.classList.add("DOWNLOAD");
         challengeModuleContainer.appendChild(label);
+        challengeModuleContainer.appendChild(CreateBreak());
     }
 
     if (challenge.hasImage) {
@@ -279,10 +306,9 @@ function AddChallengeModule(challenge, index) {
         challengeModuleContainer.appendChild(CreateBreak());
         challengeModuleContainer.appendChild(CreateBreak());
     }
-    if (challengeModuleContainer.children.length === 4) {
+    if (challengeModuleContainer.children.length === 6) {
         challengeModuleContainer.appendChild(CreateBreak());
     }
-
     challengeAccordian.appendChild(AddChallengeWalkthrough(challenge, index));
 
     challengeModuleContainer.appendChild(challengeAccordian);
@@ -354,6 +380,25 @@ function AddChallengeWalkthrough(challenge, index) {
     return challengeModuleWalkthrough;
 }
 
+function getChallengeDifficulty(challenge) {
+
+    switch (challenge.difficulty) {
+
+        case "Easy":
+            return "difficulty-easy";
+        case "Medium":
+            return "difficulty-medium";
+        case "Hard":
+            return "difficulty-hard";
+        default:
+            return "difficulty-challenge"
+    }
+
+}
+
 function GetFileName(URL) {
-    return "." + URL.substring(URL.indexOf(" "));
+    return URL.substring(URL.lastIndexOf("."));
+}
+export function stopMedia() {
+    [...document.getElementsByTagName('audio'), ...document.getElementsByTagName('video')].forEach(media => { media.pause(); media.currentTime = 0;});
 }
