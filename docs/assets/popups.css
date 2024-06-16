@@ -135,6 +135,10 @@
         transition: width 200ms;
     }
 
+    .challenge {
+        max-width: 70% !important;
+    }
+
 }
 
 @media (max-width: 738px ) {
@@ -179,6 +183,10 @@
 
     .DOWNLOAD {
         width: 100% !important;
+    }
+
+    .challenge {
+        max-width: 80% !important;
     }
 
 }

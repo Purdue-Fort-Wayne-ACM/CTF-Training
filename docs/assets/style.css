@@ -91,7 +91,7 @@ em {
 }
 
 .hero-section-category .text {
-    max-width: 75%;
+    max-width: 50%;
     border-radius: 10px;
     color: white;
 }
@@ -324,7 +324,7 @@ body {
         display: none;
     }
 
-    .hero-section .text {
+    .hero-section-category .text {
         max-width: 100%;
         text-align: center;
         padding-left: 40px;
@@ -373,8 +373,12 @@ body {
         padding: 20px 20px;
     }
 
-    .hero-section {
-        padding: 40px 50px;
+    .hero-section-category {
+        padding: 40px 30px;
+    }
+
+    .catSection {
+        max-width: 100%;
     }
 }
 
