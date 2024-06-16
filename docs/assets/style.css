@@ -151,7 +151,9 @@ em {
 .hero-section .text a:hover {
     transform: scale(1.05);
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.632);
+    background: linear-gradient(to right, rgba(95, 95, 253, 0.569), rgba(255, 95, 95, 0.569));
+    color: white;
+    
 }
 
 .hero-section .display {
@@ -331,6 +333,13 @@ body {
         padding-right: 40px;
     }
 
+    .hero-section .text {
+        max-width: 100%;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
 }
 
 
@@ -344,6 +353,18 @@ body {
     }
 
     .hero-section-category .text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero-section .text {
         max-width: 100%;
         text-align: center;
     }
@@ -365,6 +386,10 @@ body {
     footer div p {
         text-align: center;
     }
+
+    .category-container-parent {
+        padding: 40px 50px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -377,6 +402,10 @@ body {
         padding: 40px 30px;
     }
 
+    .hero-section {
+        padding: 40px 30px;
+    }
+
     .catSection {
         max-width: 100%;
     }
@@ -386,5 +415,6 @@ body {
 
     .category-container-parent {
         border-radius: 0px;
+        padding: 40px 30px;
     }
 }
