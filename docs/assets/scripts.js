@@ -158,9 +158,9 @@ function AddChallengeSummary(challenge, index) {
     var breakLine = document.createElement("hr");
     var challengeSummaryDifficulty = document.createElement("h6")
     var challengeSummaryDescription = document.createElement("p");
-    //var challengeIcon = document.createElement("img");
+    var challengeIcon = document.createElement("img");
 
-    //challengeIcon.src = challenge.icon;
+    challengeIcon.src = challenge.icon;
     challengeSummaryHeader.textContent = challenge.name;
     challengeSummaryDescription.textContent = challenge.short_description;
     challengeSummaryDifficulty.textContent = challenge.difficulty;
@@ -169,7 +169,7 @@ function AddChallengeSummary(challenge, index) {
     challengeSummaryDifficulty.classList.add(getChallengeDifficulty(challenge));
 
     challengeSummaryParent.appendChild(challengeSummaryChildDiv);
-    //challengeSummaryChildDiv.appendChild(challengeIcon);
+    challengeSummaryChildDiv.appendChild(challengeIcon);
     challengeSummaryChildDiv.appendChild(challengeSummaryHeader);
     challengeSummaryChildDiv.appendChild(challengeSummaryDifficulty);
     challengeSummaryParent.appendChild(breakLine);
@@ -192,13 +192,16 @@ function AddChallengeModule(challenge, index) {
     var challengeAccordian = CreateAccordian(index);
 
     var header_container = document.createElement("div");
+    var challengeIcon = document.createElement("img");
 
+    challengeIcon.src = challenge.icon;
     challengeSummaryDifficulty.textContent = challenge.difficulty;
     challengeSummaryDifficulty.id = "panel";
     challengeSummaryDifficulty.classList.add(getChallengeDifficulty(challenge));
     challengeModuleHeader.textContent = challenge.name;
 
     header_container.classList.add("header_container");
+    header_container.appendChild(challengeIcon);
     header_container.appendChild(challengeModuleHeader);
     header_container.appendChild(challengeSummaryDifficulty);
 

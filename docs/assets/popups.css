@@ -116,6 +116,13 @@
     align-items: center !important;
 }
 
+.challenge .header_container img {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
 .panel-heading a {
     color: black;
 }
