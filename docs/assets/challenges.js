@@ -626,7 +626,41 @@ export default {
                     "text": "Coming soon..."
                 }
             ]
-        }
+        },
+        {
+            "name": "Lost",
+            "difficulty": "Hard",
+            "icon": "https://www.svgrepo.com/show/167791/lost.svg",
+            "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
+            "description": "Some of our agents became obsessed with finding this image. They haven't been making reports lately, where could they have gone?",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/liminal.jpg",
+            "questions": [
+                "What was the time that the image was taken? (MM/DD/YYYY HH:MM)",
+                "What make and model of camera took this image?",
+                "Where was this photo taken?",
+                "In what room was this photo taken at the above location?",
+                "(BONUS) Was the provided image modified?"
+            ],
+            "answers": [
+                "91f54cba0fe7c4e2566ea1df8c6ed90a3c02dfbe9ce804f744471d1573aae3b5b52f5fac2ee86b0e8188eb09578517864799d739e14f5ff1a0ddf09cc06e7416",
+                "7af14fdf43491d180ec388e968cf7598c29fc8ba125f3b6f2c0bb33c861989204fc79e7bf123300b33449b7a05387b15dc5e61b6606a47491fb6e9dabea5b57f",
+                "f57b06366c96eef670b8e9fd136df36b2ea50436ad1d54d0811cff97f446a16d0fddc58608d6e3a1d9a88d2c5e62f75754a1407bc8fde7e1cc10ad3130c0e911",
+                "04a38abd2e7afcc43e6e9ce2b6c802bcb15b1c7718d738c7da04e5c66d3331fde0f5c515bc16be2c5ebb2eb419d72b562f982aa0a74db61b5968bf56ab52d078",
+                "3d7b895c45098fd40b4f2fc28708745c4e155c502627eea080ceb01052a5f10884d0f56c24a312cf66b6b9e02b8ccc59eb9350bafbfdc26f6c1f8a249fb65899"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
     ],
     "Cryptography": [
         {
@@ -1077,7 +1111,7 @@ export default {
             "difficulty": "Medium",
             "icon": "https://www.svgrepo.com/show/290874/window-curtains.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
-            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
+            "description": "We were sent some compromized CIA windows computers. After a ransomware attack, their passwords were changed. What are the new passwords?",
             "questions": [
                 "What is E52CAC67419A9A224A3B108F3FA6CB6D:A4F49C406510BDCAB6824EE7C30FD852?",
                 "What is 87199F718F851325359D3FC755B08C91:8695B1A5AD5DA22C504B9E8DEAB23D51?",
@@ -1095,7 +1129,7 @@ export default {
             "difficulty": "Hard",
             "icon": "https://www.svgrepo.com/show/282766/cassette.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
-            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
+            "description": "We interecepted some passwords from Savage Spider. We suspect that they all seem to follow a pattern. Can you decrypt them?",
             "questions": [
                 "What is $1$4UjLRjJI$ahzDw6BJBQAjsg3e5YODv0?",
                 "What is $1$sw7OszoD$QByaohyCROIoWVF8mVZA4.?",
@@ -1113,38 +1147,48 @@ export default {
             "walkthrough": []
         },
         {
-            "name": "An Open Window",
+            "name": "Excellent",
             "difficulty": "Hard",
-            "icon": "https://www.svgrepo.com/show/290874/window-curtains.svg",
+            "icon": "https://www.svgrepo.com/show/472992/award.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
-            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
+            "description": "We captured this spreadsheet being used by Cassandra, but it seems to be password protected. Can you crack it?",
+            "canDownload":true,
+            "assetURL": "../challenge_assets/2024/Gemini.xlsx",
             "questions": [
-                "What is E52CAC67419A9A224A3B108F3FA6CB6D:A4F49C406510BDCAB6824EE7C30FD852?",
-                "What is 87199F718F851325359D3FC755B08C91:8695B1A5AD5DA22C504B9E8DEAB23D51?",
-                "What is 795A00303D8DBA577584248B8D2C9F9E:8407E5CD6E75341AFDDE41CD8A137AD1?" 
+                "What is the password?",
+                "What is the flag?"
             ],
             "answers": [
-                "dceb060f775b65369bec51c97da2b12e874eb093a59d8eb867988f9b44d42eacb5ae7aff471874b9b943d1313501876477844452c1c73aaee72121253ee0d69b",
-                "3877fb24c501836c2307f250744ebe3588f5b05aa20f6d8ff4eae284dc796a4b6ba687ad4078c37749d22c2b033b94d578ccb89f70577ce121f9d3c86ed8ca99",
-                "dd8300b311addc126a29df226833e0ca6fd33433e86e9c9e48e98b4c8424c0140017b8000bc5186bc5f1103da0ad206d33d237f88955138b667ef4186bc0d7d9"
+                "2a09c756ca7f5ca3ebfd9ff555e9993582447aaca30a0deafb90f8e3651597a9f34b8b14b588b668021122ec449d03a6a1affc60e4b1ab7e2755e634f25d40a9",
+                "7a47d3563c7125abdb28685db1e7e2529b2c30b9ef0bf63a4cfa6cc2732b2a763998889539d855a69bced814835f214e8aeacee6d91ad348136b471a01814efe"
             ],
             "walkthrough": []
         },
         {
-            "name": "An Open Window",
+            "name": "New Moon",
             "difficulty": "Challenge",
-            "icon": "https://www.svgrepo.com/show/290874/window-curtains.svg",
+            "icon": "https://www.svgrepo.com/show/336791/mask-two.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
-            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
+            "description": "We interecepted some passwords from Static Hydra. We suspect that they all seem to follow a pattern. Can you decrypt them?",
             "questions": [
-                "What is E52CAC67419A9A224A3B108F3FA6CB6D:A4F49C406510BDCAB6824EE7C30FD852?",
-                "What is 87199F718F851325359D3FC755B08C91:8695B1A5AD5DA22C504B9E8DEAB23D51?",
-                "What is 795A00303D8DBA577584248B8D2C9F9E:8407E5CD6E75341AFDDE41CD8A137AD1?" 
+                "What is $1$KrfM4.0O$7xkJ.IAx/Xul302vIJ2Gj.?",
+                "What is $1$LJPZzVqY$LkpwcGwafX1TOFVLJF/Qz0?",
+                "What is $1$tPGFhYeS$O4S1htc.7XeiPgCE5m90N1?",
+                "What is $1$oPtk8zW4$mMrrM5w8DBARVXs/O6XMv1?",
+                "What is $1$P/nTMNFm$ln5Llfcs.Ptl1aCNTBr8G/?",
+                "What is $1$j4rC3Hzc$5a0A8QoLtDWarEj6MEQw11?",
+                "What is $1$mtSZGnjW$YLQvZ1O6O6nGo/63YTeH6/?",
+                "What is $1$Cubuzgjo$jpnJtBaMNxvdtcS5sH2TM1?",
             ],
             "answers": [
-                "dceb060f775b65369bec51c97da2b12e874eb093a59d8eb867988f9b44d42eacb5ae7aff471874b9b943d1313501876477844452c1c73aaee72121253ee0d69b",
-                "3877fb24c501836c2307f250744ebe3588f5b05aa20f6d8ff4eae284dc796a4b6ba687ad4078c37749d22c2b033b94d578ccb89f70577ce121f9d3c86ed8ca99",
-                "dd8300b311addc126a29df226833e0ca6fd33433e86e9c9e48e98b4c8424c0140017b8000bc5186bc5f1103da0ad206d33d237f88955138b667ef4186bc0d7d9"
+                "36638c82da8b8568ea48e3b7216c0a3f453ef6c3eda88db330db5d6be7b5a1b841ed8b420eaf3a1fbcd31f3dda9f667af26d68a5f754d12506a96c92e75c8e12",
+                "79db7085322723b7090ba566e427a5ad4f0e96779014b810e9b7cde85872ad8b23f82ad954ac0ac530505422464840f051c72a63089ac0778c0c1b7af6208420",
+                "5abd43acc8553727daa018e77518926c5ce18476b7af357a55c6ea367456668a06c9115b50c3af68296e85f4ed466e04aeafd24f8fe56c441e42a38b3675d3ac",
+                "06053c55e1a4d29edc879a8730218e5f4d5004a44b04a7b3ba58eef968598a9744e5fd11ed2d81b1e9e30b56fdb73bfcca6fd988503de86a54aa8787ab5f7ba0",
+                "6d69ee5701775df65c0795b71b9f48b259a844a45d7f0f2ed8995c220ce19e1c68ff57a5393334c8729748370ce90a1238b74b8cc4e2967669d6050c4e30d3bb",
+                "c6c634aad081de12e323a9e9d8b3a4910a75c43b39996b7973cfd2bea266b289637a85fe428da157ef69beb6ed72073a3adfeaa069e57866e4aedbce7e5a9f53",
+                "9587e7f09c28c38e5456aa790c037d57bd5bdbe7c7b1be22a83c150bc62cd402992ff4913c394e5660f23d3935b8a372b5ec32ac338400c6df6ae36a497ee8c9",
+                "0a1aef77e4b68a79a8c2fb78e10395f1cee980f399a93a03deaf4e8e00ffba6a782c23742bb873f5698979ca67284d8089eddfa8d97803ea9d8028ae77144b0f",
             ],
             "walkthrough": []
         }

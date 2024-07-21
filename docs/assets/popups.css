@@ -42,7 +42,7 @@
     padding: 2em 2em;
     border-radius: 16px;
     max-height: 80%;
-    max-width: 60%;
+    max-width: 75%;
     min-width: 40%;
     overflow-y: auto;
 }
@@ -121,6 +121,7 @@
     width: 40px;
     height: 40px;
     margin: 10px;
+    border-radius: 0;
 }
 
 .panel-heading a {
