@@ -628,82 +628,27 @@ export default {
             ]
         },
         {
-            "name": "Threats",
-            "difficulty": "Easy",
-            "short_description": "Research key information about potential cyber threats.",
-            "description": "We think that some APTs that we are tracking have taken inspiration from other famous APTs. Can you find out more about some?",
-            "questions": [
-                "Who is Housefly connected to?",
-                "What country is connected to Stardust Chollima?",
-                "Who released the NotPetya worm?",
-                "What is the Mandiant APT id for BRONZE FLEETWOOD?",
-                "Who identified Monster Libra?"
-            ],
-            "answers": [
-                "bd92eddcc897c1063aecff3b3fa4f4266ea7ed6e159b0625ba83b5cd33c1a79433f1a3364e6871d831233a392eb3e8219b0a8df778d83782fa606ff464a930a2",
-                "27a24ad143e371046200645747ba5eb8815ebe28d87ed69f4121f5e573b37bb6acd9759834a710513d226dac102c36f92a605b30d308b64e2ec84d24b16e2862",
-                "47ef59f7edf37a96707c081fbefba62ea3154878461c6dcb34692e656a27bf5de0612b6d7633ee292869957421712adcd11844f76bfaaabaf17d2bf3692b2041",
-                "ec2283d40cbe6e1f46b8e120423be27694ef51f05054f7d568b940c5527b13586489901b9f2f0d04f6605455c18039077a6a3bd3e75db93b7f363be7c4f55a0b",
-                "200b3093c79a9acb31dd0fed651c135ca601eb534076099d0654b76a82a8dd26259c29ef2565c09e8a2fcf48e745d9f731e65a42cadbdd084d02d38abdc29e80"
-            ],
-            "walkthrough": [
-                {
-                    "type": "p",
-                    "text": ""
-                },
-                {
-                    "type": "NOTE",
-                    "text": "Coming soon..."
-                }
-            ]
-        },
-        {
-            "name": "Foodie",
-            "difficulty": "Medium",
-            "short_description": "Use a clip from a video to gain critical information.",
-            "description": "We found this video saved on a hard drive belonging to Apollo. We think that Apollo is going to get the cookie reviewed in the video, but we don't know where.",
-            "hasVideo": true,
-            "assetURL": "../challenge_assets/2024/Foodie.mp4",
-            "questions": [
-                "What is the full name of the person reviewing the cookie?",
-                "Where was the cookie bought? (Town, State/Territory)",
-                "When was this cookie made? (MM/DD/YYYY HH:MM)",
-                "What is the ID of the video?"
-            ],
-            "answers": [
-                "345fff10b03eaf290d199814c99472aee3c4d96758ee2875bc15b7bbf645ef6219fb900b3cb34efeb4970e07201e908c4baf42653892cf27bb31a8e78fe07caf",
-                "662d091e906ebbc2fc12474917d78723eb3cb25221c689a1b48e5b9e38e504a77ef78314ae8ed431fe684bcaa6c0c8bb18df28924752730bfc28ae9ae5cf0540",
-                "c888a24c703f7bee86faf12fb959682e371d71861d000083dcd38c237f69c0678c804c019eb1844eb7df2302ceb0f24da2ef6eba3436e6db652aa55141c23339",
-                "f9b8f90256677da53c6fe39ff0ecb04c19ebb12ca9d843b3640c283f6e548e2b177d9ebb8aaf5c75700bef90eacd169e0efa851dd42453892cc64d9a847be1dd"
-            ],
-            "walkthrough": [
-                {
-                    "type": "p",
-                    "text": ""
-                },
-                {
-                    "type": "NOTE",
-                    "text": "Coming soon..."
-                }
-            ]
-        },
-        {
-            "name": "On Par",
+            "name": "Lost",
             "difficulty": "Hard",
-            "short_description": "Exercise your pattern recognition skills to find the missing element of a pattern.",
-            "description": "We have tracked the locations of several radio transmissions sent by Centipede, but we can't find the last one. We suspect that they will be heading somewhere in North Dakota.",
-            "assetCode": "38.3266625, -77.0405319<br>29.4639600, -98.4514000<br>42.2987200, -87.8648600",
+            "icon": "https://www.svgrepo.com/show/167791/lost.svg",
+            "short_description": "Take your reverse image searching skills to another level as you find the location of a mysterious photograph.",
+            "description": "Some of our agents became obsessed with finding this image. They haven't been making reports lately, where could they have gone?",
+            "hasImage": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/liminal.jpg",
             "questions": [
-                "What are the GPS coordinates of the next location?",
-                "What was the model that all locations had in common?",
-                "If the signal was sent from the model, how many feet could it have been effectively heard from?",
-                "How tall is the device in cm?"
+                "What was the time that the image was taken? (MM/DD/YYYY HH:MM)",
+                "What make and model of camera took this image?",
+                "Where was this photo taken?",
+                "In what room was this photo taken at the above location?",
+                "(BONUS) Was the provided image modified?"
             ],
             "answers": [
-                "bb19c4f8144eecf53f84512c20ccdaaccddce59c63913550cd555184b9eb01dfbf28dc244c14d15d5fe0546d50438d11f5621ed976f5bff843dca31f0d8fcec3",
-                "6fecb5826cfac219bede55825cc11441cf9a5f1224f3899de7dab52ec7409c84a55c149db7723c57671e0a4213b22d361d49d8fae257bf04ad5c31671faf40d3",
-                "3c93457c61411a0c77df29385f6ced1df6a8bc8bb5d1bb3575430481b6b9057e2187b03de67c16cd79f391f42ca8f28c77f2679723e137c7e69e2fa29ad72d4f",
-                "c5734030523aab44f03d71d22e43b4cc2094b4bf76fc601dceb2063d643253635105e1a49fb9765c38ee3dbd697677ca0dab17edca87570454bc1ee26b3f75f8"
+                "91f54cba0fe7c4e2566ea1df8c6ed90a3c02dfbe9ce804f744471d1573aae3b5b52f5fac2ee86b0e8188eb09578517864799d739e14f5ff1a0ddf09cc06e7416",
+                "7af14fdf43491d180ec388e968cf7598c29fc8ba125f3b6f2c0bb33c861989204fc79e7bf123300b33449b7a05387b15dc5e61b6606a47491fb6e9dabea5b57f",
+                "f57b06366c96eef670b8e9fd136df36b2ea50436ad1d54d0811cff97f446a16d0fddc58608d6e3a1d9a88d2c5e62f75754a1407bc8fde7e1cc10ad3130c0e911",
+                "04a38abd2e7afcc43e6e9ce2b6c802bcb15b1c7718d738c7da04e5c66d3331fde0f5c515bc16be2c5ebb2eb419d72b562f982aa0a74db61b5968bf56ab52d078",
+                "3d7b895c45098fd40b4f2fc28708745c4e155c502627eea080ceb01052a5f10884d0f56c24a312cf66b6b9e02b8ccc59eb9350bafbfdc26f6c1f8a249fb65899"
             ],
             "walkthrough": [
                 {
@@ -715,7 +660,7 @@ export default {
                     "text": "Coming soon..."
                 }
             ]
-        }
+        },
     ],
     "Cryptography": [
         {
@@ -793,7 +738,7 @@ export default {
             "difficulty": "Medium",
             "icon": "https://www.svgrepo.com/show/8549/dancer-motion.svg",
             "short_description": "Identify the cipher and decrypt to find the plaintext.",
-            "description": "",
+            "description": "We received this odd email with just this image. Could it be encrypted in some way?",
             "hasImage": true,
             "canDownload": true,
             "assetURL": "../challenge_assets/2023/DanceMonkey.png",
@@ -827,7 +772,7 @@ export default {
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/448010/gear-box.svg",
             "short_description": "Identify the cipher and decrypt to find the plaintext.",
-            "description": "",
+            "description": "We found some of these messages written in a classroom. What could they mean?",
             "questions": [
                 "What is Bmeeiadp?",
                 "What is xdlyaf?",
@@ -849,7 +794,7 @@ export default {
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/281904/book-mortarboard.svg",
             "short_description": "Identify the cipher and decrypt to find the plaintext.",
-            "description": "",
+            "description": "We found some of these messages written in a classroom. What could they mean?",
             "questions": [
                 "What is 01010000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011?",
                 "What is 6578616D706C65?",
@@ -889,7 +834,7 @@ export default {
             "difficulty": "Hard",
             "icon":"https://www.svgrepo.com/show/478160/radio-tower-free-illustration-2.svg",
             "short_description": "Find data that has been hidden in plain sight.",
-            "description": "We captured this image from a hacker. We think that it contains a hidden message can you find it?",
+            "description": "We found that some Sly Canis agents have been communicating over old radio transmissions. We captured a note card with the numbers below and a date when we captured the transmission. Can you decode the flag they were transmitting?",
             "hasAudio": true,
             "assetURL": "../challenge_assets/2024/Poached.webm",
             "assetCode": "44349   48950   10642   61323   37117\n80392   23148   82094   86889   15203\n61108   44224   81178   86191   01358\n46239   46947   66522   32898   81935\n95916   28267   37722   47854   67140\n09312   32940   33215   96665   63576\n15999   95861   54426   64848   77089\n11867   60289   09261   14601   79687\n64966   29943   54057   36644   61581\n34474   58713   14115   77267   56767\n81187   68945   30720   64262   55059\n55074   20103   37166   62555   41557\n43100   24458   04106   18157   84722\n41603   39715   44755   91932   18109\n32730   86075   42673   93608   71753\n78733   51702   30438   72905   08045\n29335   94485   39026   70444   90599\n15891   28384   63729   28510   26125\n75405   99315   93574   07594   48590\n68784   88413   73275   50490   13701",
@@ -924,6 +869,32 @@ export default {
                 "64a963c5f480c9c44ff19ff63f7c8be47e090de00816c30a09db2e6459fdae748491a969b2540f8637b02f5b0541e80a3fab192efcf23906b9e1e2956367e1fb",
                 "e322ea913e8176231d2d352ca571444ac87ff2099ca4f93af9929eeb0fccf2bfdad28575ccf8de9eed0763debba1f2f5e73ff9c216990c6e7c6264d3a10884e7",
                 "91709414ff48e9c1a18da9fb29ae0ab2d74390ecaaa22e6682344cfd14000b307c7d56678da8578a82dbcff1049280b20efc1997813c80bb7d2ce0a7d4ec5b3b"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
+        },
+        {
+            "name": "A Night at the Opera",
+            "difficulty": "Challenge",
+            "icon": "https://www.svgrepo.com/show/480246/violin-2.svg",
+            "short_description": "Decode a radio transmission to get key insights.",
+            "description": "We have some found that some Corrupted Cancer agents have switched how they are transmitting information. Can you crack their new protocol?",
+            "hasAudio": true,
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/Opera.webm",
+            "questions": [
+                "What is the flag?"
+            ],
+            "answers": [
+                "866d4deb35412a914d57c2f8367b25c2834ad97a5e575b82a943c42a8335a7b8c35d4e51bb29e4e4d45f3588558d13a26396a48c0990d0e2a62e3ec2dfb04d4b"
             ],
             "walkthrough": [
                 {
@@ -981,6 +952,31 @@ export default {
                 "1fbf239ccfb8b0060f94b0c1a578c58a58c0114f34dce41a3f17f5dfdf9cf40c9e4c3efdd511363918cfa11389f35e2cffa89782619fd07dc39d298dc3a34c2d"
             ],
             "walkthrough": []
+        },
+        {
+            "name": "Wordy",
+            "difficulty": "Challenge",
+            "icon": "https://www.svgrepo.com/show/532183/letter-chinese-a.svg",
+            "short_description": "Recover a hidden message inside a word document.",
+            "description": "We captured this file from SAB3RT00TH's expert cryptographer, Holden C. Retts. However, it seems Holden was on to us and switched up their protocol. Can you figure it out?",
+            "canDownload": true,
+            "assetURL": "../challenge_assets/2024/Memo-314_Captured.docx",
+            "questions": [
+                "What is the flag?"
+            ],
+            "answers": [
+                "bf35d860e1f0354c17155549307e503d568978f4cb973769bfb56c1ae4b47622e013ef8176a862c74bd0d11a254f41a3a6a6581accd942aa0d2c7678275e3c8b"
+            ],
+            "walkthrough": [
+                {
+                    "type": "p",
+                    "text": ""
+                },
+                {
+                    "type": "NOTE",
+                    "text": "Coming soon..."
+                }
+            ]
         }
     ],
     "Log": [
@@ -1036,7 +1032,7 @@ export default {
     "Cracking": [
         {
             "name": "Common",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "icon": "https://www.svgrepo.com/show/469601/recycle.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
             "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
@@ -1076,7 +1072,7 @@ export default {
         },
         {
             "name": "Masked",
-            "difficulty": "Easy",
+            "difficulty": "Medium",
             "icon": "https://www.svgrepo.com/show/352261/mask.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
             "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. They seem to follow a pattern though, PFW-AAAA-###. Can you decrypt them?",
@@ -1087,6 +1083,138 @@ export default {
             "answers": [
                 "ef647a5fdb62371de66a62c50ac0d0434dd8ecaa2b9298695831da96f5061e61d3fe7f67cc2f44f8caf08ec377a1b30efc0f5e43d29a7cc0749b1b40b709596e",
                 "a0bd5eb84513607ce681594e94c63280a079359dc65484d94debd67cd0dca830e0daf2fe7bd705a9c7ba6d66614d6e506d60ba344749d24b61d8e02552dc1026"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Hashes",
+            "difficulty": "Easy",
+            "icon": "https://www.svgrepo.com/show/502784/password-key.svg",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We interecepted some passwords from SAB3RT00TH, but they seem to be hashed. Can you decrypt them?",
+            "questions": [
+                "What is the md5 hash of admin?",
+                "What is the sha1 hash of apollo?",
+                "What is the sha256 of hello world?",
+                "What is the whirlpool hash of sandworm?"
+            ],
+            "answers": [
+                "22b12a761a4cc5fb8b3633b2bf728ce7ffc1db96593b9fa3adbdb6c88df1f974cd306ef4d6217f5406781dcf7d165822e3a8d2cd2bf8eb425330def115eb9920",
+                "88e1955fbe334ea55fa1a386825245beb335a1e79f42cc0e50e5201e64396bc0b8847ff44f44bc4920eb1a88b5532562852afddfcc6ce5fec0fab532cdaa0d6f",
+                "55cda124307c2dbd815213717d5391a4874e8daa7b64cd64c59d68a7040bc56288d5dbb85a6f45216e6d073db4af28f1a83d973419b3752b8986771aec3fb8db",
+                "f80a146897920e503fd09dd008035994b87541d1df3a053dfe66628a47f852e95f2969d427ae94f457ec1d405b809e6e1a91c4f8399c4229a842fb3c46ecba4c"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "An Open Window",
+            "difficulty": "Medium",
+            "icon": "https://www.svgrepo.com/show/290874/window-curtains.svg",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We were sent some compromized CIA windows computers. After a ransomware attack, their passwords were changed. What are the new passwords?",
+            "questions": [
+                "What is E52CAC67419A9A224A3B108F3FA6CB6D:A4F49C406510BDCAB6824EE7C30FD852?",
+                "What is 87199F718F851325359D3FC755B08C91:8695B1A5AD5DA22C504B9E8DEAB23D51?",
+                "What is 795A00303D8DBA577584248B8D2C9F9E:8407E5CD6E75341AFDDE41CD8A137AD1?" 
+            ],
+            "answers": [
+                "dceb060f775b65369bec51c97da2b12e874eb093a59d8eb867988f9b44d42eacb5ae7aff471874b9b943d1313501876477844452c1c73aaee72121253ee0d69b",
+                "3877fb24c501836c2307f250744ebe3588f5b05aa20f6d8ff4eae284dc796a4b6ba687ad4078c37749d22c2b033b94d578ccb89f70577ce121f9d3c86ed8ca99",
+                "dd8300b311addc126a29df226833e0ca6fd33433e86e9c9e48e98b4c8424c0140017b8000bc5186bc5f1103da0ad206d33d237f88955138b667ef4186bc0d7d9"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Top Secret",
+            "difficulty": "Hard",
+            "icon": "https://www.svgrepo.com/show/282766/cassette.svg",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We interecepted some passwords from Golden Taotie. We suspect that they all seem to follow a pattern. Can you decrypt them?",
+            "questions": [
+                "What is $1$4UjLRjJI$ahzDw6BJBQAjsg3e5YODv0?",
+                "What is $1$sw7OszoD$QByaohyCROIoWVF8mVZA4.?",
+                "What is $1$lMVrlkgd$bytov6NvnuwIoJRpB66C31?",
+                "What is $1$M/tA.I6P$ouye.8Ez5M2Ut7eG2k4ut/?",
+                "What is $1$v4ndvG0U$2JI8PPaUcKWob5UAuoQ61.?"
+            ],
+            "answers": [
+                "a6e8cc58620d62cb4ebf8fbbc447565abf04af12cafa7da145e2ee0f8969416e1c48e8c1720cce8eac8329bffd9597d54346be788c3954c3bec29282592153c5",
+                "8841a7523c8a8a0b898b599f3518ed53ea1ac0ddef04e8ddfec5d2bde0da92947d0b61e491d460b180bed2926f4357480b4f6ed0af0ea1702724770d058377f6",
+                "b1e4077f6c0c253bf879b53a5453eb3450bafb6fc3379debf6294f4a8a27f83dca314953b8b882f9bcc64d1470491b92c5e7bb57ce6624cbbd02e4589a455418",
+                "829a23537eab485bbf38b04c72e207971a670c3604456565044266d5f0f4f0c181c797a15c80557cc3dfbe8bc218da3e55c279f768073f3f210cec221123cc7d",
+                "81e06bb2463942b5806f5e081111dbd8ca79506ee5c158213047d939b9ef281a40a25c60a71f6621d3ccfd9c0f5ad2f0d474504029aab0e8151283d2b60e1d2e"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Excellent",
+            "difficulty": "Hard",
+            "icon": "https://www.svgrepo.com/show/472992/award.svg",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We captured this spreadsheet being used by Cassandra, but it seems to be password protected. Can you crack it?",
+            "canDownload":true,
+            "assetURL": "../challenge_assets/2024/Gemini.xlsx",
+            "questions": [
+                "What is the password?",
+                "What is the flag?"
+            ],
+            "answers": [
+                "2a09c756ca7f5ca3ebfd9ff555e9993582447aaca30a0deafb90f8e3651597a9f34b8b14b588b668021122ec449d03a6a1affc60e4b1ab7e2755e634f25d40a9",
+                "7a47d3563c7125abdb28685db1e7e2529b2c30b9ef0bf63a4cfa6cc2732b2a763998889539d855a69bced814835f214e8aeacee6d91ad348136b471a01814efe"
+            ],
+            "walkthrough": []
+        },
+        {
+            "name": "Full Moon",
+            "difficulty": "Challenge",
+            "icon": "https://www.svgrepo.com/show/336791/mask-two.svg",
+            "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
+            "description": "We interecepted some passwords from Static Hydra. We suspect that they all follow a pattern. Can you decrypt them?",
+            "questions": [
+                "What is $1$KrfM4.0O$7xkJ.IAx/Xul302vIJ2Gj.?",
+                "What is $1$LJPZzVqY$LkpwcGwafX1TOFVLJF/Qz0?",
+                "What is $1$tPGFhYeS$O4S1htc.7XeiPgCE5m90N1?",
+                "What is $1$oPtk8zW4$mMrrM5w8DBARVXs/O6XMv1?",
+                "What is $1$P/nTMNFm$ln5Llfcs.Ptl1aCNTBr8G/?",
+                "What is $1$j4rC3Hzc$5a0A8QoLtDWarEj6MEQw11?",
+                "What is $1$mtSZGnjW$YLQvZ1O6O6nGo/63YTeH6/?",
+                "What is $1$Cubuzgjo$jpnJtBaMNxvdtcS5sH2TM1?",
+            ],
+            "answers": [
+                "36638c82da8b8568ea48e3b7216c0a3f453ef6c3eda88db330db5d6be7b5a1b841ed8b420eaf3a1fbcd31f3dda9f667af26d68a5f754d12506a96c92e75c8e12",
+                "79db7085322723b7090ba566e427a5ad4f0e96779014b810e9b7cde85872ad8b23f82ad954ac0ac530505422464840f051c72a63089ac0778c0c1b7af6208420",
+                "5abd43acc8553727daa018e77518926c5ce18476b7af357a55c6ea367456668a06c9115b50c3af68296e85f4ed466e04aeafd24f8fe56c441e42a38b3675d3ac",
+                "06053c55e1a4d29edc879a8730218e5f4d5004a44b04a7b3ba58eef968598a9744e5fd11ed2d81b1e9e30b56fdb73bfcca6fd988503de86a54aa8787ab5f7ba0",
+                "6d69ee5701775df65c0795b71b9f48b259a844a45d7f0f2ed8995c220ce19e1c68ff57a5393334c8729748370ce90a1238b74b8cc4e2967669d6050c4e30d3bb",
+                "c6c634aad081de12e323a9e9d8b3a4910a75c43b39996b7973cfd2bea266b289637a85fe428da157ef69beb6ed72073a3adfeaa069e57866e4aedbce7e5a9f53",
+                "9587e7f09c28c38e5456aa790c037d57bd5bdbe7c7b1be22a83c150bc62cd402992ff4913c394e5660f23d3935b8a372b5ec32ac338400c6df6ae36a497ee8c9",
+                "0a1aef77e4b68a79a8c2fb78e10395f1cee980f399a93a03deaf4e8e00ffba6a782c23742bb873f5698979ca67284d8089eddfa8d97803ea9d8028ae77144b0f",
+            ],
+            "walkthrough": []
+        },
+        {
+            "name":"Shhhh - It's a Secret Thing",
+            "difficulty": "Challenge",
+            "icon":"https://www.svgrepo.com/show/261803/rabbit.svg",
+            "short_description":"",
+            "description": "We found some passwords from a T.H.E.M. device. They seem to be changed daily.",
+            "questions": [
+                "What is B909AF1B48802FCF2B28305E6A65ABD2",
+                "What is 75E7ED8156E12CAC4BD2ABDCB8058DA2",
+                "What is CA7E251C22B4EC836B47740EA605664F",
+                "What is 12A28AEA2772ADCA3DB7230F8C0EE02D",
+                "What is C2DF287A0C622043443F5131B11DD997",
+                "What is 2B0F14A2D4258D0E835654F626310915",
+                "What is CE318A33D6ED00D2FA54FF0146C5917D"
+            ],
+            "answers":[
+                "a822086230399f215cdb9a6e2004fa44014e2635265f9b890e019604894aa5b8c92ca2d5d27685c398ca0819aa3cc546f8e3b86a128ca0f76d58a9fcd05d1adc",
+                "4026956f2495678930f7a14fd56166d48a0ae662f13b8229709ef1736f0690bc6e5148adf0482c2f81751d495a599d7f15344edfcefb1463bc8051829142029c",
+                "ac3d31f6b9aa31d6e5dc398f97cb8fc52e387b2f8df17e01bdd0bc736a2d1aeec61cea02c86f88953b6a81208cbb7128556625b4f7280019cfc33bc1e2194875",
+                "0d92ea7c654c5b8f0d09f7b8555df2242c6548b2e4d508e5706ef9facf6b276b55092980017fff8a3db50c35e182d6c44c2f00d35aeed7c12b0cc150911b3574",
+                "34e23694b6a5ae9615c6754839ce2908db066e4095a88242715a1b5949f1875474f8120a4421beb1b9127f9f26dece43737662db60e84752b09c667a5aff66ed",
+                "1f5758cfb7a98f41b10759b0e5f3bb4b59474940aa59cee801c2724dce0f7e0aff0ff1291d513d9abd96bfcb680525ffda84fa65f55403704a2f30beba681506",
+                "9aa71257bb1bdf33ebcd0927032f713b3bca977e26492590fbcb0517abb19a465f98a454425b9009e29f4a9c0bd8e8d953717c41f74336a36a85bc80f8e89ed9"
             ],
             "walkthrough": []
         }
@@ -1183,9 +1311,9 @@ export default {
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/487201/christmas-tree.svg",
             "short_description": "Learn how to read network traffic and see what information is being transmitted.",
-            "description": "Our hackers seem to communicate a lot over online games. Luckily our analysts were able to capture a few of their games can you tell us anything from the network traffic capture?",
+            "description": "Last holiday, we detected some odd activity on our account. Can you tell us more about the behavior?",
             "canDownload": true,
-            "assetURL": "../challenge_assets/2024/grinch.pcapng",
+            "assetURL": "../challenge_assets/2024/Grinch.pcapng",
             "questions": [
                 "What is the IPv4 of the server being scanned?",
                 "What is the IPv4 of the scanner?",
