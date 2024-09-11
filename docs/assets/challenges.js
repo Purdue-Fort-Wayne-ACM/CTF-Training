@@ -738,7 +738,7 @@ export default {
             "difficulty": "Medium",
             "icon": "https://www.svgrepo.com/show/8549/dancer-motion.svg",
             "short_description": "Identify the cipher and decrypt to find the plaintext.",
-            "description": "",
+            "description": "We received this odd email with just this image. Could it be encrypted in some way?",
             "hasImage": true,
             "canDownload": true,
             "assetURL": "../challenge_assets/2023/DanceMonkey.png",
@@ -772,7 +772,7 @@ export default {
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/448010/gear-box.svg",
             "short_description": "Identify the cipher and decrypt to find the plaintext.",
-            "description": "",
+            "description": "We found some of these messages written in a classroom. What could they mean?",
             "questions": [
                 "What is Bmeeiadp?",
                 "What is xdlyaf?",
@@ -794,7 +794,7 @@ export default {
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/281904/book-mortarboard.svg",
             "short_description": "Identify the cipher and decrypt to find the plaintext.",
-            "description": "",
+            "description": "We found some of these messages written in a classroom. What could they mean?",
             "questions": [
                 "What is 01010000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011?",
                 "What is 6578616D706C65?",
@@ -834,7 +834,7 @@ export default {
             "difficulty": "Hard",
             "icon":"https://www.svgrepo.com/show/478160/radio-tower-free-illustration-2.svg",
             "short_description": "Find data that has been hidden in plain sight.",
-            "description": "We found that some ",
+            "description": "We found that some Sly Canis agents have been communicating over old radio transmissions. We captured a note card with the numbers below and a date when we captured the transmission. Can you decode the flag they were transmitting?",
             "hasAudio": true,
             "assetURL": "../challenge_assets/2024/Poached.webm",
             "assetCode": "44349   48950   10642   61323   37117\n80392   23148   82094   86889   15203\n61108   44224   81178   86191   01358\n46239   46947   66522   32898   81935\n95916   28267   37722   47854   67140\n09312   32940   33215   96665   63576\n15999   95861   54426   64848   77089\n11867   60289   09261   14601   79687\n64966   29943   54057   36644   61581\n34474   58713   14115   77267   56767\n81187   68945   30720   64262   55059\n55074   20103   37166   62555   41557\n43100   24458   04106   18157   84722\n41603   39715   44755   91932   18109\n32730   86075   42673   93608   71753\n78733   51702   30438   72905   08045\n29335   94485   39026   70444   90599\n15891   28384   63729   28510   26125\n75405   99315   93574   07594   48590\n68784   88413   73275   50490   13701",
@@ -889,7 +889,7 @@ export default {
             "description": "We have some found that some Corrupted Cancer agents have switched how they are transmitting information. Can you crack their new protocol?",
             "hasAudio": true,
             "canDownload": true,
-            "assetURL": "../challenge_assets/2024/opera.webm",
+            "assetURL": "../challenge_assets/2024/Opera.webm",
             "questions": [
                 "What is the flag?"
             ],
@@ -1129,7 +1129,7 @@ export default {
             "difficulty": "Hard",
             "icon": "https://www.svgrepo.com/show/282766/cassette.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
-            "description": "We interecepted some passwords from Savage Spider. We suspect that they all seem to follow a pattern. Can you decrypt them?",
+            "description": "We interecepted some passwords from Golden Taotie. We suspect that they all seem to follow a pattern. Can you decrypt them?",
             "questions": [
                 "What is $1$4UjLRjJI$ahzDw6BJBQAjsg3e5YODv0?",
                 "What is $1$sw7OszoD$QByaohyCROIoWVF8mVZA4.?",
@@ -1165,11 +1165,11 @@ export default {
             "walkthrough": []
         },
         {
-            "name": "New Moon",
+            "name": "Full Moon",
             "difficulty": "Challenge",
             "icon": "https://www.svgrepo.com/show/336791/mask-two.svg",
             "short_description": "Identify and exploit weaknesses in common hashing algorithms.",
-            "description": "We interecepted some passwords from Static Hydra. We suspect that they all seem to follow a pattern. Can you decrypt them?",
+            "description": "We interecepted some passwords from Static Hydra. We suspect that they all follow a pattern. Can you decrypt them?",
             "questions": [
                 "What is $1$KrfM4.0O$7xkJ.IAx/Xul302vIJ2Gj.?",
                 "What is $1$LJPZzVqY$LkpwcGwafX1TOFVLJF/Qz0?",
@@ -1189,6 +1189,32 @@ export default {
                 "c6c634aad081de12e323a9e9d8b3a4910a75c43b39996b7973cfd2bea266b289637a85fe428da157ef69beb6ed72073a3adfeaa069e57866e4aedbce7e5a9f53",
                 "9587e7f09c28c38e5456aa790c037d57bd5bdbe7c7b1be22a83c150bc62cd402992ff4913c394e5660f23d3935b8a372b5ec32ac338400c6df6ae36a497ee8c9",
                 "0a1aef77e4b68a79a8c2fb78e10395f1cee980f399a93a03deaf4e8e00ffba6a782c23742bb873f5698979ca67284d8089eddfa8d97803ea9d8028ae77144b0f",
+            ],
+            "walkthrough": []
+        },
+        {
+            "name":"Shhhh - It's a Secret Thing",
+            "difficulty": "Challenge",
+            "icon":"https://www.svgrepo.com/show/261803/rabbit.svg",
+            "short_description":"",
+            "description": "We found some passwords from a T.H.E.M. device. They seem to be changed daily.",
+            "questions": [
+                "What is B909AF1B48802FCF2B28305E6A65ABD2",
+                "What is 75E7ED8156E12CAC4BD2ABDCB8058DA2",
+                "What is CA7E251C22B4EC836B47740EA605664F",
+                "What is 12A28AEA2772ADCA3DB7230F8C0EE02D",
+                "What is C2DF287A0C622043443F5131B11DD997",
+                "What is 2B0F14A2D4258D0E835654F626310915",
+                "What is CE318A33D6ED00D2FA54FF0146C5917D"
+            ],
+            "answers":[
+                "a822086230399f215cdb9a6e2004fa44014e2635265f9b890e019604894aa5b8c92ca2d5d27685c398ca0819aa3cc546f8e3b86a128ca0f76d58a9fcd05d1adc",
+                "4026956f2495678930f7a14fd56166d48a0ae662f13b8229709ef1736f0690bc6e5148adf0482c2f81751d495a599d7f15344edfcefb1463bc8051829142029c",
+                "ac3d31f6b9aa31d6e5dc398f97cb8fc52e387b2f8df17e01bdd0bc736a2d1aeec61cea02c86f88953b6a81208cbb7128556625b4f7280019cfc33bc1e2194875",
+                "0d92ea7c654c5b8f0d09f7b8555df2242c6548b2e4d508e5706ef9facf6b276b55092980017fff8a3db50c35e182d6c44c2f00d35aeed7c12b0cc150911b3574",
+                "34e23694b6a5ae9615c6754839ce2908db066e4095a88242715a1b5949f1875474f8120a4421beb1b9127f9f26dece43737662db60e84752b09c667a5aff66ed",
+                "1f5758cfb7a98f41b10759b0e5f3bb4b59474940aa59cee801c2724dce0f7e0aff0ff1291d513d9abd96bfcb680525ffda84fa65f55403704a2f30beba681506",
+                "9aa71257bb1bdf33ebcd0927032f713b3bca977e26492590fbcb0517abb19a465f98a454425b9009e29f4a9c0bd8e8d953717c41f74336a36a85bc80f8e89ed9"
             ],
             "walkthrough": []
         }
@@ -1285,9 +1311,9 @@ export default {
             "difficulty": "Easy",
             "icon": "https://www.svgrepo.com/show/487201/christmas-tree.svg",
             "short_description": "Learn how to read network traffic and see what information is being transmitted.",
-            "description": "Our hackers seem to communicate a lot over online games. Luckily our analysts were able to capture a few of their games can you tell us anything from the network traffic capture?",
+            "description": "Last holiday, we detected some odd activity on our account. Can you tell us more about the behavior?",
             "canDownload": true,
-            "assetURL": "../challenge_assets/2024/grinch.pcapng",
+            "assetURL": "../challenge_assets/2024/Grinch.pcapng",
             "questions": [
                 "What is the IPv4 of the server being scanned?",
                 "What is the IPv4 of the scanner?",
