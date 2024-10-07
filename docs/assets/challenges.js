@@ -1279,6 +1279,20 @@ export default {
             "assetURL": "../challenge_assets/2024/ourspace/",
             "hasQuestion": false,
             "walkthrough": []
+        },
+        {
+            "name": "Stuffy",
+            "difficulty": "Easy",
+            "icon": "https://www.svgrepo.com/show/431152/nose.svg",
+            "short_description": "Exploit a website's vulnerabilities to gain access to restricted information.",
+            "description": "We suspect that this server insecurily sends information to the client. Can you find the flag?",
+            "questions": [
+                "What is the flag?"
+            ],
+            "answers": [
+                "64b2054fa9fe31814ef3a1582b1e33bd3cca87b11b09b8cede5827780880e63f46e185f3ec1fc3c3934f2713bf0ed3c526195a0fe62564101ffc1eee4096ff46" // I guess this might be a secure flag location. No one would look here! PFW-JSON-5682
+            ],
+            "walkthrough": []
         }
     ],
     "Net": [
@@ -1292,7 +1306,7 @@ export default {
             "assetURL": "../challenge_assets/2024/sus_export.pcapng",
             "questions": [
                 "What is the game?",
-                "How many players where there?",
+                "How many players were there?",
                 "What player wore the brain slug item?",
                 "What was the IP address of the game server?",
                 "What was the host port number?"

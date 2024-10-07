@@ -312,7 +312,7 @@ function AddChallengeModule(challenge, index) {
     if (challengeModuleContainer.children.length === 6) {
         challengeModuleContainer.appendChild(CreateBreak());
     }
-    challengeAccordian.appendChild(AddChallengeWalkthrough(challenge, index));
+    // challengeAccordian.appendChild(AddChallengeWalkthrough(challenge, index));
 
     challengeModuleContainer.appendChild(challengeAccordian);
 
