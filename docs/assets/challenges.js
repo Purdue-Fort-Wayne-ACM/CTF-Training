@@ -949,7 +949,7 @@ export default {
                 "a2657ec579414e7f042b0c5992361eac615f491aff47c75b012a4df1043d5002a0fe30a714c50863bb7f1493c5fd7bd89dcd62d461fa7b4be82af3a8a0a1dbeb",
                 "27159f6e140c8c9d2652f2c07b74c8a485593f08a6da8b955d2887102a127a4508fff44e74dffae07ccf546b5d3be5fa4f1ec14a2dc9f6a2576635e623f50c87",
                 "fead72b1a6ec3a9b59bfb1be2c9ae6401cf1e15eac86290005629d92e7bfb3bc4ed1ce37a3f9b0a9793db9432d7f96536cd64cdbe58b1020cc6c866d72c5ef40",
-                "39515fa30f305552071dc3eaef1fd29f7b9a4cc6f1fd70a6148d05bb4b94f9a6e9822af2140c10a6065f2ec669adaef1d983932ed3250c14bfaf9eb4ae5f6e1e"
+                "fe3069f5e478714d2e6b2a5cffc49996c2c5d05eab5b2953e38fb3a1456e01d01b8947730b810187ec650d698c9731f7ec48b711bed5d6ad71f739dd9cf5cb58"
             ],
             "walkthrough": ["Use a save editor, such as https://pkmds.app/"]
         },
