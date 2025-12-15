@@ -943,15 +943,15 @@ export default {
                 "What is the rival’s name?",
                 "What is the trainer id of the save?",
                 "What members of the party are from other players?",
-                "What are the stats of the strongest party member?"
+                "What are the stats of the strongest party member? Answer in CSV format with no spaces - HP,Atk,Def,Spe,Spc"
             ],
             "answers": [
                 "a2657ec579414e7f042b0c5992361eac615f491aff47c75b012a4df1043d5002a0fe30a714c50863bb7f1493c5fd7bd89dcd62d461fa7b4be82af3a8a0a1dbeb",
                 "27159f6e140c8c9d2652f2c07b74c8a485593f08a6da8b955d2887102a127a4508fff44e74dffae07ccf546b5d3be5fa4f1ec14a2dc9f6a2576635e623f50c87",
                 "fead72b1a6ec3a9b59bfb1be2c9ae6401cf1e15eac86290005629d92e7bfb3bc4ed1ce37a3f9b0a9793db9432d7f96536cd64cdbe58b1020cc6c866d72c5ef40",
-                "1fbf239ccfb8b0060f94b0c1a578c58a58c0114f34dce41a3f17f5dfdf9cf40c9e4c3efdd511363918cfa11389f35e2cffa89782619fd07dc39d298dc3a34c2d"
+                "eb4fa45e3fc41d4423365a33bcce4ef21f7d3ad161a915317153c1a11ecd9d712c467926c61572ebac9db9d9391840a5f0baa8b88c60c2920b1f6ac7406b2f93"
             ],
-            "walkthrough": []
+            "walkthrough": ["Use a save editor, such as https://pkmds.app/"]
         },
         {
             "name": "Wordy",
